@@ -1,0 +1,10 @@
+Make a Detail Page for the NFT with bid history. 
+Generate a rails scaffold for users.
+Make a register page. 
+Generate a rails scaffold for nft bids.
+Create a front end view for NFT bids. 
+Create an NFT endpoint for bidding. 
+CRUD NFT Interface. 
+See bids Interface. 
+
+time = DateTime.new(params["nft_listing"]["auction_start_time(1i)"].to_i, params["nft_listing"]["auction_start_time(2i)"].to_i, params["nft_listing"]["auction_start_time(3i)"].to_i, params["nft_listing"]["auction_start_time(4i)"].to_i, params["nft_listing"]["auction_start_time(5i)"].to_i)

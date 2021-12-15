@@ -1,12 +1,39 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import HomePage from '../components/pages/home'
+import styles from '../../styles/Home.module.css'
+import ItemDetail from '../../components/pages/ItemDetail'
 import axios from 'axios'
+import { useRouter } from 'next/router'
 
-export default function Home() {
+export async function getServerSideProps(context) {
+  const nftid = context.params.nftid;
+  console.log('context')
+  // const { nftid } = router.query
+  
+  const res = await fetch(`http://localhost:4000/api/nft_listing/` + nftid)
+  const data = await res.json()
+  const nft = data[0];
+  if (!data) {
+    return {
+      notFound: true,
+    }
+  }
+  
+  return {
+    props: { nft }, // will be passed to the page component as props
+  }
+}
+
+
+export default function NftDetail(props) {
+  console.log('props')
+  console.log(props)
   const [nftListings, setNftListings] = useState([]);
+  const router = useRouter()
+  
+  console.log('pid')
+  // console.log(nftid)
   useEffect(() => {
     axios.get('http://localhost:4000/api/nft_listings').then(response => {
       setNftListings(response.data)
@@ -22,7 +49,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <HomePage nftListings={nftListings} />
+      <ItemDetail nft={props.nft} />
 
       <footer className={styles.footer}>
         <a
