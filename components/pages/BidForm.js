@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import Footer from '../components/footer';
 import { createGlobalStyle } from 'styled-components';
 import ReCAPTCHA from "react-google-recaptcha";
+import axios from 'axios'
+import constants from '../../src/constants'
 
 const GlobalStyles = createGlobalStyle`
   header#myHeader.navbar.white {
@@ -16,7 +18,9 @@ const GlobalStyles = createGlobalStyle`
   }
 `;
 
-const logintwo= () => {
+const logintwo= (props) => {
+    console.log('API_URL')
+    console.log(constants.API_URL)
     const recaptchaRef = React.useRef();
     const [captchaPassed, setCaptchaPassed] = useState(0);
     const [form, setForm] = useState({});
@@ -29,7 +33,16 @@ const logintwo= () => {
         console.log(form);
         if (!captchaPassed){
             alert("Please check the captcha to bid.")
+            return false
         }
+        console.log('apiurl')
+        console.log(constants.API_URL + '/api/bid')
+        var formObj = form
+        formObj['nft_listing_id'] = props.nft._id.$oid
+        axios.post(constants.API_URL + 'api/bid', formObj).then(response => {
+            console.log(response)
+        })
+
         return false
     }
     const handleChange = (event) => {

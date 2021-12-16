@@ -1,31 +1,14 @@
-  const constants = {
+const constants = {
       searchFilters: false,
       searchLinks: true,
-      topicsSelect,
       LOGGED_OUT: "logged_out",
-      appointment_statuses: appointment_statuses,
       LOGGED_IN: "logged_in",
       LOGGING_IN: "logging_in",
       LOADING_SESSION: "loading_session",
-      meeting_durations: meeting_durations,
-      time_zones: time_zones,
       RESETING_PASSWORD: "reseting_password",
       SIGNING_UP: "signing_up",
       API_URL: "http://localhost:4000/",
       // API_URL: "https://opendoor-stage.herokuapp.com/",
-      ONBOARDING_STATUS_ADD_INTERESTS: 1,
-      ONBOARDING_STATUS_UPLOAD_PROFILE_PHOTO: 2,
-      ONBOARDING_STATUS_ADD_FRIENDS: 3,
-      ONBOARDING_STATUS_INVITE_OTHERS: 4,
-      "system_admin_email": "support@opendoorconnect.com",
-      ONBOARDING_STATUS_ADD_CHILD_ACCOUNT: 5,
-      "onboarding_statuses_to_paths": onboarding_statuses_to_paths,
-      "availability_durations": availability_durations,
-      "topics": topics,
-      "languages": languages,
-      metaDescription,
-      metaKeywords,
-      metaTitle
   }
   
   export default constants;
