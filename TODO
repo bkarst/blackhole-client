@@ -1,3 +1,15 @@
+3. Collect Email, XRP Address, Bid on the placing of a bid. 
+
+1. Create a react component similar to sologenic's "Connect Wallet" Feature for 
+XUMM only. Use connected wallet to escrowed xrp auction where if they win the auction, the 
+
+Hold the amount in escrow 
+escrow creator. 
+Create a trustline that is an escrow. 
+Create a biddding system in XRP that works with 
+Trustline. 
+
+Turn Countdown box red in last 24 hours. Green otherwise. 
 Make a Detail Page for the NFT with bid history. 
 Generate a rails scaffold for users.
 Make a register page. 

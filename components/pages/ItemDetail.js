@@ -1,5 +1,6 @@
 import React from "react";
 import Clock from "../components/Clock";
+import BidForm from "./BidForm";
 import Footer from '../components/footer';
 import { createGlobalStyle } from 'styled-components';
 
@@ -10,7 +11,8 @@ const GlobalStyles = createGlobalStyle`
 `;
 
 const NFTDetail = function(props) {
-const nft = props.nft
+const nft = props.nft;
+
 const [openMenu, setOpenMenu] = React.useState(true);
 const [openMenu1, setOpenMenu1] = React.useState(false);
 const handleBtnClick = () => {
@@ -31,8 +33,15 @@ return (
   <section className='container'>
     <div className='row mt-md-5 pt-md-4'>
     <div className="col-md-6 text-center">
+    
                             <img src={nft.image_url} className="img-fluid img-rounded mb-sm-30" alt=""/>
+                            <div>
+                            
+      <BidForm nft={nft} />
+                            </div>
+                                    
                         </div>
+                        
                         <div className="col-md-6">
                             <div className="item_info">
                                 Auctions ends in 

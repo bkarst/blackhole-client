@@ -240,12 +240,12 @@ export default class Responsive extends Component {
                 </Link>
             </div>  
         ))}
-        { this.state.nfts.length !== this.dummyData.length &&
+        {/* { this.state.nfts.length !== this.dummyData.length &&
             <div className='col-lg-12'>
                 <div className="spacer-single"></div>
                 <span onClick={() => this.loadMore()} className="btn-main lead m-auto">Load More</span>
             </div>
-        }
+        } */}
     </div>              
     );
 }
