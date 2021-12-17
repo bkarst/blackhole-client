@@ -5,7 +5,7 @@ import styles from '../styles/Home.module.css'
 import HomePage from '../components/pages/home'
 import axios from 'axios'
 import BiddyHeader from '../components/menu/BiddyHeader';
-import constants from '../../src/constants';
+import constants from '../src/constants';
 
 export default function Home() {
   const [nftListings, setNftListings] = useState([]);
