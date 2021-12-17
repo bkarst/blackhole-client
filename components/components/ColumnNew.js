@@ -202,8 +202,8 @@ export default class Responsive extends Component {
   return (
     <div className='row'>
         {this.props.nftListings.map( (nft, index) => (
-            <div key={index} className="d-item col-lg-3 col-md-6 col-sm-6 col-xs-12 mb-4">
-                <Link href={"/nftdetail/" + nft._id.$oid } >
+            <div key={index} className="d-item col-lg-3 col-md-6 col-sm-6 col-xs-12 mb-4" style={{cursor: 'pointer'}}>
+                <Link href={"/nftdetail/" + nft._id.$oid }  >
                 <div className="nft__item m-0">
                 
                     { !nft.auction_ended && nft.auction_end_time &&

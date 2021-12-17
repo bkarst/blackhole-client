@@ -79,17 +79,17 @@ const Header= function() {
     return (
     <header id="myHeader" className='navbar white'>
      <div className='container'>
-       <div className='row w-100-nav'>
+       <div className='row w-100-nav'  >
           <div className='logo px-0'>
               <div className='navbar-title navbar-item'>
                 
               </div>
           </div>
 
-          <Link href="/">
+          <Link href="/"  >
                 <img
                     src="../img/logo.jpeg"
-                    style={{width: 80}}
+                    style={{width: 80, cursor: 'pointer'}}
                     className="img-fluid d-block"
                     alt="#"
                   />

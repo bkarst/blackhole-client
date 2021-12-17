@@ -12,8 +12,16 @@ const GlobalStyles = createGlobalStyle`
   }
 `;
 
+const formatDate = (dateString) => {
+  const date = new Date(dateString);
+  const string = date.getMonth() + "/" + date.getDate() + "/" + date.getFullYear() + "  " + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
+  return string
+}
+
 const NFTDetail = function(props) {
 const nft = props.nft;
+
+
 
 const [openMenu, setOpenMenu] = useState(true);
 const [openMenu1, setOpenMenu1] = useState(false);
@@ -59,11 +67,11 @@ return (
                             <div className="item_info">
                                 {auctionTimerJSX}
                                 <h2>{nft.title} </h2>
-                                <div className="item_info_counts">
+                                {/* <div className="item_info_counts">
                                     <div className="item_info_type"><i className="fa fa-image"></i>Art</div>
                                     <div className="item_info_views"><i className="fa fa-eye"></i>250</div>
                                     <div className="item_info_like"><i className="fa fa-heart"></i>18</div>
-                                </div>
+                                </div> */}
                                 <p>{nft.description} </p>
                                 <h3>{nft.bids.length > 0 ? "Current Bid: " : "Minimum Bid: "}{ nft.current_bid + " XRP"}</h3>
                                     
@@ -99,7 +107,7 @@ return (
                                     </span>
                                 </div>                                    
                                 <div className="p_list_info">
-                                    <div> Bid <b>{ bid.max_bid } XRP</b> from <b>{ bid.xrp_address }</b> at {bid.created_at} </div>
+                                    <div> Bid <b>{ bid.max_bid } XRP</b> from <b>{ bid.xrp_address }</b> at {formatDate(nft.created_at)  } </div>
                                 </div>
                                     </div>
                                 ))}

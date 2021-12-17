@@ -1,3 +1,4 @@
+Should we extend auction by 10 minutes if a bid has been made in the last 10 minutes. 
 Fix the footer. 
 Add robot functionality back in. 
 Format the date in the bids. 
