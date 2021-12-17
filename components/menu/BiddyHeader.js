@@ -77,8 +77,9 @@ const Header= function() {
     
     }, []);
     return (
-    <header id="myHeader" className='navbar white'>
-     <div className='container'>
+    <header id="myHeader" className='navbar white' >
+     <div className='container' style={{marginTop: 20}}>
+     
        <div className='row w-100-nav'  >
           <div className='logo px-0'>
               <div className='navbar-title navbar-item'>
@@ -95,6 +96,7 @@ const Header= function() {
                   />
                 </Link>
               <BreakpointProvider>
+              
                 <Breakpoint l down>
                   {showmenu && 
                   <div className='menu'>
@@ -105,6 +107,7 @@ const Header= function() {
                           >
                           Home
                         </div>
+                        
                         {openMenu && (
                           <div className='item-dropdown'>
                             <div className="dropdown" onClick={closeMenu}>
@@ -167,8 +170,11 @@ const Header= function() {
                       <div>
                           <div className="dropdown-custom btn" 
                              >
-                            Home
-                            <span className='lines'></span>
+                            Twitter
+                          </div>
+                          <div className="dropdown-custom btn" 
+                             >
+                            Telegram
                           </div>
                         </div>
                         </Link>

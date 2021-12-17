@@ -1,9 +1,10 @@
+Add twitter and telegram logos. 
+
 Should we extend auction by 10 minutes if a bid has been made in the last 10 minutes. 
 Fix the footer. 
-Add robot functionality back in. 
-Format the date in the bids. 
-Make the thumbnail separate. 
 
+Add human verification functionality back in. 
+Make the thumbnail separate. 
 
 https://biddy-nft.herokuapp.com/nft_listings
 

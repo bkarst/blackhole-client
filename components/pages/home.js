@@ -56,7 +56,7 @@ const homethree= (props) => (
   <GlobalStyles />
   
 
-      <section className='container'>
+      <section className='container' style={{marginTop: 30}}>
 
        <ColumnNew nftListings={props.nftListings} />
       </section>
