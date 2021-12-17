@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, createRef} from "react";
 import Clock from "../components/Clock";
 import BidForm from "./BidForm";
 import Footer from '../components/footer';
@@ -15,8 +15,8 @@ const GlobalStyles = createGlobalStyle`
 const NFTDetail = function(props) {
 const nft = props.nft;
 
-const [openMenu, setOpenMenu] = React.useState(true);
-const [openMenu1, setOpenMenu1] = React.useState(false);
+const [openMenu, setOpenMenu] = useState(true);
+const [openMenu1, setOpenMenu1] = useState(false);
 const handleBtnClick = () => {
   setOpenMenu(!openMenu);
   setOpenMenu1(false);
@@ -91,7 +91,7 @@ return (
                                 <div className="tab-1 onStep fadeIn">
                                 <div className="p_list">
                                 { nft.bids.map( bid => (
-                                    <div>
+                                    <div key={bid._id}>
                                     <div className="p_list_pp">
                                     <span>
                                         <img className="lazy" src="./img/author/author-1.jpg" alt=""/>

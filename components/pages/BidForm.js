@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import Footer from '../components/footer';
 import { createGlobalStyle } from 'styled-components';
 import ReCAPTCHA from "react-google-recaptcha";
@@ -18,10 +18,10 @@ const GlobalStyles = createGlobalStyle`
   }
 `;
 
-const logintwo= (props) => {
+export default function BidForm(props) {
     console.log('API_URL')
     console.log(constants.API_URL)
-    const recaptchaRef = React.useRef();
+    const recaptchaRef = useRef();
     const [captchaPassed, setCaptchaPassed] = useState(0);
     const [form, setForm] = useState({});
     const onChange = (event) => {
@@ -109,4 +109,3 @@ const logintwo= (props) => {
 </div>
 
 )};
-export default logintwo;
