@@ -1,3 +1,9 @@
+Fix the footer. 
+Add robot functionality back in. 
+Format the date in the bids. 
+Make the thumbnail separate. 
+
+
 https://biddy-nft.herokuapp.com/nft_listings
 
 mongosh "mongodb+srv://cluster0.swpg9.mongodb.net/biddydbprod" --username bkarst

@@ -234,7 +234,7 @@ export default class Responsive extends Component {
                             
                         </span>
                         <div className="nft__item_price">
-                            {nft.price}<span>{nft.currency}</span>
+                            {nft.current_bid}<span>{nft.currency}</span>
                         </div>
                         <div className="nft__item_action">
                             <span onClick={()=> window.open(nft.bidLink, "_self")}>Place a bid</span>
