@@ -1,4 +1,10 @@
-Add the logo and the header with menu
+https://biddy-nft.herokuapp.com/nft_listings
+
+mongosh "mongodb+srv://cluster0.swpg9.mongodb.net/biddydbprod" --username bkarst
+
+Secure the API by restricting domain call. 
+Make the backend API call changable when deploying to vercel. 
+
 3. Collect Email, XRP Address, Bid on the placing of a bid. 
 
 1. Create a react component similar to sologenic's "Connect Wallet" Feature for 

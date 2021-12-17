@@ -6,13 +6,14 @@ import ItemDetail from '../../components/pages/ItemDetail'
 import axios from 'axios'
 import { useRouter } from 'next/router'
 import BiddyHeader from '../../components/menu/BiddyHeader';
+import constants from '../../src/constants';
 
 export async function getServerSideProps(context) {
   const nftid = context.params.nftid;
   console.log('context')
   // const { nftid } = router.query
   
-  const res = await fetch(`http://localhost:4000/api/nft_listing/` + nftid)
+  const res = await fetch(constants.API_URL + `/api/nft_listing/` + nftid)
   const data = await res.json()
   const nft = data[0];
   if (!data) {

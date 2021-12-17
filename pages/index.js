@@ -5,11 +5,12 @@ import styles from '../styles/Home.module.css'
 import HomePage from '../components/pages/home'
 import axios from 'axios'
 import BiddyHeader from '../components/menu/BiddyHeader';
+import constants from '../../src/constants';
 
 export default function Home() {
   const [nftListings, setNftListings] = useState([]);
   useEffect(() => {
-    axios.get('http://localhost:4000/api/nft_listings').then(response => {
+    axios.get(constants.API_URL + '/api/nft_listings').then(response => {
       setNftListings(response.data)
     })
     // Update the document title using the browser API
