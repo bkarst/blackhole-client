@@ -15,7 +15,7 @@ const [openMenu1, setOpenMenu1] = React.useState(false);
 const [openMenu2, setOpenMenu2] = React.useState(false);
 const [openMenu3, setOpenMenu3] = React.useState(false);
 const [openMenu4, setOpenMenu4] = React.useState(false);
-const handleBtnClick = (): void => {
+const handleBtnClick = () => {
   setOpenMenu(!openMenu);
   setOpenMenu1(false);
   setOpenMenu2(false);
@@ -26,7 +26,7 @@ const handleBtnClick = (): void => {
   document.getElementById("offer").classList.remove("active");
   document.getElementById("like").classList.remove("active");
 };
-const handleBtnClick1 = (): void => {
+const handleBtnClick1 = () => {
   setOpenMenu1(!openMenu1);
   setOpenMenu2(false);
   setOpenMenu(false);
@@ -37,7 +37,7 @@ const handleBtnClick1 = (): void => {
   document.getElementById("offer").classList.remove("active");
   document.getElementById("like").classList.remove("active");
 };
-const handleBtnClick2 = (): void => {
+const handleBtnClick2 = () => {
   setOpenMenu2(!openMenu2);
   setOpenMenu(false);
   setOpenMenu1(false);
@@ -48,7 +48,7 @@ const handleBtnClick2 = (): void => {
   document.getElementById("offer").classList.remove("active");
   document.getElementById("like").classList.remove("active");
 };
-const handleBtnClick3 = (): void => {
+const handleBtnClick3 = () => {
   setOpenMenu3(!openMenu3);
   setOpenMenu(false);
   setOpenMenu1(false);
@@ -59,7 +59,7 @@ const handleBtnClick3 = (): void => {
   document.getElementById("offer").classList.remove("active");
   document.getElementById("like").classList.add("active");
 };
-const handleBtnClick4 = (): void => {
+const handleBtnClick4 = () => {
   setOpenMenu4(!openMenu4);
   setOpenMenu(false);
   setOpenMenu1(false);

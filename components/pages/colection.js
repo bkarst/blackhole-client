@@ -13,13 +13,13 @@ const GlobalStyles = createGlobalStyle`
 const Colection= function() {
 const [openMenu, setOpenMenu] = React.useState(true);
 const [openMenu1, setOpenMenu1] = React.useState(false);
-const handleBtnClick = (): void => {
+const handleBtnClick = () => {
   setOpenMenu(!openMenu);
   setOpenMenu1(false);
   document.getElementById("Mainbtn").classList.add("active");
   document.getElementById("Mainbtn1").classList.remove("active");
 };
-const handleBtnClick1 = (): void => {
+const handleBtnClick1 = () => {
   setOpenMenu1(!openMenu1);
   setOpenMenu(false);
   document.getElementById("Mainbtn1").classList.add("active");
