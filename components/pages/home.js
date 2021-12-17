@@ -5,6 +5,7 @@ import CarouselCollection from '../components/CarouselCollection';
 import ColumnNew from '../components/ColumnNew';
 import AuthorList from '../components/authorList';
 import Footer from '../components/footer';
+
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
@@ -53,14 +54,10 @@ const GlobalStyles = createGlobalStyle`
 const homethree= (props) => (
   <div>
   <GlobalStyles />
-
+  
 
       <section className='container'>
-        <div className='row'>
-          <div className='col-lg-12'>
-              <h2 className='style-2'>New Items</h2>
-          </div>
-        </div>
+
        <ColumnNew nftListings={props.nftListings} />
       </section>
 

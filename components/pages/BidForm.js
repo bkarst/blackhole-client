@@ -41,6 +41,12 @@ const logintwo= (props) => {
         formObj['nft_listing_id'] = props.nft._id.$oid
         axios.post(constants.API_URL + 'api/bid', formObj).then(response => {
             console.log(response)
+            if (response.data.error){
+              alert(response.data.error)
+            }
+            else {
+              window.location.reload();
+            }
         })
 
         return false
@@ -76,7 +82,7 @@ const logintwo= (props) => {
                   </div>
 
                   <div className="field-set">
-                     <input type="number" step="0.01" required onChange={handleChange} name='max_bid' id='max_bid' className="form-control" placeholder="Bid in XRP"/>
+                     <input type="number" step="0.01" required onChange={handleChange} name='max_bid' id='max_bid' className="form-control" placeholder={"Bid in XRP (" + props.nft.minimum_bid_number + " or more)"}/>
                   </div>
                   
                   <div className="field-set" style={{marginTop: 10, marginBottom: 10}}>

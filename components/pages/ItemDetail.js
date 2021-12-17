@@ -2,7 +2,9 @@ import React from "react";
 import Clock from "../components/Clock";
 import BidForm from "./BidForm";
 import Footer from '../components/footer';
+
 import { createGlobalStyle } from 'styled-components';
+import Link from 'next/link'
 
 const GlobalStyles = createGlobalStyle`
   header#myHeader.navbar.white {
@@ -27,6 +29,18 @@ const handleBtnClick1 = () => {
   document.getElementById("Mainbtn1").classList.add("active");
   document.getElementById("Mainbtn").classList.remove("active");
 };
+
+var auctionTimerJSX = <div>This auction has ended.</div>
+
+if (!props.nft.auction_ended){
+  auctionTimerJSX = <div>
+  Auctions ends in 
+  <div className="de_countdown">
+    <Clock deadline={nft.auction_end_time} />
+  </div>
+  </div>
+}
+
 return (
 <div>
 <GlobalStyles/>
@@ -36,7 +50,6 @@ return (
     
                             <img src={nft.image_url} className="img-fluid img-rounded mb-sm-30" alt=""/>
                             <div>
-                            
       <BidForm nft={nft} />
                             </div>
                                     
@@ -44,10 +57,7 @@ return (
                         
                         <div className="col-md-6">
                             <div className="item_info">
-                                Auctions ends in 
-                                <div className="de_countdown">
-                                  <Clock deadline={nft.auction_end_time} />
-                                </div>
+                                {auctionTimerJSX}
                                 <h2>{nft.title} </h2>
                                 <div className="item_info_counts">
                                     <div className="item_info_type"><i className="fa fa-image"></i>Art</div>
@@ -55,7 +65,7 @@ return (
                                     <div className="item_info_like"><i className="fa fa-heart"></i>18</div>
                                 </div>
                                 <p>{nft.description} </p>
-                                <h3>Current Bid: { nft.minimum_bid_number + " XRP"}</h3>
+                                <h3>{nft.bids.length > 0 ? "Current Bid: " : "Minimum Bid: "}{ nft.current_bid + " XRP"}</h3>
                                     
                                     
                                 <h6>Creator</h6>

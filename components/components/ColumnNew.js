@@ -205,9 +205,16 @@ export default class Responsive extends Component {
             <div key={index} className="d-item col-lg-3 col-md-6 col-sm-6 col-xs-12 mb-4">
                 <Link href={"/nftdetail/" + nft._id.$oid } >
                 <div className="nft__item m-0">
-                    { nft.auction_end_time &&
+                
+                    { !nft.auction_ended && nft.auction_end_time &&
                         <div className="de_countdown">
+                            
                             <Clock deadline={nft.auction_end_time} />
+                        </div>
+                    }
+                    { nft.auction_ended &&
+                        <div className="de_countdown">
+                            Auction Ended
                         </div>
                     }
                     <div className="author_list_pp">
@@ -224,6 +231,7 @@ export default class Responsive extends Component {
                     <div className="nft__item_info">
                         <span onClick={()=> window.open(nft.nftLink, "_self")}>
                             <h4>{nft.title}</h4>
+                            
                         </span>
                         <div className="nft__item_price">
                             {nft.price}<span>{nft.currency}</span>
