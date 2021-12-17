@@ -33,13 +33,8 @@ export default function NftDetail(props) {
   const router = useRouter()
   
   console.log('pid')
-  // console.log(nftid)
-  useEffect(() => {
-    axios.get('http://localhost:4000/api/nft_listings').then(response => {
-      setNftListings(response.data)
-    })
-    // Update the document title using the browser API
-  }, []);
+  console.log(props.nft)
+  
 
   return (
     <div>

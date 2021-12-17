@@ -31,10 +31,10 @@ const logintwo= (props) => {
     const handleSubmit = (event) => {
         event.preventDefault();
         console.log(form);
-        if (!captchaPassed){
-            alert("Please check the captcha to bid.")
-            return false
-        }
+        // if (!captchaPassed){
+        //     alert("Please check the captcha to bid.")
+        //     return false
+        // }
         console.log('apiurl')
         console.log(constants.API_URL + '/api/bid')
         var formObj = form
@@ -76,7 +76,7 @@ const logintwo= (props) => {
                   </div>
 
                   <div className="field-set">
-                     <input type="number" step="0.01" required onChange={handleChange} name='max_bid' id='max_bid' className="form-control" placeholder="Max Bid"/>
+                     <input type="number" step="0.01" required onChange={handleChange} name='max_bid' id='max_bid' className="form-control" placeholder="Bid in XRP"/>
                   </div>
                   
                   <div className="field-set" style={{marginTop: 10, marginBottom: 10}}>
