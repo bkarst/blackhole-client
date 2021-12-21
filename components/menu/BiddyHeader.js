@@ -3,6 +3,7 @@ import Breakpoint, { BreakpointProvider, setDefaultBreakpoints } from "react-soc
 import { header } from 'react-bootstrap';
 import Link from 'next/link'
 import useOnclickOutside from "react-cool-onclickoutside";
+import { FaTwitter, FaTelegramPlane } from "react-icons/fa";
 
 
 setDefaultBreakpoints([
@@ -89,12 +90,13 @@ const Header= function() {
 
           <Link href="/"  >
                 <img
-                    src="../img/logo.jpeg"
-                    style={{width: 80, cursor: 'pointer'}}
+                    src="../img/grenade.png"
+                    style={{width: 150, cursor: 'pointer'}}
                     className="img-fluid d-block"
                     alt="#"
                   />
                 </Link>
+                
               <BreakpointProvider>
               
                 <Breakpoint l down>
@@ -165,27 +167,46 @@ const Header= function() {
                 </Breakpoint>
                 <Breakpoint xl>
                   <div className='menu'>
+                  <div className='navbar-item'>
+                       <Link href="/">
+                         Live Auction
+                       </Link>
+                     </div>
                     <div className='navbar-item'>
-                    <Link href='/'>
+                       <Link href="/trustlines">
+                         Trustlines
+                       </Link>
+                     </div>
+                     <div className='navbar-item'>
+                            <a href='https://wearexrparmy.com/' target="_blank">
+                              XRP Army Home Page
+                            </a>
+                     </div>
+                    <div className='navbar-item'>
+                    
                       <div>
-                          <div className="dropdown-custom btn" 
-                             >
-                            Twitter
-                          </div>
-                          <div className="dropdown-custom btn" 
-                             >
-                            Telegram
-                          </div>
+                      <div className="dropdown-custom btn" >
                         </div>
-                        </Link>
+                          <div className="dropdown-custom btn" >
+                             <a href='https://twitter.com/WEAREXRPARMY' target="_blank">
+                                <FaTwitter size={30} />
+                            </a>
+                          </div>
+                          {/* <div className="dropdown-custom btn" 
+                             >
+                            <a href='https://www.telegram.com' target="_blank">
+                                <FaTelegramPlane size={30} />
+                            </a>
+                          </div> */}
+                        </div>
                     </div>
                   </div>
                 </Breakpoint>
               </BreakpointProvider>
 
-              <div className='mainside'>
+              {/* <div className='mainside'>
                 <NavLink to="/wallet" className="btn-main">Connect Wallet</NavLink>
-              </div>
+              </div> */}
                   
       </div>
 

@@ -48,7 +48,9 @@ $general: #a2a2a2;
 $black_soft: #333;
 $black_col: #2e333c;
 $black_more: #0f0f0f;
-$color: #FF343F;
+// $color: #4b5320;
+$color: #4b5320;
+$color2: #F7C752;
 $color_more: #FC202C;
 .col-white{
   color: $white;
@@ -651,8 +653,8 @@ p.lead {
     display: block;
     width: max-content;
     text-align: center;
-    color: #fff !important;
-    background: #FF343F;
+    color: #333 !important;
+    background: $color2;
     border-radius: 30px;
     letter-spacing: normal;
     outline: 0;
@@ -665,7 +667,7 @@ p.lead {
     box-shadow: 2px 2px 20px 0px rgba(131, 100, 226, 0);
     transition: all 0.3s ease;
     &:hover{
-      box-shadow: 2px 2px 20px 0px #FF343F;
+      box-shadow: 2px 2px 20px 0px $color2;
       transition: all 0.3s ease;
     }
     &.inline{
@@ -2366,7 +2368,7 @@ i.font60 {
     background: none;
     width: auto;
     height: auto;
-    color: rgba(252,52,63, .1);
+    color: rgba(75,83,32, .1);
     right: 0;
     top: 30%;
 }
@@ -2799,7 +2801,7 @@ i.font60 {
     border-radius: 30px;
     -moz-border-radius: 30px;
     -webkit-border-radius: 30px;
-    border: solid 2px $color;
+    border: solid 2px $color2;
     z-index: 1;
     color: $white;
     .Clock-days{
@@ -2829,7 +2831,7 @@ i.font60 {
     display: inline-block;
     width: 50px;
     height: auto;
-    background: $color;
+    background: $color2;
     margin-left: 10px;
     margin-top: -3px;
     border-radius: 100% !important;
@@ -2853,7 +2855,7 @@ i.font60 {
 
 .author_list_pp i {
     color: #ffffff;
-    background: $color;
+    background: $color2;
     font-size: 10px;
     padding: 3px;
     position: absolute;
@@ -3431,6 +3433,7 @@ i.font60 {
     i {
       color: #ffffff;
       background: $color;
+      background: #F7C752;
       font-size: 10px;
       padding: 3px;
       position: absolute;

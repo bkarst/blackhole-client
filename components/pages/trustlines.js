@@ -108,31 +108,19 @@ const homethree= (props) => (
 
       <div className='row'>
           <div className='col-lg-12'>
-              <h2 className='style-2'>Get Your XRP Army NFTs</h2>
-          </div>
-        </div>
-        <div className='container px-0'>
-          <FeatureBox/>
-        </div>
-
-      <div className='row'>
-          <div className='col-lg-12'>
-              <div className="items_filter">
-                <div className='dropdownSelect one'><Select className='select1' styles={customStyles} menuContainerStyle={{'zIndex': 999}} defaultValue={options[0]} options={options} /></div>
-                <div className='dropdownSelect two'><Select className='select1' styles={customStyles} defaultValue={options1[0]} options={options1} /></div>
-                <div className='dropdownSelect three'><Select className='select1' styles={customStyles} defaultValue={options2[0]} options={options2} /></div>
-                <form className="row form-dark" id="form_quick_search" name="form_quick_search">
-                    <div className="col">
-                        <input className="form-control" id="name_1" name="name_1" placeholder="search item here..." type="text" />
-                         <button id="btn-submit"><i className="fa fa-search bg-color-secondary"></i></button>
-                        <div className="clearfix"></div>
-                    </div>
-                </form>
-            </div>
+              <h2 className='style-2'>Trustlines</h2>
           </div>
         </div>
 
-       <ColumnNew nftListings={props.nftListings} />
+        <div>
+            Explaination...
+        </div>
+    <a target="_blank" href="https://xrpl.services/?issuer=rpxfUMMVUpkrk6KFiKuQJ8EDjJbbxqVd8h&currency=XrpAUnC&limit=169">
+        XrpAUnC
+    </a>
+      
+
+       
       </section>
 
 

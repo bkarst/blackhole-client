@@ -89,7 +89,7 @@ const GlobalStyles = createGlobalStyle`
     box-shadow: 0px 0px 0px 2px #8364e2;
   }
   .nft__item_action span{
-    color: #8364e2;
+    color: #4b5320;
   }
   .feature-box.style-3 i.wm{
     color: rgba(131,100,226, .1);
