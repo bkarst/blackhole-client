@@ -115,7 +115,7 @@ const homethree= (props) => (
         <div>
             Explaination...
         </div>
-    <a target="_blank" href="https://xrpl.services/?issuer=rpxfUMMVUpkrk6KFiKuQJ8EDjJbbxqVd8h&currency=XrpAUnC&limit=169">
+    <a rel="noreferrer" target="_blank" href="https://xrpl.services/?issuer=rpxfUMMVUpkrk6KFiKuQJ8EDjJbbxqVd8h&currency=XrpAUnC&limit=169">
         XrpAUnC
     </a>
       

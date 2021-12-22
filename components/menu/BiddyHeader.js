@@ -178,7 +178,7 @@ const Header= function() {
                        </Link>
                      </div>
                      <div className='navbar-item'>
-                            <a href='https://wearexrparmy.com/' target="_blank">
+                            <a rel="noreferrer" href='https://wearexrparmy.com/' target="_blank">
                               XRP Army Home Page
                             </a>
                      </div>
@@ -188,7 +188,7 @@ const Header= function() {
                       <div className="dropdown-custom btn" >
                         </div>
                           <div className="dropdown-custom btn" >
-                             <a href='https://twitter.com/WEAREXRPARMY' target="_blank">
+                             <a rel="noreferrer" href='https://twitter.com/WEAREXRPARMY' target="_blank">
                                 <FaTwitter size={30} />
                             </a>
                           </div>
