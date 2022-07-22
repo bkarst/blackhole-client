@@ -172,6 +172,16 @@ const Header= function() {
                          Live Auction
                        </Link>
                      </div>
+                     <div className='navbar-item'>
+                       <Link href="/admin" >
+                         Admin
+                       </Link>
+                     </div>
+                     <div className='navbar-item'>
+                       <Link href="/polls">
+                         Polls
+                       </Link>
+                     </div>
                     <div className='navbar-item'>
                        <Link href="/trustlines">
                          Trustlines

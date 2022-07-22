@@ -100,15 +100,11 @@ const GlobalStyles = createGlobalStyle`
 const homethree= (props) => (
   <div>
   <GlobalStyles />
-  
-  
-        
-      
       <section className='container' style={{marginTop: 30}}>
 
       <div className='row'>
           <div className='col-lg-12'>
-              <h2 className='style-2'>Get Your XRP Army NFTs</h2>
+              <h2 className='style-2'>Get Your XRP Army NFTs Here.</h2>
           </div>
         </div>
         <div className='container px-0'>

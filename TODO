@@ -1,13 +1,16 @@
+create data structure for polls
+create poll form
+edit poll form
+
+
+Email Auction winner using rails polling event whenever. 
 Fix the mobile menu. 
-
 Add a link to step 2 on home page. 
+Add show/hide ability to NFT. 
 
-Add show/hide ability. 
-
+Add 'no auctions available' when there is no nfts available. 
 Extend auction after high bid. 
-put filters on similar to explore
-Home, create and sell. 
-Email Auction winner, 
+
 
 Go through a dry run of sending someone an NFT. 
 
