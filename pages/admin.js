@@ -37,7 +37,7 @@ export default function Home() {
           <div>
             
         <div>
-            Admin Polls
+            Polls
         </div>
         <div>
         <Link href="/pollform">

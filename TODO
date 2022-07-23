@@ -1,7 +1,41 @@
+https://rpc.cosmos.network/
+
+https://cosmoshub.validator.network:443
+
+curl localhost:26657/block?height=5
+
+curl https://stargate.cosmos.network/block?height=5
+
+
+curl https://rpc.cosmos.network:26657/block?height=5
+
+curl https://cosmoshub.validator.network:26657/block?height=5
+
+
 create data structure for polls
 create poll form
 edit poll form
+poll
+    - description
+    - name
+    - duration
+    - start time
+    - chain (juno)
 
+poll option 
+    - description
+
+poll campaign
+    - poll id
+    - start datetime
+    - end datetime
+    - chain 
+
+poll responses
+
+    - respondant crypto address
+    - poll instance id
+    - 
 
 Email Auction winner using rails polling event whenever. 
 Fix the mobile menu. 
