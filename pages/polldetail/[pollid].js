@@ -8,6 +8,8 @@ import { useRouter } from 'next/router'
 import BiddyHeader from '../../components/menu/BiddyHeader';
 import EditPollForm from '../../components/components/EditPollForm'
 import constants from '../../src/constants';
+import PollCampaignList from '../../components/components/PollCampaignList'
+import Footer from '../../components/components/footer';
 
 export async function getServerSideProps(context) {
   const pollid = context.params.pollid;
@@ -47,7 +49,8 @@ export default function NftDetail({poll}) {
       </Head>
       <BiddyHeader />
       <EditPollForm poll={poll} />
-      
+      <PollCampaignList poll={poll} />
+      <Footer />
     </div>
   )
 }

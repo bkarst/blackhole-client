@@ -1,3 +1,9 @@
+get active campaigns from poll.
+deactiviate a campaigns
+only one active poll. 
+
+https://lcd-cosmos.cosmostation.io/cosmos/bank/v1beta1/balances/cosmos15uv6hx0a6khw45fj29cavrxvfenq7z03qc7lra?pagination.limit=1000
+
 https://rpc.cosmos.network/
 
 https://cosmoshub.validator.network:443
@@ -10,7 +16,12 @@ curl https://stargate.cosmos.network/block?height=5
 curl https://rpc.cosmos.network:26657/block?height=5
 
 curl https://cosmoshub.validator.network:26657/block?height=5
+cosmos14n54vflfey7k3uhw2p2kp7emfqw4muqd832msu
 
+https://lcd-cosmos.cosmostation.io/cosmos/bank/v1beta1/balances/cosmos15uv6hx0a6khw45fj29cavrxvfenq7z03qc7lra?pagination.limit=1000
+
+
+juno14n54vflfey7k3uhw2p2kp7emfqw4muqd832msu
 
 create data structure for polls
 create poll form

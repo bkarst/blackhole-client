@@ -2,7 +2,8 @@ import React from "react"
 import Link from 'next/link'
 
 // eslint-disable-next-line react/display-name
-const PollListing = ({poll, pollOptions}) => {
+const PollListing = ({poll, pollOptions, openModalFunction, startCampaignFunction}) => {
+
     return <div style={{marginTop: 20, marginBottom:20, backgroundColor: "#333333"}}>
         <div style={{display: 'flex', flexDirection: 'row'}}>
             <div>
@@ -10,7 +11,7 @@ const PollListing = ({poll, pollOptions}) => {
                 {poll.title}
                 </Link>
             </div>
-            <div style={{marginLeft: 30}}>
+            <div style={{marginLeft: 30}} onClick={() => openModalFunction(poll) } >
                 Start Campaign
             </div>
         </div>

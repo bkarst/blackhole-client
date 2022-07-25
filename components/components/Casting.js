@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Clock from "../components/Clock";
-import Footer from '../components/footer';
+import Clock from "./Clock";
+import Footer from './footer';
 import axios from 'axios'
 import constants from '../../src/constants';
 import Modal from 'react-modal';
@@ -9,7 +9,6 @@ import Modal from 'react-modal';
 
 const customStyles = {
     content: {
-    
       top: '50%',
       backgroundColor: '#000',
       left: '50%',
