@@ -30,3 +30,83 @@
       text-align: center;
     font-size: 16px;
   }
+  
+  .page-title{
+    font: 700 30px/40px poppins,Helvetica,Arial,Verdana,sans-serif;
+    color: #fff;
+    text-transform: none;
+    color: var(--the7-h1-color);
+    font: var(--the7-h1-font);
+    text-transform: var(--the7-h1-text-transform);
+    letter-spacing: var(--the7-h1-letter-spacing);
+    word-spacing: var(--the7-h1-word-spacing);
+    text-decoration: var(--the7-h1-text-decoration);
+  }
+
+  .elementor-element {
+    font-family: Poppins, Helvetica, Arial, Verdana, sans-serif;
+    --flex-direction: initial;
+    --flex-wrap: initial;
+    --justify-content: initial;
+    --align-items: initial;
+    --align-content: initial;
+    --gap: initial;
+    --flex-basis: initial;
+    --flex-grow: initial;
+    --flex-shrink: initial;
+    --order: initial;
+    --align-self: initial;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: var(--flex-direction);
+    flex-direction: var(--flex-direction);
+    -ms-flex-wrap: var(--flex-wrap);
+    flex-wrap: var(--flex-wrap);
+    -webkit-box-pack: var(--justify-content);
+    -ms-flex-pack: var(--justify-content);
+    justify-content: var(--justify-content);
+    -webkit-box-align: var(--align-items);
+    -ms-flex-align: var(--align-items);
+    align-items: var(--align-items);
+    -ms-flex-line-pack: var(--align-content);
+    align-content: var(--align-content);
+    gap: var(--gap);
+    -ms-flex-preferred-size: var(--flex-basis);
+    flex-basis: var(--flex-basis);
+    -webkit-box-flex: var(--flex-grow);
+    -ms-flex-positive: var(--flex-grow);
+    flex-grow: var(--flex-grow);
+    -ms-flex-negative: var(--flex-shrink);
+    flex-shrink: var(--flex-shrink);
+    -webkit-box-ordinal-group: var(--order);
+    -ms-flex-order: var(--order);
+    order: var(--order);
+    -ms-flex-item-align: var(--align-self);
+    align-self: var(--align-self);
+}
+
+.dot {
+    height: 100px;
+    width: 100px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  .poll-opts-container{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .poll-opt-container{
+    margin: 100;
+  }
+
+  .poll-opt-label{
+    text-align: center;
+  }
+
+  .poll-opt{
+    cursor: pointer;
+    margin: 100px;
+  }

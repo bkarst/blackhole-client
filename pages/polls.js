@@ -105,17 +105,10 @@ export async function getServerSideProps(context) {
 
 export default function Home(props) {
   console.log('props,', props.pollCampaign)
-  const castVote = async () => {
+  const castVote = async (pollOptionId) => {
+    console.log('pollOptionId', pollOptionId)
   var keplr = await getKeplr()
   console.log(keplr)
-      // console.log(response.getKey(''))
-
-
-
-
-
-
-
       const chainId = "juno-1";
 
       // // Enabling before using the Keplr is recommended.
@@ -133,15 +126,30 @@ export default function Home(props) {
       //https://lcd-juno.cosmostation.io/cosmos/bank/v1beta1/balances/juno1dru5985k4n5q369rxeqfdsjl8ezutch8y9vuau?pagination.limit=1000
       const balances = await axios.get(`https://lcd-juno.cosmostation.io/cosmos/bank/v1beta1/balances/${accounts[0].address}?pagination.limit=1000`)
       // const json = await balances.json()
-      console.log(accounts)
-      console.log(balances)
+      console.log('accounts', accounts)
+      console.log('balances', balances)
       // // Initialize the gaia api with the offline signer that is injected by Keplr extension.
       // const cosmJS = new SigningCosmosClient(
       //     "https://lcd-cosmoshub.keplr.app",
       //     accounts[0].address,
       //     offlineSigner,
       // );
-
+      // const title = document.getElementById("description").value;
+      var formObj = { 
+        address: accounts[0].address,
+        poll_campaign_id: pollCampaign.id, 
+        poll_option_id: pollOptionId
+      }
+      console.log('formObj', formObj)
+      axios.post(constants.API_URL + '/api/poll_responses/', formObj).then(response => {
+        if (response.data.error){
+          alert(response.data.error)
+        }
+        else {
+          alert("Thank you for your response!")
+          window.location.reload();
+        }
+      })
 
 
 
@@ -172,26 +180,49 @@ export default function Home(props) {
       </Head>
       <BiddyHeader />
 
-      <section className='container' style={{marginTop: 30}}>
+      <section className='container' style={{padding: 10, marginTop: 120}}>
         <div className='row'>
           <div className='col-lg-12'>
-            Black Hole Voting
+            <div className="page-title-head hgroup">
+              <h3>Blackhole Voting</h3>
+              </div>
           </div>
         </div>
+        </section>
+        <section className="container" style={{padding: 10}} >
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-809a63a" data-id="809a63a" data-element_type="column">
+			    <div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-e12331c elementor-widget elementor-widget-text-editor" data-id="e12331c" data-element_type="widget" data-widget_type="text-editor.default">
+				  <div class="elementor-widget-container">
+							<p>Each RPR you hold in your wallet equals 1 vote. If you vote more than once with the same wallet, only your latest vote will count.&nbsp; Whatever your balance of RPR is at the end of the vote will be the number of votes cast for you. You will be voting with the XUMM app. If you’d like to split your votes you can hold RPR in multiple wallets and vote with each wallet.</p><p>Make sure you have our trust line set up in your XUMM app as well.&nbsp; Click here to set the trust line.</p><p>If you would like to promote a particular voting option online or through social media, each voting option has a unique URL associated with it. Simply right click on the voting option, copy the link address and share it online!</p>						</div>
+				  </div>
+				</div>
+		</div>
+							</div>
+		</section>
+    <section className="container" style={{padding: 10}} >
         <div className='row'>
           <div className='col-lg-12'>
-          <Countdown date={pollCampaign.end_time} renderer={renderer} />
-
-      <div>
-
+            <Countdown date={pollCampaign.end_time} renderer={renderer} />
+          <div>
+        </div>
+        <div className='poll-opts-container' >
+        {poll.poll_options.map((pollOption, index) =>
+        <div key={index} className='poll-opt' onClick={() => castVote(pollOption.id)}>
+            <div>
+              <div className='dot'>
+              </div>
+              <div className='poll-opt-label' >
+                {pollOption.description}
+              </div>
+            </div>
+          </div>
+        )}
+        </div>
       </div>
-
-      {poll.poll_options.map((pollOption, index) =>
-            <div onClick={castVote} key={index}> ----- {pollOption.description}</div>
-        )}  
-          </div>
-        </div>
-      </section>
     </div>
+  </section>
+</div>
   )
 }
