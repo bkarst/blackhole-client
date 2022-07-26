@@ -2,11 +2,59 @@ import React, { useState, useEffect } from 'react';
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+// import '../src/stylesheets/App.css'
 import HomePage from '../components/pages/home'
 import Collection from '../components/pages/colection'
 import axios from 'axios'
 import BiddyHeader from '../components/menu/BiddyHeader';
 import constants from '../src/constants';
+import Countdown from 'react-countdown';
+
+const renderer = ({ days, hours, minutes, seconds, completed }) => {
+  if (completed) {
+    // Render a completed state
+    return <div>Poll active</div>;
+  } else {
+    // Render a countdown
+    return (
+    <div className='countdown-container' >
+      <div className='countdown-box' >
+        <div className='elementor-countdown-digits'>
+          {days}
+        </div>
+        <div className='elementor-countdown-label'>
+          Days
+        </div>
+      </div>
+      <div className='countdown-box' >
+        <div className='elementor-countdown-digits'>
+          {hours}
+        </div>
+        <div className='elementor-countdown-label'>
+          Hours
+        </div>
+      </div>
+      <div className='countdown-box' >
+        <div className='elementor-countdown-digits'>
+        {minutes}
+        </div>
+        <div className='elementor-countdown-label'>
+          Mins
+        </div>
+      </div>
+      <div className='countdown-box' >
+        <div className='elementor-countdown-digits'>
+          {seconds}
+        </div>
+        <div className='elementor-countdown-label'>
+          Secs
+        </div>
+      </div>
+    </div>
+    )
+  }
+};
+
 
 async function getKeplr() {
   if (window.keplr) {
@@ -102,6 +150,7 @@ export default function Home(props) {
     
   }
   const poll = props.pollCampaign.poll
+  const pollCampaign = props.pollCampaign
   const [nftListings, setNftListings] = useState([]);
   // useEffect(() => {
   //   axios.get(constants.API_URL + '/api/nft_listings').then(response => {
@@ -109,6 +158,10 @@ export default function Home(props) {
   //   })
   //   // Update the document title using the browser API
   // }, []);
+  const endTime = Date.parse(poll.end_time)
+  const startTime = Date.parse(poll.start_time)
+  console.log('endTime', pollCampaign.end_time)
+  console.log('startTime', pollCampaign.start_time)
   
   return (
     <div>
@@ -119,15 +172,26 @@ export default function Home(props) {
       </Head>
       <BiddyHeader />
 
+      <section className='container' style={{marginTop: 30}}>
+        <div className='row'>
+          <div className='col-lg-12'>
+            Black Hole Voting
+          </div>
+        </div>
+        <div className='row'>
+          <div className='col-lg-12'>
+          <Countdown date={pollCampaign.end_time} renderer={renderer} />
+
       <div>
-        {poll.title}
+
       </div>
 
       {poll.poll_options.map((pollOption, index) =>
             <div onClick={castVote} key={index}> ----- {pollOption.description}</div>
-        )}
-
-
+        )}  
+          </div>
+        </div>
+      </section>
     </div>
   )
 }

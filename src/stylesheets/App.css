@@ -1,0 +1,32 @@
+.elementor-countdown-digits, .elementor-countdown-hours{
+    font-family: "Roboto Mono", Sans-serif;
+      font-size: 26px;
+      font-weight: 600;
+      text-align: center;
+  }
+
+  .countdown-box {
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+
+  .countdown-container{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    justify-content: center;
+    background: #888888;
+    margin: auto;
+    width: 250px;
+    align-items: center;
+    border-radius: 10px;
+  }
+
+  .elementor-countdown-label{
+    font-family: "Roboto Mono", Sans-serif;
+      font-weight: 600;
+      text-align: center;
+    font-size: 16px;
+  }
