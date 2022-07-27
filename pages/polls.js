@@ -10,10 +10,12 @@ import BiddyHeader from '../components/menu/BiddyHeader';
 import constants from '../src/constants';
 import Countdown from 'react-countdown';
 
+
+
 const renderer = ({ days, hours, minutes, seconds, completed }) => {
   if (completed) {
     // Render a completed state
-    return <div>Poll active</div>;
+    return <div></div>;
   } else {
     // Render a countdown
     return (
@@ -104,6 +106,11 @@ export async function getServerSideProps(context) {
 
 
 export default function Home(props) {
+
+  if (props.pollCampaign.error){
+    return <div>No Polls currently upcoming or active</div>
+  }  
+
   console.log('props,', props.pollCampaign)
   const castVote = async (pollOptionId) => {
     console.log('pollOptionId', pollOptionId)
@@ -163,28 +170,18 @@ export default function Home(props) {
           alert("Thank you for your response! See the preliminary results below. ")
           window.location.reload();
         }
-      })
-
-
-
-
-
-    
+      })    
   }
   const poll = props.pollCampaign.poll
   const pollCampaign = props.pollCampaign
   const [nftListings, setNftListings] = useState([]);
-  // useEffect(() => {
-  //   axios.get(constants.API_URL + '/api/nft_listings').then(response => {
-  //     setNftListings(response.data)
-  //   })
-  //   // Update the document title using the browser API
-  // }, []);
+
   const endTime = Date.parse(poll.end_time)
   const startTime = Date.parse(poll.start_time)
   console.log('endTime', pollCampaign.end_time)
   console.log('startTime', pollCampaign.start_time)
-  
+  // 
+  // poll.active = 
   return (
     <div>
       <Head>
@@ -218,14 +215,25 @@ export default function Home(props) {
     <section className="container" style={{padding: 10}} >
         <div className='row'>
           <div className='col-lg-12'>
-            <Countdown date={pollCampaign.end_time} renderer={renderer} />
+            { pollCampaign.is_current_poll && 
+              <Countdown date={pollCampaign.end_time} renderer={renderer} />
+            }
+            { !pollCampaign.is_current_poll && 
+              <div>
+                <div style={{textAlign: 'center'}}>
+                  Time Till Next Poll
+                </div>
+                <Countdown date={pollCampaign.start_time} renderer={renderer} />
+              </div>
+            }
           <div>
         </div>
         <div className='poll-opts-container' >
-        {poll.poll_options.map((pollOption, index) =>
+        {pollCampaign.is_current_poll && poll.poll_options.map((pollOption, index) =>
         <div key={index} className='poll-opt' onClick={() => castVote(pollOption.id)}>
             <div>
               <div className='dot'>
+                <img src={pollOption.thumbnail_url} height={100} />
                 <div className='poll-opt-label' >
                   {pollOption.description}
                 </div>

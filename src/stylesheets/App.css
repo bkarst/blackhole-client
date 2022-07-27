@@ -88,7 +88,7 @@
 .dot {
     height: 100px;
     width: 100px;
-    background-color: #bbb;
+    /* background-color: #bbb; */
     border-radius: 50%;
     display: inline-block;
   }
@@ -105,7 +105,7 @@
   .poll-opt-label{
     text-align: center;
     margin-top: 38px;
-    color: #000000;
+    color: #ffffff;
   }
 
   .poll-opt{

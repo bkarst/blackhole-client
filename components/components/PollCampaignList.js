@@ -4,7 +4,9 @@ import Link from 'next/link'
 // eslint-disable-next-line react/display-name
 const PollCampaignList = ({poll}) => {
 
-    return <div >
+    return <section>
+        <div className="row">
+      <div className="col-lg-7 offset-lg-1 mb-5">
         <div>
             Campaigns
         </div>
@@ -14,13 +16,13 @@ const PollCampaignList = ({poll}) => {
                 <div style={{margin: 5}} > ----- {pollCampaign.id}</div>
                 <div style={{margin: 5}} >  {pollCampaign.start_time}</div>
                 <div style={{margin: 5}} >  {pollCampaign.end_time}</div>
-                <div style={{margin: 5}} > ----- {pollCampaign.id}</div>
-                <div style={{margin: 5}} >delete</div>
             </div>
         )}
         
     </div>
     </div>
+    </div>
+    </section>
 }
 
 export default PollCampaignList;
