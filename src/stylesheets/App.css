@@ -104,6 +104,8 @@
 
   .poll-opt-label{
     text-align: center;
+    margin-top: 38px;
+    color: #000000;
   }
 
   .poll-opt{

@@ -14,6 +14,8 @@ const PollCampaignList = ({poll}) => {
                 <div style={{margin: 5}} > ----- {pollCampaign.id}</div>
                 <div style={{margin: 5}} >  {pollCampaign.start_time}</div>
                 <div style={{margin: 5}} >  {pollCampaign.end_time}</div>
+                <div style={{margin: 5}} > ----- {pollCampaign.id}</div>
+                <div style={{margin: 5}} >delete</div>
             </div>
         )}
         

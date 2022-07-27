@@ -108,23 +108,37 @@ export default function Home(props) {
   const castVote = async (pollOptionId) => {
     console.log('pollOptionId', pollOptionId)
   var keplr = await getKeplr()
+  if (keplr === undefined) {
+    alert("Please install keplr. To continue.")
+    window.open("https://www.keplr.app/", '_blank').focus();
+    return
+  }
   console.log(keplr)
       const chainId = "juno-1";
 
       // // Enabling before using the Keplr is recommended.
       // // This method will ask the user whether to allow access if they haven't visited this website.
       // // Also, it will request that the user unlock the wallet if the wallet is locked.
+
+      try {
       await keplr.enable(chainId);
-  
+      console.log('keplr')
+      }
+      catch (err) {
+        console.log(err)
+        alert("Please Sign up for Keplr");
+        return
+      }
       const offlineSigner = window.keplr.getOfflineSigner(chainId);
-  
-      // // You can get the address/public keys by `getAccounts` method.
+      console.log('keplr2')
       // // It can return the array of address/public key.
       // // But, currently, Keplr extension manages only one address/public key pair.
       // // XXX: This line is needed to set the sender address for SigningCosmosClient.
       const accounts = await offlineSigner.getAccounts();
+      console.log('keplr2')
       //https://lcd-juno.cosmostation.io/cosmos/bank/v1beta1/balances/juno1dru5985k4n5q369rxeqfdsjl8ezutch8y9vuau?pagination.limit=1000
       const balances = await axios.get(`https://lcd-juno.cosmostation.io/cosmos/bank/v1beta1/balances/${accounts[0].address}?pagination.limit=1000`)
+      console.log('keplr2')
       // const json = await balances.json()
       console.log('accounts', accounts)
       console.log('balances', balances)
@@ -146,7 +160,7 @@ export default function Home(props) {
           alert(response.data.error)
         }
         else {
-          alert("Thank you for your response!")
+          alert("Thank you for your response! See the preliminary results below. ")
           window.location.reload();
         }
       })
@@ -212,9 +226,9 @@ export default function Home(props) {
         <div key={index} className='poll-opt' onClick={() => castVote(pollOption.id)}>
             <div>
               <div className='dot'>
-              </div>
-              <div className='poll-opt-label' >
-                {pollOption.description}
+                <div className='poll-opt-label' >
+                  {pollOption.description}
+                </div>
               </div>
             </div>
           </div>

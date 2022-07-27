@@ -32,7 +32,12 @@ export default function EditPollForm({poll}){
     }
     const addOption = () => {
         const title = document.getElementById("description").value;
-        var formObj = { description: title, poll_id: poll.id }
+        const thumbnailUrl = document.getElementById("thumbnail_url").value;
+        var formObj = { 
+            description: title, 
+            poll_id: poll.id, 
+            thumbnail_url: thumbnailUrl 
+          }
         console.log(constants.API_URL + '/api/polls')
         axios.post(constants.API_URL + '/api/poll_options/', formObj).then(response => {
             console.log(response)
@@ -47,7 +52,7 @@ export default function EditPollForm({poll}){
 
     return <div>
 
-    <section className='jumbotron breadcumb no-bg'>
+    <section className='container'>
       <div className='mainbreadcumb'>
         <div className='container'>
           <div className='row m-10-hor'>
@@ -68,6 +73,8 @@ export default function EditPollForm({poll}){
                   <div className="field-set">
                       <h5>Description</h5>
                       <input style={{border: '1px solid #ffffff' }} required type="text" name="description" id="description" className="form-control" />
+                      <h5>Thumbnail</h5>
+                      <input style={{border: '1px solid #ffffff' }} required type="text" name="thumbnail_url" id="thumbnail_url" className="form-control" />
                       <input onClick={addOption} type="button" id="submit" className="btn-main" value="Add Option"/>
                   </div>
               </form>
