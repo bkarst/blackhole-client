@@ -4,13 +4,13 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 // import '../src/stylesheets/App.css'
 import HomePage from '../components/pages/home'
+import PollResultsTable from '../components/components/PollResultsTable'
 import Collection from '../components/pages/colection'
 import axios from 'axios'
 import BiddyHeader from '../components/menu/BiddyHeader';
 import constants from '../src/constants';
 import Countdown from 'react-countdown';
-
-
+import Footer from '../components/components/footer';
 
 const renderer = ({ days, hours, minutes, seconds, completed }) => {
   if (completed) {
@@ -245,6 +245,12 @@ export default function Home(props) {
       </div>
     </div>
   </section>
+  <section className="container" style={{padding: 10}} >
+        <div className='row'>
+          <PollResultsTable pollResults={pollCampaign.results} />
+        </div>
+  </section>
+  <Footer />
 </div>
   )
 }

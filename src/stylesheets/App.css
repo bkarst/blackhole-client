@@ -112,3 +112,23 @@
     cursor: pointer;
     margin: 100px;
   }
+
+  .pollResults td, .pollResults th{
+    text-align: center;
+    padding: 15px;
+  }
+  .pollResults tr th:nth-child(even){
+    background: #000000;
+    text-align: center;
+  }
+
+  .pollResults tr td:nth-child(even){
+    background: #000000;
+    text-align: center;
+  }
+
+  .pollResults{
+    background: #eee;
+    margin: auto;
+    border-radius: 10px;
+  }
