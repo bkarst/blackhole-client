@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import TrustLines from '../components/pages/trustlines'
+import TrustLines from '../components/pages/home2'
 import axios from 'axios'
 import BiddyHeader from '../components/menu/BiddyHeader';
 import constants from '../src/constants';

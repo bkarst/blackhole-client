@@ -9,6 +9,7 @@ import BiddyHeader from '../../components/menu/BiddyHeader';
 import EditPollForm from '../../components/components/EditPollForm'
 import constants from '../../src/constants';
 import PollCampaignList from '../../components/components/PollCampaignList'
+
 import Footer from '../../components/components/footer';
 
 export async function getServerSideProps(context) {
