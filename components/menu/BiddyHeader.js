@@ -86,12 +86,12 @@ const Header= function() {
               <div className='navbar-title navbar-item'>
                 
               </div>
-          </div>
+          </div> 
 
           <Link href="/"  >
                 <img
-                    src="../img/grenade.png"
-                    style={{width: 150, cursor: 'pointer'}}
+                    src="../img/blkh.png"
+                    style={{width: 100, cursor: 'pointer'}}
                     className="img-fluid d-block"
                     alt="#"
                   />
