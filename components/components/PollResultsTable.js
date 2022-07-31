@@ -2,6 +2,7 @@ import React from "react"
 import Link from 'next/link'
 import axios from 'axios'
 import constants from '../../src/constants';
+import DonutChart from '../components/DonutChart' 
 
 // eslint-disable-next-line react/display-name
 const PollResultsTable = ({ pollResults }) => {
@@ -28,8 +29,9 @@ const PollResultsTable = ({ pollResults }) => {
                 <td>{pollOption.weighted_votes }</td>
                 <td>{pollOption.weighted_percent }% </td>
             </tr>
-        )}    
+        )}
         </table>
+        < DonutChart />
         </div>
 }
 

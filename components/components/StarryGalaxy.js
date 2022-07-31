@@ -291,7 +291,7 @@ window.addEventListener('resize',function(){
 
 const StarryGalaxy = () => {
     if ((typeof window !== 'undefined')){
-      // React.useEffect(() => run(), [])
+      React.useEffect(() => run(), [])
     }
     return <canvas style={{position: 'fixed', background: '#000000'}} id="canv"></canvas>
 };

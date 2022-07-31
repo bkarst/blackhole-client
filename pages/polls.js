@@ -5,6 +5,9 @@ import styles from '../styles/Home.module.css'
 // import '../src/stylesheets/App.css'
 import HomePage from '../components/pages/home'
 import PollResultsTable from '../components/components/PollResultsTable'
+import PollOption from '../components/components/PollOption'
+import StarryGalaxy from '../components/components/StarryGalaxy'
+
 import Collection from '../components/pages/colection'
 import axios from 'axios'
 import BiddyHeader from '../components/menu/BiddyHeader';
@@ -156,7 +159,7 @@ export default function Home(props) {
       //     offlineSigner,
       // );
       // const title = document.getElementById("description").value;
-      var formObj = { 
+      var formObj = {   
         address: accounts[0].address,
         poll_campaign_id: pollCampaign.id, 
         poll_option_id: pollOptionId
@@ -191,7 +194,7 @@ export default function Home(props) {
       </Head>
       <BiddyHeader />
 
-      <section className='container' style={{padding: 10, marginTop: 120}}>
+      <section className='container' style={{padding: 10, marginTop: 180}}>
         <div className='row'>
           <div className='col-lg-12'>
             <div className="page-title-head hgroup">
@@ -230,16 +233,7 @@ export default function Home(props) {
         </div>
         <div className='poll-opts-container' >
         {pollCampaign.is_current_poll && poll.poll_options.map((pollOption, index) =>
-        <div key={index} className='poll-opt' onClick={() => castVote(pollOption.id)}>
-            <div>
-              <div className='dot'>
-                <img src={pollOption.thumbnail_url} height={100} />
-                <div className='poll-opt-label' >
-                  {pollOption.description}
-                </div>
-              </div>
-            </div>
-          </div>
+          <PollOption key={index} pollOption={pollOption} castVote={castVote} />
         )}
         </div>
       </div>

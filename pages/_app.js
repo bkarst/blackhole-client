@@ -6,7 +6,11 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 // import '../node_modules/bootstrap/dist/js/bootstrap.js';
 import '../assets/style.scss';
 import '../styles/globals.css'
+
+import '../src/stylesheets/Roadmap.css'
 import '../src/stylesheets/App.css'
+import '../src/stylesheets/DonutChart.css'
+
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />
 }

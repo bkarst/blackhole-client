@@ -106,7 +106,7 @@ export default function Home() {
             </form>
         </div>
     </Modal>
-      <section className='container' style={{marginTop: 30}}>
+      <section className='container' style={{marginTop: 180}}>
 
       <div className='row'>
           <div className='col-lg-12'>
