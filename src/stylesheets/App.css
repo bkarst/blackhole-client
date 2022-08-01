@@ -97,6 +97,7 @@
   .poll-opts-container{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
   }
 
   .poll-opt-container{
@@ -364,6 +365,7 @@
 }
 .donut-charter-cont{
   margin-top: 20px;
+  text-align: center;
 }
 
 .donut {

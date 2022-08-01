@@ -58,7 +58,7 @@ export default function Home() {
         alert(response.data.error)
       }
       else {
-        // window.location.reload();
+        window.location.reload();
       }
   })
     // startCampaign F
