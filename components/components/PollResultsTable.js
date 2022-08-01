@@ -31,7 +31,7 @@ const PollResultsTable = ({ pollResults }) => {
             </tr>
         )}
         </table>
-        < DonutChart />
+        
         </div>
 }
 

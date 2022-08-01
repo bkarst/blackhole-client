@@ -293,6 +293,6 @@ const StarryGalaxy = () => {
     if ((typeof window !== 'undefined')){
       React.useEffect(() => run(), [])
     }
-    return <canvas style={{position: 'fixed', background: '#000000'}} id="canv"></canvas>
+    return <canvas style={{zIndex: -1, position: 'fixed', background: '#000000'}} id="canv"></canvas>
 };
 export default StarryGalaxy;

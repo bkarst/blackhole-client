@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Roadmap = () => {
+const DonutChart = () => {
 
     return (
         <><div class="svg-item">
@@ -23,4 +23,4 @@ const Roadmap = () => {
     )
 
 };
-export default Roadmap;
+export default DonutChart;

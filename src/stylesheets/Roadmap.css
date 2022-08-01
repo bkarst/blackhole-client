@@ -33,6 +33,7 @@ p, a, ul li{
 }
 
  .slide{
+    cursor: pointer;
    margin-left:-50px;
     display: inline-block;
     width: 400px;
@@ -52,6 +53,7 @@ p, a, ul li{
 
 .slide-container{
   padding:20px 30px;
+  user-select: none; 
 }
 
 .slide-container ul{

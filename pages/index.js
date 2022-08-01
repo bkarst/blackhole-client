@@ -9,6 +9,9 @@ import axios from 'axios'
 import BiddyHeader from '../components/menu/BiddyHeader';
 import StarryGalaxy from '../components/components/StarryGalaxy';
 import constants from '../src/constants';
+import Reveal from 'react-awesome-reveal';
+import { fadeIn } from '../lib/CssHelper'
+
 
 export default function Home() {
   const [nftListings, setNftListings] = useState([]);
@@ -34,6 +37,11 @@ export default function Home() {
         <SliderMainHome />
       </section>
       <section>
+        <Reveal className='onStep' keyframes={fadeIn} delay={1000} duration={1000} triggerOnce>
+          <h2 className="col-white" style={{textAlign: 'center' }}>
+            Upcoming Missions
+          </h2>
+        </Reveal>
         <Roadmap />
       </section>
       

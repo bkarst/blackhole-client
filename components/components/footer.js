@@ -13,7 +13,7 @@ const footer= () => (
                             <div className="de-flex">
                                 <div className="de-flex-col">
                                     <span onClick={()=> window.open("", "_self")}>
-                                        <span className="copy">&copy; Copyright 2021 - XRP Army</span>
+                                        <span className="copy">&copy; Copyright 2021 - Blackhole</span>
                                     </span>
                                 </div>
                                 <div className="de-flex-col">
