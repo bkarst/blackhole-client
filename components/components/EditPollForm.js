@@ -79,7 +79,7 @@ export default function EditPollForm({poll}){
 
     return <div>
 
-    <section className='container'>
+    <section className='container' style={{marginTop: 100}}>
       <div className='mainbreadcumb'>
         <div className='container'>
           <div className='row m-10-hor'>
@@ -117,6 +117,9 @@ export default function EditPollForm({poll}){
     
     <section className='container'>
     <div className="row">
+      <div className="col-lg-7 offset-lg-1 mb-5">
+        Poll Options
+      </div>
       <div className="col-lg-7 offset-lg-1 mb-5">
           <form id="form-create-item" className="form-border" action="#">
               <div className="field-set">

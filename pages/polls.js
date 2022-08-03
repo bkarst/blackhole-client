@@ -19,7 +19,7 @@ import Footer from '../components/components/footer';
 import SliderVoting from '../components/components/SliderVoting'
 import FancyCountdown from '../components/components/FancyCountdown'
 import Reveal from 'react-awesome-reveal';
-import { fadeIn } from '../lib/CssHelper'
+import { fadeIn, fadeInUp } from '../lib/CssHelper'
 
 
 
@@ -115,6 +115,7 @@ export default function Home(props) {
       // const json = await balances.json()
       console.log('accounts', accounts)
       console.log('balances', balances)
+      const voting_balance = 10
       // // Initialize the gaia api with the offline signer that is injected by Keplr extension.
       // const cosmJS = new SigningCosmosClient(
       //     "https://lcd-cosmoshub.keplr.app",
@@ -122,7 +123,14 @@ export default function Home(props) {
       //     offlineSigner,
       // );
       // const title = document.getElementById("description").value;
+
+      if (voting_balance == 0) {
+        alert("You must hold Blackhole to vote. Visit Osmosis for more details. ")
+        return
+      }
+
       var formObj = {   
+        voting_balance: voting_balance,
         address: accounts[0].address,
         poll_campaign_id: pollCampaign.id, 
         poll_option_id: pollOptionId
@@ -184,11 +192,14 @@ export default function Home(props) {
   </section>
   <section className="container" style={{padding: 10}} >
         <div className='row'>
+        <Reveal className='onStep' keyframes={fadeInUp} delay={0} duration={600} triggerOnce >
           <h3 style={{zIndex: 999, margin: 'auto', textAlign: 'center', marginBottom: 20}}>
               Current Results
           </h3>
           <DonutChartPollResults pollResults={pollCampaign.results} />
+          </Reveal>
         </div>
+
   </section>
   <Footer />
 </div>

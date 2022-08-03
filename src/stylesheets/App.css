@@ -108,6 +108,8 @@
     text-align: center;
     margin-top: 38px;
     color: #ffffff;
+    font-family: 'Dongle', sans-serif;
+    font-size: 24px;
   }
 
   .tooltip-label {
@@ -115,14 +117,14 @@
     position: absolute;
     background: #eee;
     padding: 3px 14px;
-    border-radius: 7px;
+    border-radius: 5px;
     font-weight: 800;
     font-size: 13px;
     color: #000;
     text-align: center;
     top: -59px;
     margin: auto;
-    left: -17px;
+    left: 6px;
     width: 140px;
   }
 
@@ -371,4 +373,11 @@
 .donut {
 box-shadow: 5px 5px 15px rgb(0 0 0 / 20%), -5px -5px 15px rgb(255 255 255 / 5%), inset -5px -5px 10px rgb(255 255 255 / 5%), inset 5px 5px 10px rgb(0 0 0 / 20%);
 border-radius:50%;
+}
+
+.vote-container{
+  box-shadow: 0 2px 5px rgb(0 0 0 / 40%);
+    background: rgb(71 71 71 / 40%);
+    border-radius: 10px;
+    padding: 27px;
 }
