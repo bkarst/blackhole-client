@@ -2989,7 +2989,7 @@ const FancyCountdown = ({ pollCampaign }) => {
       
     return (<div className='col-lg-12'>
         <div className="wrapper">
-			  <div class="clock animated flipInX">
+			  <div className="clock animated flipInX">
 			  </div>
 		</div>
 		<canvas id="confetti"></canvas>
