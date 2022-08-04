@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
@@ -148,7 +148,7 @@ export default function Home(props) {
   }
   const poll = props.pollCampaign.poll
   const pollCampaign = props.pollCampaign
-  const [nftListings, setNftListings] = useState([]);
+  // const [nftListings, setNftListings] = useState([]);
 
   const endTime = Date.parse(poll.end_time)
   const startTime = Date.parse(poll.start_time)
@@ -184,7 +184,7 @@ export default function Home(props) {
         </div>
         <div className='poll-opts-container' >
         {pollCampaign.is_current_poll && poll.poll_options.map((pollOption, index) =>
-          <PollOption key={index} pollOption={pollOption} castVote={castVote} />
+          <div></div>
         )}
         </div>
       </div>

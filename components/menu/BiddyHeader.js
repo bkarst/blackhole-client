@@ -29,10 +29,11 @@ const NavLink = props => (
 
 const Header= function() {
 
-    const [openMenu, setOpenMenu] = React.useState(false);
-    const [openMenu1, setOpenMenu1] = React.useState(false);
-    const [openMenu2, setOpenMenu2] = React.useState(false);
-    const [openMenu3, setOpenMenu3] = React.useState(false);
+    const [openMenu, setOpenMenu] = useState(false);
+    const [openMenu1, setOpenMenu1] = useState(false);
+    const [openMenu2, setOpenMenu2] = useState(false);
+    const [openMenu3, setOpenMenu3] = useState(false);
+    const [showmenu, btn_icon] = useState(false);
     const handleBtnClick = () => {
       setOpenMenu(!openMenu);
     };
@@ -70,7 +71,7 @@ const Header= function() {
       closeMenu3();
     });
 
-    const [showmenu, btn_icon] = useState(false);
+    
     useEffect(() => {
     const header = document.getElementById("myHeader");
     const totop = document.getElementById("scroll-to-top");
@@ -90,7 +91,7 @@ const Header= function() {
 
           <Link href="/"  >
                 <img
-                    src="../img/blockholellc.png"
+                    src="../img/blacholealt.png"
                     style={{width: 150, cursor: 'pointer'}}
                     className="img-fluid d-block"
                     alt="#"
