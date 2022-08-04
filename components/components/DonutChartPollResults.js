@@ -9,7 +9,7 @@ const DonutChartPollResults = ({pollResults}) => {
             //     <td>{pollOption.weighted_votes }</td>
             //     <td>{pollOption.weighted_percent }% </td>
             // </tr>
-            <div key={index} ><div className="svg-item">
+            <div key={index} className="svg-item">
             <svg width="100%" height="100%" viewBox="0 0 40 40" className="donut">
                 <circle className="donut-hole" cx="20" cy="20" r="15.91549430918954" fill="#202631"></circle>
                 <circle className="donut-ring" cx="20" cy="20" r="15.91549430918954" fill="transparent" strokeWidth="3.5"></circle>
@@ -24,7 +24,6 @@ const DonutChartPollResults = ({pollResults}) => {
                 </g>
             </svg>
             </div>
-        </div>
         )}
         
         </div>
