@@ -184,7 +184,7 @@ export default function Home(props) {
         </div>
         <div className='poll-opts-container' >
         {pollCampaign.is_current_poll && poll.poll_options.map((pollOption, index) =>
-          <div></div>
+          <PollOption key={index} pollOption={pollOption} castVote={castVote} />
         )}
         </div>
       </div>
