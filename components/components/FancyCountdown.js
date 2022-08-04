@@ -2979,12 +2979,14 @@ function run2(pollCampaign) {
 }
 
 const FancyCountdown = ({ pollCampaign }) => {
-    if ((typeof window !== 'undefined')){
+    
         React.useEffect(() => {
-            run();
-            run2(pollCampaign);
+			if ((typeof window !== 'undefined')){
+            	run();
+            	run2(pollCampaign);
+			}
         }, [])
-      }
+      
     return (<div className='col-lg-12'>
         <div className="wrapper">
 			  <div class="clock animated flipInX">

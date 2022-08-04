@@ -89,9 +89,11 @@ var Slider = function() {
 
 
 const Roadmap = () => {
-    if ((typeof window !== 'undefined')){
-      React.useEffect(() => run(), [])
-    }
+    React.useEffect(() => {
+      if ((typeof window !== 'undefined')){
+      run()
+      }
+    }, [])
     return (
         <><div className="slider">
             <div className="slide active">
