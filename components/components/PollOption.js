@@ -9,7 +9,7 @@ export default function PollOption({castVote, pollOption}) {
 return (
     <div onMouseLeave={() => setOpen(false)} onMouseEnter={() => setOpen(true)} className='poll-opt' onClick={() => castVote(pollOption.id)}>
           <Reveal className='onStep' keyframes={fadeInUp} delay={0} duration={600}  >
-            <div class="tooltip-label" style={{display: isOpen ? 'inline' : 'none', position: 'absolute'}}>
+            <div className="tooltip-label" style={{display: isOpen ? 'inline' : 'none', position: 'absolute'}}>
               Click to Burn
             </div>
           </Reveal>
