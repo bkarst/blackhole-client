@@ -100,6 +100,7 @@ const GlobalStyles = createGlobalStyle`
 const homethree= (props) => (
   <div>
   <GlobalStyles />
+      
       <section className='container' style={{marginTop: 30}}>
 
       <div className='row'>
@@ -129,10 +130,11 @@ const homethree= (props) => (
         </div>
 
        <ColumnNew nftListings={props.nftListings} />
+
       </section>
 
 
-    <Footer />
+    
 
   </div>
 );

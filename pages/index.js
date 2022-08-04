@@ -11,6 +11,7 @@ import StarryGalaxy from '../components/components/StarryGalaxy';
 import constants from '../src/constants';
 import Reveal from 'react-awesome-reveal';
 import { fadeIn } from '../lib/CssHelper'
+import Footer from '../components/components/footer';
 
 
 export default function Home() {
@@ -44,9 +45,9 @@ export default function Home() {
         </Reveal>
         <Roadmap />
       </section>
-      
 
-      <HomePage nftListings={nftListings} />
+      
+      <Footer />
 
     </div>
   )

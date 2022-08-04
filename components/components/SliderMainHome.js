@@ -1,6 +1,7 @@
 import React from 'react';
 import Reveal from 'react-awesome-reveal';
 import { keyframes } from "@emotion/react";
+import Link from 'next/link'
 
 const fadeInUp = keyframes`
   0% {
@@ -42,7 +43,9 @@ const slidermainhome= () => (
               </Reveal>
               <div className="spacer-10"></div>
               <Reveal className='onStep d-inline' keyframes={inline} delay={800} duration={900} triggerOnce>
-                <span onClick={()=> window.open("#", "_self")} className="btn-main inline lead">Vote Now</span>
+                <Link href='/polls'>
+                  <span className="btn-main inline lead">Vote Now</span>
+                </Link>
               <div className="mb-sm-30"></div>
               </Reveal>
 

@@ -90,8 +90,8 @@ const Header= function() {
 
           <Link href="/"  >
                 <img
-                    src="../img/blkh.png"
-                    style={{width: 100, cursor: 'pointer'}}
+                    src="../img/blockholellc.png"
+                    style={{width: 150, cursor: 'pointer'}}
                     className="img-fluid d-block"
                     alt="#"
                   />
@@ -169,28 +169,18 @@ const Header= function() {
                   <div className='menu'>
                   <div className='navbar-item'>
                        <Link href="/">
-                         Live Auction
-                       </Link>
-                     </div>
-                     <div className='navbar-item'>
-                       <Link href="/admin" >
-                         Admin
+                         Home
                        </Link>
                      </div>
                      <div className='navbar-item'>
                        <Link href="/polls">
-                         Polls
+                         Voting
                        </Link>
                      </div>
                     <div className='navbar-item'>
                        <Link href="/trustlines">
-                         Trustlines
+                         Team
                        </Link>
-                     </div>
-                     <div className='navbar-item'>
-                            <a rel="noreferrer" href='https://wearexrparmy.com/' target="_blank">
-                              XRP Army Home Page
-                            </a>
                      </div>
                     <div className='navbar-item'>
                     
