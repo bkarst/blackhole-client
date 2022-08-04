@@ -1618,10 +1618,8 @@ p.lead {
 /*** footer ***/
 footer{
   padding: 80px 0 0 0;
-  background: rgba(255, 255, 255, .025);
   &.footer-light {
-      border-top: solid 1px rgba(255,255,255,.025);
-      color: #a2a2a2;
+      
       a {
         color: #a2a2a2;
         font-weight: 400;
@@ -1661,6 +1659,7 @@ footer{
     .subfooter {
       margin-top: 40px;
       padding: 20px 0 20px 0;
+      background: rgba(255, 255, 255, .035);
       border-top: solid 1px rgba(255,255,255,.1);
       span{
         cursor: pointer;
