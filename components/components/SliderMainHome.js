@@ -2,6 +2,7 @@ import React from 'react';
 import Reveal from 'react-awesome-reveal';
 import { keyframes } from "@emotion/react";
 import Link from 'next/link'
+import { fadeIn } from '../../lib/CssHelper';
 
 const fadeInUp = keyframes`
   0% {
@@ -52,14 +53,13 @@ const slidermainhome= () => (
               <Reveal className='onStep d-inline' keyframes={inline} delay={900} duration={1200} triggerOnce>
               <div className="row">
                   <div className="spacer-single"></div>
-                  
               </div>
-              </Reveal>
+              </Reveal>  
           </div>
-          <div className="col-md-6 xs-hide">
-          <Reveal className='onStep d-inline' keyframes={inline} delay={300} duration={1200} triggerOnce>
-              <img src="./img/misc/women-with-vr.png" className="img-fluid" alt=""/>
-          </Reveal>
+          <div className="col-md-6">
+            <Reveal className='onStep d-inline' keyframes={fadeIn} delay={0} duration={3500} triggerOnce>
+              <img src="../img/spaceman3.jpg" style={{marginLeft: 140}} alt=""/>
+            </Reveal>
           </div>
       </div>
     </div>
