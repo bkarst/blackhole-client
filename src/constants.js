@@ -8,8 +8,8 @@ const constants = {
       RESETING_PASSWORD: "reseting_password",
       SIGNING_UP: "signing_up",
     //   API_URL: "http://localhost:4000/",
-    // API_URL: "https://blackhole-staging.herokuapp.com",
-    API_URL: "http://localhost:3001",
+    API_URL: "https://blackhole-staging.herokuapp.com",
+    // API_URL: "http://localhost:3001",
   }
   
   export default constants;
