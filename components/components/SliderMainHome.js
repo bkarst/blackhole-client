@@ -43,7 +43,7 @@ const slidermainhome= () => (
               </Reveal>
               <div className="spacer-10"></div>
               <Reveal className='onStep d-inline' keyframes={inline} delay={800} duration={900} triggerOnce>
-                <Link href='/polls'>
+                <Link href='/voting'>
                   <span className="btn-main inline lead">Vote Now</span>
                 </Link>
               <div className="mb-sm-30"></div>

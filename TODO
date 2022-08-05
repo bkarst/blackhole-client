@@ -1,9 +1,24 @@
+https://juno-rpc.polkachu.com/
+https://docs.tendermint.com/master/rpc/#/ABCI/abci_query
+https://pkg.go.dev/github.com/cosmos/cosmos-sdk/api@v0.1.0/cosmos/auth/v1beta1
+
+
+{
+    "path": "/cosmos.auth.v1beta1.Query/Account",
+    "data": "0a2b6a756e6f313575763668783061366b68773435666a323963617672787666656e71377a30336b3261797970",
+    "prove": false
+}
+
+close gaps on votes and results
+
+email list submission, connect with sendgrid or mailchimp. 
+learn how to query the juno rpc endpoint. 
+get functionality working for cosmos chain. 
 hide admin section, password protect
-deploy website
 create a team section or about section
 create a snapshot background process at the end of poll.
 add additional wallet support
-create a supported wallets page. 
+create a supported wallets page. partners page?
 find out of the balances is returning ATOM
 
 partners

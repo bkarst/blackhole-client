@@ -174,7 +174,7 @@ const Header= function() {
                        </Link>
                      </div>
                      <div className='navbar-item'>
-                       <Link href="/polls">
+                       <Link href="/voting">
                          Voting
                        </Link>
                      </div>

@@ -130,8 +130,10 @@
 
   .poll-opt{
     cursor: pointer;
-    margin: 100px;
-    position: relative
+    margin: 50px;
+    margin-top: 21px;
+    margin-bottom: 30px;
+    position: relative;
   }
 
   .pollResults td, .pollResults th{
@@ -361,7 +363,7 @@
 }
 
 .svg-item {
-  max-width: 18%;
+  max-width: 15%;
   display: inline-block;
   margin: 20px;
 }
