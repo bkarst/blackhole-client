@@ -1,7 +1,11 @@
+https://discord.com/invite/juno
+https://lcd-juno.itastakers.com/#/Query/CosmosBankV1Beta1Balance
+https://docs.junonetwork.io/cli/modules/bank
 https://juno-rpc.polkachu.com/
 https://docs.tendermint.com/master/rpc/#/ABCI/abci_query
 https://pkg.go.dev/github.com/cosmos/cosmos-sdk/api@v0.1.0/cosmos/auth/v1beta1
 
+Vote with your blackhole token below. 
 
 {
     "path": "/cosmos.auth.v1beta1.Query/Account",
