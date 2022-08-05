@@ -185,7 +185,7 @@ export default function Home(props) {
           Time till Poll Ends
         </h4>
         <div className='col-white' style={{textAlign: 'center', marginTop: 20, marginBottom: 100}}>
-          Vote Below Before the Poll Window Closes!
+            Vote with your Blackhole Token Below Before the Poll Window Closes!
         </div>
         </div>
       </section>
@@ -197,7 +197,7 @@ export default function Home(props) {
         <div className='poll-opts-container' >
           
             {pollCampaign.is_current_poll && poll.poll_options.map((pollOption, index) =>
-              <Reveal key={index} className='onStep' keyframes={grow} delay={index * 200} duration={(index + 1)*600} triggerOnce >
+              <Reveal key={index} className='onStep' keyframes={grow} delay={index * 200} duration={1300} triggerOnce >
                 <PollOption key={index} pollOption={pollOption} castVote={castVote} />
               </Reveal>
             )}

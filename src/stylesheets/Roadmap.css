@@ -46,7 +46,8 @@ p, a, ul li{
     border: double 1px transparent;
     border-radius: 30px;
     background-image: linear-gradient(#0200546b, #0000006b), 
-                    linear-gradient(to right, #661dee73, #009dff75);
+                    linear-gradient(to right, rgb(65, 176, 201), #009dff75);
+                    /*  linear-gradient(to right, #661dee73, #009dff75); */
     background-origin: border-box;
     background-clip: content-box, border-box;
   }

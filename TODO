@@ -5,7 +5,10 @@ https://juno-rpc.polkachu.com/
 https://docs.tendermint.com/master/rpc/#/ABCI/abci_query
 https://pkg.go.dev/github.com/cosmos/cosmos-sdk/api@v0.1.0/cosmos/auth/v1beta1
 
+63, 111, 140
+
 Vote with your blackhole token below. 
+Link to whitepaper
 
 {
     "path": "/cosmos.auth.v1beta1.Query/Account",
