@@ -197,7 +197,7 @@ export default function Home(props) {
         <div className='poll-opts-container' >
           
             {pollCampaign.is_current_poll && poll.poll_options.map((pollOption, index) =>
-              <Reveal className='onStep' keyframes={grow} delay={index * 200} duration={(index + 1)*600} triggerOnce >
+              <Reveal key={index} className='onStep' keyframes={grow} delay={index * 200} duration={(index + 1)*600} triggerOnce >
                 <PollOption key={index} pollOption={pollOption} castVote={castVote} />
               </Reveal>
             )}
