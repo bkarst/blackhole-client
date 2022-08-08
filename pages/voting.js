@@ -20,24 +20,8 @@ import SliderVoting from '../components/components/SliderVoting'
 import FancyCountdown from '../components/components/FancyCountdown'
 import Reveal from 'react-awesome-reveal';
 import { fadeIn, fadeInUp, grow } from '../lib/CssHelper'
-import { CosmWasmClient } from '@cosmjs/cosmwasm-stargate'
-
-const getBalance = async (address) => {
-  const client = await CosmWasmClient.connect("https://rpc-juno.itastakers.com/")
-  console.log("client", client);
-  // cw20 contract address
-  // juno1rdw3gumdz7zyjn2pev9ugxs765xlv6vtv6g3jt2lqw580zrchvjs66daca
-
-  const response = await client.queryContractSmart("juno1rdw3gumdz7zyjn2pev9ugxs765xlv6vtv6g3jt2lqw580zrchvjs66daca", {
-    balance: {
-      address: address
-    }
-  });
-  return response.balance
-  // console.log('response', response)
-}
-
-
+import { getBalance } from '../lib/CosmosHelper'
+// import { CosmWasmClient } from '@cosmjs/cosmwasm-stargate'
 
 async function getKeplr() {
   if (window.keplr) {
