@@ -1,11 +1,31 @@
+send tokens with stargate
+https://gist.github.com/webmaster128/8444d42a7eceeda2544c8a59fbd7e1d9
+
+https://github.com/cosmos/cosmjs
+
+Blackhole test
+https://www.mintscan.io/juno/wasm/contract/juno1rdw3gumdz7zyjn2pev9ugxs765xlv6vtv6g3jt2lqw580zrchvjs66daca
+
+
 https://discord.com/invite/juno
+
 https://lcd-juno.itastakers.com/#/Query/CosmosBankV1Beta1Balance
+
 https://docs.junonetwork.io/cli/modules/bank
+
 https://juno-rpc.polkachu.com/
+
 https://docs.tendermint.com/master/rpc/#/ABCI/abci_query
+
 https://pkg.go.dev/github.com/cosmos/cosmos-sdk/api@v0.1.0/cosmos/auth/v1beta1
 
-63, 111, 140
+https://lcd-juno.cosmostation.io/cosmos/bank/v1beta1/balances/juno15uv6hx0a6khw45fj29cavrxvfenq7z03k2ayyp?pagination.limit=1000
+
+https://lcd-juno.itastakers.com/cosmos/bank/v1beta1/balances/juno15uv6hx0a6khw45fj29cavrxvfenq7z03k2ayyp?pagination.limit=1000
+
+rgb(160,217,235)
+rgb(65, 176, 201)
+rgb(236, 230, 152)
 
 Vote with your blackhole token below. 
 Link to whitepaper

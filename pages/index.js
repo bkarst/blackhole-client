@@ -12,15 +12,24 @@ import constants from '../src/constants';
 import Reveal from 'react-awesome-reveal';
 import { fadeIn } from '../lib/CssHelper'
 import Footer from '../components/components/footer';
+import { DirectSecp256k1HdWallet } from "@cosmjs/proto-signing";
+import { assertIsBroadcastTxSuccess, SigningStargateClient, StargateClient } from "@cosmjs/stargate";
+import { CosmWasmClient } from '@cosmjs/cosmwasm-stargate'
+
 
 
 export default function Home() {
-  const [nftListings, setNftListings] = useState([]);
+  // const [nftListings, setNftListings] = useState([]);
   useEffect(() => {
-    axios.get(constants.API_URL + '/api/nft_listings').then(response => {
-      setNftListings(response.data)
-    })
-    // Update the document title using the browser API
+    
+
+    
+// const { balance } = response
+
+  //   axios.get(constants.API_URL + '/api/nft_listings').then(response => {
+  //     setNftListings(response.data)
+  //   })
+  //   // Update the document title using the browser API
   }, []);
 
   return (
@@ -39,7 +48,7 @@ export default function Home() {
       </section>
       <section>
         <Reveal className='onStep' keyframes={fadeIn} delay={1000} duration={1000} triggerOnce>
-          <h2 className="col-white" style={{textAlign: 'center' }}>
+          <h2 className="col-white" style={{textAlign: 'center' }} >
             Upcoming Missions
           </h2>
         </Reveal>

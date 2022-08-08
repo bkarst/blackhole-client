@@ -20,7 +20,22 @@ import SliderVoting from '../components/components/SliderVoting'
 import FancyCountdown from '../components/components/FancyCountdown'
 import Reveal from 'react-awesome-reveal';
 import { fadeIn, fadeInUp, grow } from '../lib/CssHelper'
+import { CosmWasmClient } from '@cosmjs/cosmwasm-stargate'
 
+const getBalance = async (address) => {
+  const client = await CosmWasmClient.connect("https://rpc-juno.itastakers.com/")
+  console.log("client", client);
+  // cw20 contract address
+  // juno1rdw3gumdz7zyjn2pev9ugxs765xlv6vtv6g3jt2lqw580zrchvjs66daca
+
+  const response = await client.queryContractSmart("juno1rdw3gumdz7zyjn2pev9ugxs765xlv6vtv6g3jt2lqw580zrchvjs66daca", {
+    balance: {
+      address: address
+    }
+  });
+  return response.balance
+  // console.log('response', response)
+}
 
 
 
@@ -103,27 +118,30 @@ export default function Home(props) {
         return
       }
       const offlineSigner = window.keplr.getOfflineSigner(chainId);
-      console.log('keplr2')
       // // It can return the array of address/public key.
       // // But, currently, Keplr extension manages only one address/public key pair.
       // // XXX: This line is needed to set the sender address for SigningCosmosClient.
       const accounts = await offlineSigner.getAccounts();
-      console.log('keplr2')
       //https://lcd-juno.cosmostation.io/cosmos/bank/v1beta1/balances/juno1dru5985k4n5q369rxeqfdsjl8ezutch8y9vuau?pagination.limit=1000
       //use juno tools api to find balance
-      const balances = await axios.get(`https://lcd-juno.cosmostation.io/cosmos/bank/v1beta1/balances/${accounts[0].address}?pagination.limit=1000`)
-      console.log('keplr2')
-      const balancePairs = balances.data.balances
-      // const json = await balances.json()
+      // const balances = await axios.get(`https://lcd-juno.cosmostation.io/cosmos/bank/v1beta1/balances/${accounts[0].address}?pagination.limit=1000`)
+
+
       console.log('accounts', accounts)
-      console.log('balances', balancePairs);
-      var voting_balance = 0
-      for (var i = 0; i < balancePairs.length; i++){
-        const pair = balancePairs[i];
-        if (pair.denom == "ujuno"){
-          voting_balance = pair.amount
-        }
-      }
+      const address = accounts[0].address
+      const balance = await getBalance(address);
+      // const balancePairs = balances.data.balances
+      // const json = await balances.json()
+      // console.log('accounts', accounts)
+      // console.log('balances', balancePairs);
+      // var voting_balance = 0;
+      console.log('balance', balance)
+      // for (var i = 0; i < balancePairs.length; i++){
+      //   const pair = balancePairs[i];
+      //   if (pair.denom == "ujuno"){
+      //     voting_balance = pair.amount
+      //   }
+      // }
       
       // // Initialize the gaia api with the offline signer that is injected by Keplr extension.
       // const cosmJS = new SigningCosmosClient(
@@ -133,13 +151,13 @@ export default function Home(props) {
       // );
       // const title = document.getElementById("description").value;
 
-      if (voting_balance == 0) {
+      if (balance == 0) {
         alert("You must hold Blackhole to vote. Visit Osmosis for more details. ")
         return
       }
 
       var formObj = {   
-        voting_balance: voting_balance,
+        voting_balance: balance,
         address: accounts[0].address,
         poll_campaign_id: pollCampaign.id, 
         poll_option_id: pollOptionId
