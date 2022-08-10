@@ -181,7 +181,7 @@ const Header= function() {
                        </Link>
                      </div>
                     <div className='navbar-item'>
-                       <Link href="/trustlines">
+                       <Link href="/team">
                          Team
                        </Link>
                      </div>

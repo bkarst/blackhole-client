@@ -6,17 +6,24 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 // import '../node_modules/bootstrap/dist/js/bootstrap.js';
 import '../assets/style.scss';
 import '../styles/globals.css'
+import Script from 'next/script'
+
 
 
 import '../src/stylesheets/Roadmap.css'
-// import '../src/stylesheets/Slider.scss'
+
 import '../src/stylesheets/App.css'
 import '../src/stylesheets/DonutChart.css'
 import '../src/stylesheets/FancyCountdown.css'
+import 'swiper/css';
+import '../src/stylesheets/Slider.scss'
 
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return <>
+  <Script src="https://www.google-analytics.com/analytics.js" />
+  <Component {...pageProps} />
+  </>
 }
 
 export default MyApp

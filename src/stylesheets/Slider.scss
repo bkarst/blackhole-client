@@ -149,10 +149,13 @@
  $font-02: "Barlow Condensed",
  sans-serif;
  
- $m-01: #D45B7A;
- $m-02: #FDA576;
+ $m-01: rgb(65, 176, 201);
+ $m-02: #0200546b;
  
- 
+//  linear-gradient(#0200546b, #0000006b), 
+//  linear-gradient(to right, rgb(65, 176, 201), #009dff75) 
+
+
  $g-01: linear-gradient(140deg, $m-01, $m-02);
  
  $neu-01: #EAEAEA;
@@ -226,8 +229,8 @@
      margin: 0;
      padding: 0;
      height: auto;
-     font-family: $font-01;
-     background: white;
+    //  font-family: $font-01;
+    //  background: white;
      //background-color: #CBCBCB;
  
  }
@@ -239,7 +242,7 @@
          &:before {
              width: 100%;
              height: 380px;
-             background-color: $neu-01;
+            //  background-color: $neu-01;
              content: '';
              position: absolute;
              z-index: -1;
@@ -260,34 +263,20 @@
  
              .title {
                  text-align: center;
-                 margin-bottom: 80px;
-                 color: $neu-03;
-                 font-size: 44px;
+                 margin-bottom: 10px;
+                 color: #fff;
+                //  font-size: 44px;
                  line-height: normal;
-                 text-transform: uppercase;
-                 font-weight: bold;
-                 letter-spacing: 1.3px;
+                 font-family: 'Outfit', sans-serif;
+                //  text-transform: uppercase;
+                //  font-weight: bold;
+                //  letter-spacing: 1.3px;
                  position: relative;
                  display: flex;
+                 font-size: 36px;
                  justify-content: center;
                  align-items: flex-start;
                  height: 100px;
- 
-                 &:before {
-                     content: '';
-                     position: absolute;
-                     width: 80px;
-                     height: 10px;
-                     background: $neu-03;
-                     border-radius: 50px;
-                     bottom: 0;
-                     opacity: 0.2;
- 
-                     @include sm {
-                         width: 60px;
-                         height: 5px;
-                     }
-                 }
  
                  @include sm {
                      font-size: 32px;
