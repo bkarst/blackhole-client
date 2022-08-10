@@ -29,6 +29,8 @@ const NavLink = props => (
 
 const Header= function() {
 
+    const logoSize = 25
+
     const [openMenu, setOpenMenu] = useState(false);
     const [openMenu1, setOpenMenu1] = useState(false);
     const [openMenu2, setOpenMenu2] = useState(false);
@@ -190,7 +192,17 @@ const Header= function() {
                         </div>
                           <div className="dropdown-custom btn" >
                              <a rel="noreferrer" href='https://twitter.com/WEAREXRPARMY' target="_blank">
-                                <FaTwitter size={30} />
+                                <FaTwitter size={logoSize} />
+                            </a>
+                          </div>
+                          <div className="dropdown-custom btn" >
+                             <a rel="noreferrer" href='https://discord.com/' target="_blank">
+                                <img src={'/img/Discord-Logo-White.png'} style={{width: logoSize}} />
+                            </a>
+                          </div>
+                          <div className="dropdown-custom btn" >
+                             <a rel="noreferrer" href='https://telegram.com/' target="_blank">
+                                <img src={'/img/telegram2.png'} style={{width: logoSize}} />
                             </a>
                           </div>
                           {/* <div className="dropdown-custom btn" 

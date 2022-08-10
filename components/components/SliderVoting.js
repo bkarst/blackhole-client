@@ -31,6 +31,7 @@ const SliderVoting = ({ pollCampaign }) => (
  <div className="container" style={{marginTop: 100}}>
     <div className="row align-items-center">
           <div className="col-md-6">
+            
               <div className="spacer-single"></div>
               <Reveal className='onStep' keyframes={fadeInUp} delay={300} duration={900} triggerOnce>
               <h2 className="col-white">Blackhole Voting</h2>

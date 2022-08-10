@@ -63,7 +63,7 @@ const slidermainhome= () => (
           </div>
           <div className="col-md-6">
             <Reveal className='onStep d-inline' keyframes={fadeIn} delay={0} duration={3500} triggerOnce>
-              <img src="../img/spaceman5.png" style={{marginLeft: 140, width: 500}} alt=""/>
+              <img src="../img/spaceman5.png" style={{marginLeft: 100, width: 500}} alt=""/>
             </Reveal>
           </div>
       </div>

@@ -1,11 +1,14 @@
-Make the Send the vote submitted message.
-loading when vote clicked.
-Add discord and telegram icon.
+Add team page. 
 Show keplr balance and connect wallet icon.
-
+Add transitions between pages. loading when vote clicked.
+Add Hover Effects for header. 
+Add backdrop blur to text. 
 
 
 put in the high res spaceman. 
+Make the Send the vote submitted message.
+make donut segment font more readable
+Add discord and telegram icon.
 
 bin/rails test test/models/poll_campaign_test.rb
 

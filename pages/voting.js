@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useRef } from 'react';
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
@@ -70,13 +70,14 @@ export async function getServerSideProps(context) {
 }
 
 
-export default function Home(props) {
+export default function Voting(props) {
 
   if (props.pollCampaign.error){
     return <div>No Polls currently upcoming or active</div>
   }  
 
-  console.log('props,', props.pollCampaign)
+  const closeMessage = () => {testDivRef.current.scrollIntoView(); setShowCongratsVoting(false);}
+
   const castVote = async (pollOptionId) => {
     console.log('pollOptionId', pollOptionId)
   var keplr = await getKeplr()
@@ -152,14 +153,17 @@ export default function Home(props) {
           alert(response.data.error)
         }
         else {
-          alert("Thank you for your response! See the preliminary results below. ")
+          setShowCongratsVoting(true)
+          // alert("Thank you for your response! See the preliminary results below.")
           // window.location.reload();
         }
-      })    
+      })
   }
   const poll = props.pollCampaign.poll
   const pollCampaign = props.pollCampaign
   // const [nftListings, setNftListings] = useState([]);
+  const [showCongratsVoting, setShowCongratsVoting] = useState(false);
+  const testDivRef = useRef(null);
 
   const endTime = Date.parse(poll.end_time)
   const startTime = Date.parse(poll.start_time)
@@ -196,19 +200,24 @@ export default function Home(props) {
           <div className='col-lg-12'>
           <div>
         </div>
+        <div style={{display: showCongratsVoting ? 'inline' : 'none'}} >
+          <Reveal className='onStep' keyframes={grow} delay={0} duration={500} triggerOnce >
+            <div onClick={closeMessage} className="alert fade alert-simple alert-success alert-dismissible text-left font__family-montserrat font__size-16 font__weight-light brk-library-rendered rendered show">
+                <strong className="font__weight-semibold">Thank you!</strong> We have received your response. See the preliminary results below... 
+            </div>
+          </Reveal>
+        </div>
         <div className='poll-opts-container' >
-          
             {pollCampaign.is_current_poll && poll.poll_options.map((pollOption, index) =>
               <Reveal key={index} className='onStep' keyframes={grow} delay={index * 200} duration={1300} triggerOnce >
                 <PollOption key={index} pollOption={pollOption} castVote={castVote} />
               </Reveal>
             )}
-        
         </div>
       </div>
     </div>
   </section>
-  <section className="container" style={{padding: 10}} >
+  <section className="container" style={{padding: 10}} ref={testDivRef} >
         <div className='row'>
         <Reveal className='onStep' keyframes={fadeInUp} delay={0} duration={600} triggerOnce >
           <h3 style={{zIndex: 999, margin: 'auto', textAlign: 'center', marginTop: 160,  marginBottom: 6}}>

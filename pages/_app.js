@@ -9,6 +9,7 @@ import '../styles/globals.css'
 
 
 import '../src/stylesheets/Roadmap.css'
+// import '../src/stylesheets/Slider.scss'
 import '../src/stylesheets/App.css'
 import '../src/stylesheets/DonutChart.css'
 import '../src/stylesheets/FancyCountdown.css'
