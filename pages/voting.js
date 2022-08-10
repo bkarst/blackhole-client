@@ -72,6 +72,9 @@ export async function getServerSideProps(context) {
 
 export default function Voting(props) {
 
+  const [showCongratsVoting, setShowCongratsVoting] = useState(false);
+  const testDivRef = useRef(null);
+  
   if (props.pollCampaign.error){
     return <div>No Polls currently upcoming or active</div>
   }  
@@ -162,8 +165,7 @@ export default function Voting(props) {
   const poll = props.pollCampaign.poll
   const pollCampaign = props.pollCampaign
   // const [nftListings, setNftListings] = useState([]);
-  const [showCongratsVoting, setShowCongratsVoting] = useState(false);
-  const testDivRef = useRef(null);
+  
 
   const endTime = Date.parse(poll.end_time)
   const startTime = Date.parse(poll.start_time)
