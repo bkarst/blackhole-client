@@ -1,3 +1,18 @@
+Make the Send the vote submitted message.
+loading when vote clicked.
+Add discord and telegram icon.
+Show keplr balance and connect wallet icon.
+
+
+
+put in the high res spaceman. 
+
+bin/rails test test/models/poll_campaign_test.rb
+
+voting message
+
+get it working on mobile
+
 send tokens with stargate
 https://gist.github.com/webmaster128/8444d42a7eceeda2544c8a59fbd7e1d9
 
