@@ -171,20 +171,26 @@ const Header= function() {
                 <Breakpoint xl>
                   <div className='menu'>
                   <div className='navbar-item'>
+                    <div className="hover-underline-animation">
                        <Link href="/">
                          Home
                        </Link>
+                       </div>
                      </div>
                      <div className='navbar-item'>
-                       <Link href="/voting">
+                     <div className="hover-underline-animation">
+                       <Link href="/voting" className='btn btn-2' >
                          Voting
                        </Link>
+                       </div>
                      </div>
                     <div className='navbar-item'>
-                       <Link href="/team">
-                         Team
-                       </Link>
-                     </div>
+                      <div className="hover-underline-animation">
+                         <Link href="/team">
+                           Team
+                        </Link>
+                      </div>
+                    </div>
                     <div className='navbar-item'>
                     
                       <div>

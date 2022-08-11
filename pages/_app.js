@@ -17,6 +17,8 @@ import '../src/stylesheets/DonutChart.css'
 import '../src/stylesheets/FancyCountdown.css'
 import 'swiper/css';
 import '../src/stylesheets/Slider.scss'
+import '../src/stylesheets/Hover.scss'
+import '../src/stylesheets/Hover2.css'
 
 
 function MyApp({ Component, pageProps }) {
