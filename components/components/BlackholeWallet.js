@@ -186,7 +186,7 @@ const BlackholeWallet = () => {
                 </div>
             </div>
             <div style={{ marginTop: -23, display: walletInfo ? 'inline' : 'none'}}  >
-                <div style={{fontSize: 28, marginTop: 10, color: '#ffffff', fontWeight: 800}}>
+                <div style={{fontSize: 28, marginTop: -6, color: '#ffffff', fontWeight: 800}}>
                   {parseInt(walletInfo && walletInfo.balance)/10000}
                 </div>
                 <div style={{fontSize: 12, fontWeight: 800, color: '#ffffff'}}>
