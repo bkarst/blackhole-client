@@ -650,11 +650,12 @@ p.lead {
     margin-top: 0;
     font-weight: 400;
 }
+
 .btn-main {
     display: block;
     width: max-content;
     text-align: center;
-    color: #333 !important;
+    color: #333;
     background: $color2;
     border-radius: 30px;
     letter-spacing: normal;

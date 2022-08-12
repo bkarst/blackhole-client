@@ -20,33 +20,9 @@ import SliderVoting from '../components/components/SliderVoting'
 import FancyCountdown from '../components/components/FancyCountdown'
 import Reveal from 'react-awesome-reveal';
 import { fadeIn, fadeInUp, grow } from '../lib/CssHelper'
-import { getBalance } from '../lib/CosmosHelper'
+import { getBalance, getKeplr } from '../lib/CosmosHelper'
+import BlackholeWallet from '../components/components/BlackholeWallet'
 // import { CosmWasmClient } from '@cosmjs/cosmwasm-stargate'
-
-async function getKeplr() {
-  if (window.keplr) {
-      return window.keplr;
-  }
-  
-  if (document.readyState === "complete") {
-      return window.keplr;
-  }
-  
-  return new Promise((resolve) => {
-      const documentStateChange = (event) => {
-          if (
-              event.target &&
-              (event.target).readyState === "complete"
-          ) {
-              resolve(window.keplr);
-              document.removeEventListener("readystatechange", documentStateChange);
-          }
-      };
-      
-      document.addEventListener("readystatechange", documentStateChange);
-  });
-}
-
 
 
 export async function getServerSideProps(context) {
@@ -184,7 +160,11 @@ export default function Voting(props) {
       <BiddyHeader />
       
       <section className='container' style={{padding: 10, marginTop: 30}}>
-        <SliderVoting pollCampaign={ pollCampaign }/>
+      <div className='row'>
+        <div className='col-lg-12'>
+          <BlackholeWallet />
+        </div>
+        </div>
       </section>
       <section className='container' style={{padding: 10, marginTop: 30}}>
         <FancyCountdown pollCampaign={pollCampaign}/>

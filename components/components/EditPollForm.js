@@ -106,7 +106,7 @@ export default function EditPollForm({poll}){
                       <input style={{border: '1px solid #ffffff' }} required type="text" name="description" id="description" className="form-control" />
                       <h5>Thumbnail</h5>
                       <input style={{border: '1px solid #ffffff' }} required type="text" name="thumbnail_url" id="thumbnail_url" className="form-control" />
-                      <input onClick={addOption} type="button" id="submit" className="btn-main" value="Add Option"/>
+                      <input onClick={ addOption } type="button" id="submit" className="btn-main" value="Add Option"/>
                   </div>
               </form>
           </div>

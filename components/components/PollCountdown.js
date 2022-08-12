@@ -2,6 +2,7 @@ import React from 'react';
 import Reveal from 'react-awesome-reveal';
 import { keyframes } from "@emotion/react";
 import Countdown from 'react-countdown';
+import BlackholeWallet from './BlackholeWallet'
 // import FancyCountdown from './components/FancyCountdown'
 
 const renderer = ({ days, hours, minutes, seconds, completed }) => {
@@ -58,6 +59,7 @@ const PollCountdown = ({ pollCampaign }) => (
                 <h3 className='col-white' style={{textAlign: 'center', marginTop: 20}}>
                     Character Here
                 </h3>
+                <BlackholeWallet />
             </div>
         }
         { !pollCampaign.is_current_poll && 

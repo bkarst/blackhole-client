@@ -106,7 +106,7 @@
 
   .poll-opt-label{
     text-align: center;
-    margin-top: 38px;
+    margin-top: 23px;
     color: #ffffff;
     font-family: 'Dongle', sans-serif;
     font-size: 24px;
@@ -352,8 +352,77 @@
   animation: donutfadelong 1s;
 }
 
+#particle{
+  width: 2000px;
+  height: 970px;
+  margin-left: -854px;
+  margin-top: -340px;
+}
 
+.wallet-title{
+  font-family: 'Dongle', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  /* color: #fff; */
+}
 
+.wallet-link{
+  font-family: 'Dongle', sans-serif;
+  font-size: 24px;
+  font-weight: 100;
+  color: rgb(191,226,239);
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.center-wallet-cont{
+  z-index: 99999;
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    position: absolute;
+    top: 98px;
+}
+
+.links-left{
+  position: absolute;
+  left: -300px;
+  top: 80px;
+  text-align: center;
+  
+  z-index: 9999999;
+}
+
+.links-bottom{
+  position: absolute;
+  left: 0px;
+  bottom: 80px;
+  text-align: center;
+  
+  z-index: 9999999;
+}
+
+.links-right{
+  position: absolute;
+  right: -100px;
+  top: 100px;
+  text-align: left;
+  z-index: 9999999;
+}
+
+.btn-blue {
+  background-color: 'blue';
+}
+
+.wallet-container{ 
+    height: 360px;
+    width: 300px;
+    position: relative;
+    margin: auto;
+    margin-top: 200px;
+    margin-bottom: 0px;
+}
 
 /* ---------- */
 /* just for this presentation */
