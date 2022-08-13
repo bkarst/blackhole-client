@@ -357,6 +357,7 @@
   height: 970px;
   margin-left: -854px;
   margin-top: -340px;
+  z-index: 0;
 }
 
 .wallet-title{
@@ -375,9 +376,22 @@
   margin-top: 10px;
   margin-bottom: 10px;
 }
+.ReactModal__Overlay {
+  opacity: 0;
+  transition: opacity 50ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open{
+  opacity: 1;
+}
+
+.ReactModal__Overlay--before-close{
+  opacity: 0;
+}
+
 
 .center-wallet-cont{
-  z-index: 99999;
+  z-index: 1;
     text-align: center;
     margin: auto;
     width: 100%;

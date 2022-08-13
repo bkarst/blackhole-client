@@ -101,11 +101,7 @@ const BlackholeWallet = () => {
         }
       }
       , [])
-      const links = [
-        <div key='3' ><span className='btn-blue btn-main inline lead' style={{color: '#fff', fill: '#fff', background: 'rgb(54,135,182)', margin: 'auto'}}>Buy BKHL on Osmosis</span></div>,
-        <div key='2' ><span className='btn-main inline lead' style={{margin: 'auto'}} >How Voting Works</span></div>,
-        <div key='4' ><span className='btn-blue btn-main inline lead' style={{color: '#fff', fill: '#fff', background: 'rgb(54,135,182)', margin: 'auto'}}>Buy BKHL on Junoswap</span></div>,
-      ]
+      
     const connectAndGetBalance = async () => {
         // console.log('pollOptionId', pollOptionId)
         var keplr = await getKeplr()
@@ -176,8 +172,8 @@ const BlackholeWallet = () => {
     <div className='wallet-container' >
         <canvas id="particle"></canvas>
         <div className='center-wallet-cont'>
-            <div style={{cursor: 'pointer', display: walletInfo ? 'none' : 'inline' }} onClick={ connectAndGetBalance }>
-                <img style={{width: 50, margin: 'auto', zIndex: 99999}} src="./img/keplr-logo.png" alt="" />
+            <div id='keplr-logo' style={{zIndex: 99999999, cursor: 'pointer', display: walletInfo ? 'none' : 'inline' }} onClick={ connectAndGetBalance }>
+                <img style={{width: 50, margin: 'auto'}} src="./img/keplr-logo.png" alt="" />
                 <div style={{fontSize: 12, marginTop: 10, color: '#ffffff'}}>
                     Connect Keplr
                 </div>
@@ -200,16 +196,7 @@ const BlackholeWallet = () => {
         </div>
     </div>
     
-    <div style={{zIndex: 9999999, textAlign: 'center', marginBottom: 120, flexDirection: 'row'}}>
-    {links.map((link, index) => {
-    return (
-    // eslint-disable-next-line react/jsx-key
-    <Reveal key={index} style={{margin: 10}} className='onStep' keyframes={fadeIn} delay={index*150} duration={600} triggerOnce>
-        {link}
-    </Reveal>
-    )
-    })}
-</div>
+    
 </div>
     )
 };

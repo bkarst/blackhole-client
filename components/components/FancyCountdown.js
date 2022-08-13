@@ -2993,10 +2993,6 @@ const FancyCountdown = ({ pollCampaign }) => {
 			  </div>
 		</div>
 		<canvas id="confetti"></canvas>
-		<div className="message">Happy New Year !!!</div>
-		<div className="stars"></div>
-		<div className="twinkling"></div>
-		<div className="clouds"></div>
     </div>)
 };
 export default FancyCountdown;

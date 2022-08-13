@@ -19,10 +19,11 @@ import Footer from '../components/components/footer';
 import SliderVoting from '../components/components/SliderVoting'
 import FancyCountdown from '../components/components/FancyCountdown'
 import Reveal from 'react-awesome-reveal';
-import { fadeIn, fadeInUp, grow } from '../lib/CssHelper'
+import { fadeIn, fadeInUp, grow, customStyles } from '../lib/CssHelper'
 import { getBalance, getKeplr } from '../lib/CosmosHelper'
 import BlackholeWallet from '../components/components/BlackholeWallet'
-// import { CosmWasmClient } from '@cosmjs/cosmwasm-stargate'
+import ReactDOM from 'react-dom';
+import Modal from 'react-modal';// import { CosmWasmClient } from '@cosmjs/cosmwasm-stargate'
 
 
 export async function getServerSideProps(context) {
@@ -50,7 +51,34 @@ export default function Voting(props) {
 
   const [showCongratsVoting, setShowCongratsVoting] = useState(false);
   const testDivRef = useRef(null);
+  const [modalIsOpen, setIsOpen] = useState(false);
+
+  let subtitle;
   
+  function openModal() {
+    setIsOpen(true);
+  }
+
+  function afterOpenModal() {
+    document.body.style.overflow = 'hidden';
+    const box = document.getElementById('keplr-logo');
+    const box2 = document.getElementById('main-logo');
+  // 👇️ removes element from DOM
+    box.style.display = 'none';
+    box2.style.display = 'none';
+    // references are now sync'd and can be accessed.
+    // subtitle.style.color = '#f00';
+  }
+
+  function closeModal() {
+    document.body.style.overflow = 'unset';
+    const box = document.getElementById('keplr-logo');
+    const box2 = document.getElementById('main-logo');
+  // 👇️ removes element from DOM
+    box.style.display = 'inline';
+    box2.style.display = 'inline';    
+    setIsOpen(false);
+  }
   if (props.pollCampaign.error){
     return <div>No Polls currently upcoming or active</div>
   }  
@@ -147,6 +175,11 @@ export default function Voting(props) {
   const startTime = Date.parse(poll.start_time)
   console.log('endTime', pollCampaign.end_time)
   console.log('startTime', pollCampaign.start_time)
+  const links = [
+    <div key={1} ><span className='btn-blue btn-main inline lead' style={{color: '#fff', fill: '#fff', background: 'rgb(54,135,182)', margin: 'auto'}}>Buy BKHL on Osmosis</span></div>,
+    <div key={2} ><span onClick={openModal} className='btn-main inline lead' style={{margin: 'auto', cursor: 'pointer', zIndex: 9999999}} >How Voting Works</span></div>,
+    <div key={3} ><span className='btn-blue btn-main inline lead' style={{color: '#fff', fill: '#fff', background: 'rgb(54,135,182)', margin: 'auto'}}>Buy BKHL on Junoswap</span></div>,
+  ]
   // 
   // poll.active = 
   return (
@@ -162,10 +195,25 @@ export default function Voting(props) {
       <section className='container' style={{padding: 10, marginTop: 30}}>
       <div className='row'>
         <div className='col-lg-12'>
+        <Reveal style={{margin: 10}} className='onStep' keyframes={fadeIn} delay={0} duration={2000} triggerOnce>
           <BlackholeWallet />
+        </Reveal>
+        </div>
+        <div>
+        <div style={{zIndex: 1, textAlign: 'center', marginBottom: 120, flexDirection: 'row'}}>
+    {links.map((link, index) => {
+    return (
+    // eslint-disable-next-line react/jsx-key
+    <Reveal key={index} style={{margin: 10}} className='onStep' keyframes={fadeIn} delay={index*150} duration={600} triggerOnce>
+        {link}
+    </Reveal>
+    )
+    })}
+</div>
         </div>
         </div>
       </section>
+      
       <section className='container' style={{padding: 10, marginTop: 30}}>
         <FancyCountdown pollCampaign={pollCampaign}/>
         <div>
@@ -178,6 +226,21 @@ export default function Voting(props) {
         </div>
       </section>
     <section className="container" style={{padding: 10}} >
+    <Modal
+        isOpen={modalIsOpen}
+        onAfterOpen={afterOpenModal}
+        onRequestClose={closeModal}
+        style={customStyles}
+        contentLabel="Example Modal"
+      >
+        {/* <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Hello</h2> */}
+        {/* <div>I am a modal</div> */}
+        <SliderVoting />
+        <button style={{padding: '6px 20px'}} onClick={closeModal}>
+          sounds good
+        </button>
+      </Modal>
+    
         <div className='row'>
           <div className='col-lg-12'>
           <div>
@@ -202,7 +265,7 @@ export default function Voting(props) {
   <section className="container" style={{padding: 10}} ref={testDivRef} >
         <div className='row'>
         <Reveal className='onStep' keyframes={fadeInUp} delay={0} duration={600} triggerOnce >
-          <h3 style={{zIndex: 999, margin: 'auto', textAlign: 'center', marginTop: 160,  marginBottom: 6}}>
+        <h3 className='col-white' style={{textAlign: 'center', marginTop: 160}}>
               Current Results
           </h3>
           <DonutChartPollResults pollResults={pollCampaign.results} />

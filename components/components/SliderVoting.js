@@ -28,18 +28,18 @@ const inline = keyframes`
 `;
 
 const SliderVoting = ({ pollCampaign }) => (
- <div className="container" style={{marginTop: 100}}>
+ <div className="container" style={{marginTop: 0}}>
     <div className="row align-items-center">
-          <div className="col-md-6">
-            
+          <div className="col-md-12">
               <div className="spacer-single"></div>
-              <Reveal className='onStep' keyframes={fadeInUp} delay={300} duration={900} triggerOnce>
+              <Reveal className='onStep' keyframes={fadeInUp} delay={0} duration={900} triggerOnce>
               <h2 className="col-white">Blackhole Voting</h2>
               </Reveal>
-              <Reveal className='onStep' keyframes={fadeInUp} delay={600} duration={900} triggerOnce>
-                <p className="lead col-white" >Each RPR you hold in your wallet equals 1 vote. If you vote more than once with the same wallet, only your latest vote will count.&nbsp; Whatever your balance of RPR is at the end of the vote will be the number of votes cast for you. You will be voting with the XUMM app. If you’d like to split your votes you can hold RPR in multiple wallets and vote with each wallet.</p>
-                <p className="lead col-white" >Make sure you have our trust line set up in your XUMM app as well.&nbsp; Click here to set the trust line.</p>
-                <p className="lead col-white" >If you would like to promote a particular voting option online or through social media, each voting option has a unique URL associated with it. Simply right click on the voting option, copy the link address and share it online!</p>
+              <Reveal className='onStep' keyframes={fadeInUp} delay={0} duration={900} triggerOnce>
+                <p className="lead col-white" >
+                Each BLKH you hold in your wallet equals 1 vote. Only your latest vote will count.  Your BLKH token balance at the end of the voting period will be the number of votes cast for you. You will be voting with the Keplr Wallet.[Maybe other wallets] If you’d like to vote for multiple Burns you can hold BLKH in multiple wallets, then you may choose to vote with each wallet.
+                </p>
+
               </Reveal>
               <div className="spacer-10"></div>
               <Reveal className='onStep d-inline' keyframes={inline} delay={900} duration={1200} triggerOnce>
@@ -48,11 +48,11 @@ const SliderVoting = ({ pollCampaign }) => (
               </div>
               </Reveal>
           </div>
-          <div className="col-md-6">
+          {/* <div className="col-md-6">
             <Reveal className='onStep d-inline' keyframes={inline} delay={300} duration={1200} triggerOnce>
                 <PollCountdown pollCampaign={pollCampaign} />
             </Reveal>
-          </div>
+          </div> */}
       </div>
     </div>
 );

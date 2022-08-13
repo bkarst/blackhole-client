@@ -93,6 +93,7 @@ const Header= function() {
 
           <Link href="/"  >
                 <img
+                    id='main-logo'
                     src="../img/blacholealt.png"
                     style={{width: 150, cursor: 'pointer'}}
                     className="img-fluid d-block"
