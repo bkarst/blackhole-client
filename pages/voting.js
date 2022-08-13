@@ -64,8 +64,9 @@ export default function Voting(props) {
     const box = document.getElementById('keplr-logo');
     const box2 = document.getElementById('main-logo');
   // 👇️ removes element from DOM
-    box.style.display = 'none';
-    box2.style.display = 'none';
+    box.style.visibility = 'hidden';
+    box2.style.visibility = 'hidden';
+    
     // references are now sync'd and can be accessed.
     // subtitle.style.color = '#f00';
   }
@@ -75,8 +76,8 @@ export default function Voting(props) {
     const box = document.getElementById('keplr-logo');
     const box2 = document.getElementById('main-logo');
   // 👇️ removes element from DOM
-    box.style.display = 'inline';
-    box2.style.display = 'inline';    
+    box.style.visibility = 'visible';
+    box2.style.visibility = 'visible';    
     setIsOpen(false);
   }
   if (props.pollCampaign.error){
