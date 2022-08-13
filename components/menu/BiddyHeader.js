@@ -198,12 +198,12 @@ const Header= function() {
                       <div className="dropdown-custom btn" >
                         </div>
                           <div className="dropdown-custom btn" >
-                             <a rel="noreferrer" href='https://twitter.com/WEAREXRPARMY' target="_blank">
+                             <a rel="noreferrer" href='https://twitter.com/BlackHoleLLC' target="_blank">
                                 <FaTwitter size={logoSize} />
                             </a>
                           </div>
                           <div className="dropdown-custom btn" >
-                             <a rel="noreferrer" href='https://discord.com/' target="_blank">
+                             <a rel="noreferrer" href='https://discord.com/invite/pY6cj2vNJD' target="_blank">
                                 <img src={'/img/Discord-Logo-White.png'} style={{width: logoSize}} />
                             </a>
                           </div>

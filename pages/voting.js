@@ -51,6 +51,7 @@ export default function Voting(props) {
 
   const [showCongratsVoting, setShowCongratsVoting] = useState(false);
   const testDivRef = useRef(null);
+  const votingMessageRef = useRef(null);
   const [modalIsOpen, setIsOpen] = useState(false);
 
   let subtitle;
@@ -162,6 +163,7 @@ export default function Voting(props) {
         }
         else {
           setShowCongratsVoting(true)
+          votingMessageRef.current.scrollIntoView();
           // alert("Thank you for your response! See the preliminary results below.")
           // window.location.reload();
         }
@@ -242,13 +244,13 @@ export default function Voting(props) {
         </button>
       </Modal>
     
-        <div className='row'>
+        <div className='row' ref={votingMessageRef} >
           <div className='col-lg-12'>
           <div>
         </div>
-        <div style={{display: showCongratsVoting ? 'inline' : 'none'}} >
+        <div  style={{display: showCongratsVoting ? 'inline' : 'none'}} >
           <Reveal className='onStep' keyframes={grow} delay={0} duration={500} triggerOnce >
-            <div onClick={closeMessage} className="alert fade alert-simple alert-success alert-dismissible text-left font__family-montserrat font__size-16 font__weight-light brk-library-rendered rendered show">
+            <div onClick={closeMessage} style={{marginTop: 30}}className="alert fade alert-simple alert-success alert-dismissible text-left font__family-montserrat font__size-16 font__weight-light brk-library-rendered rendered show">
                 <strong className="font__weight-semibold">Thank you!</strong> We have received your response. See the preliminary results below... 
             </div>
           </Reveal>
