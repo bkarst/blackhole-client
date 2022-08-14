@@ -55,6 +55,8 @@ export default function Voting(props) {
   const [modalIsOpen, setIsOpen] = useState(false);
 
   let subtitle;
+
+  
   
   function openModal() {
     setIsOpen(true);
@@ -183,6 +185,11 @@ export default function Voting(props) {
     <div key={2} ><span onClick={openModal} className='btn-main inline lead' style={{margin: 'auto', cursor: 'pointer', zIndex: 9999999}} >How Voting Works</span></div>,
     <div key={3} ><span className='btn-blue btn-main inline lead' style={{color: '#fff', fill: '#fff', background: 'rgb(54,135,182)', margin: 'auto'}}>Buy BKHL on Junoswap</span></div>,
   ]
+  let pollMessage = "Time till poll Ends"
+  
+  if (Date.parse(pollCampaign.start_time) > Date.parse(new Date())){
+    pollMessage = "Time till poll Begins"
+  }
   // 
   // poll.active = 
   return (
@@ -221,11 +228,18 @@ export default function Voting(props) {
         <FancyCountdown pollCampaign={pollCampaign}/>
         <div>
         <h4 className='col-white' style={{textAlign: 'center', marginTop: 20}}>
-          Time till Poll Ends
+          { pollMessage }
         </h4>
+        { pollCampaign.is_current_poll &&
         <div className='col-white' style={{textAlign: 'center', marginTop: 20, marginBottom: 100}}>
             Vote with your Blackhole Token Below Before the Poll Window Closes!
         </div>
+        } 
+        { !pollCampaign.is_current_poll &&
+        <div className='col-white' style={{textAlign: 'center', marginTop: 20, marginBottom: 100}}>
+            Get your HOLE before and be ready for the voting window to open.
+        </div>
+        } 
         </div>
       </section>
     <section className="container" style={{padding: 10}} >
@@ -265,6 +279,7 @@ export default function Voting(props) {
       </div>
     </div>
   </section>
+  { pollCampaign.is_current_poll &&
   <section className="container" style={{padding: 10}} ref={testDivRef} >
         <div className='row'>
         <Reveal className='onStep' keyframes={fadeInUp} delay={0} duration={600} triggerOnce >
@@ -276,6 +291,7 @@ export default function Voting(props) {
         </div>
 
   </section>
+  }
   <Footer />
 </div>
   )

@@ -2891,10 +2891,15 @@ function run2(pollCampaign) {
     var trigger_timeout = null;
     
     $(document).ready(function() {
+		
         var currentDate = new Date();
         var futureDate  = new Date(pollCampaign.end_time);
+		if (Date.parse(pollCampaign.start_time) > Date.parse(new Date())){
+			futureDate  = new Date(pollCampaign.start_time);
+		  }
         var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
     
+		
         $('.countdown_mp3').trigger('load');
         $('.happy_mp3').trigger('load');
     
