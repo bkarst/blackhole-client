@@ -97,7 +97,8 @@ const BlackholeWallet = () => {
       const [walletInfo, setWalletInfo] = useState(null);
       React.useEffect(() => {
         if ((typeof window !== 'undefined')){
-        run()
+          // console.log("runnning")
+          run()
         }
       }
       , [])

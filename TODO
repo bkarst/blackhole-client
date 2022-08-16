@@ -1,8 +1,31 @@
+.slide{
+        cursor: pointer;
+    margin-left: 50%;
+    display: inline-block;
+    width: 80%;
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: .4s all;
+    transition: .4s all;
+    border-radius: 20px;
+    color: white;
+    backdrop-filter: blur(10px);
+    border: double 1px transparent;
+    border-radius: 30px;
+    background-image: -webkit-linear-gradient(#0200546b, #0000006b), -webkit-linear-gradient(left, rgb(65, 176, 201), #009dff75);
+    background-image: linear-gradient(#0200546b, #0000006b), linear-gradient(to right, rgb(65, 176, 201), #009dff75);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+
 add text box to admin in edit poll as site content
+add security to admin security
 
 various ui tasks
 start air drop
 setup claim page
+bigger k
 tweet airdrop claim
 add liquidity
 vote drop, fortis econama, https://www.fortisoeconomia.space/votedrops/
@@ -27,16 +50,6 @@ items bigger on header
 Black hole for loading
 Add backdrop blur to text. 
 add white circle behind voting thumbnails.
-
-#loading between home and voting.
-
-
-make donut segment font more readable
-Add discord and telegram icon.
-
-bin/rails test test/models/poll_campaign_test.rb
-
-voting message
 
 get it working on mobile
 

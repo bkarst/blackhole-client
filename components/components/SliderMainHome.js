@@ -29,7 +29,7 @@ const inline = keyframes`
 `;
 
 const slidermainhome= () => (
- <div className="container" style={{marginTop: 100}}>
+ <div className="container main-cont">
     <div className="row align-items-center">
           <div className="col-md-6">
               <div className="spacer-single"></div>
@@ -63,7 +63,7 @@ const slidermainhome= () => (
           </div>
           <div className="col-md-6">
             <Reveal className='onStep d-inline' keyframes={fadeIn} delay={0} duration={3500} triggerOnce>
-              <img src="../img/spaceman5.png" style={{marginLeft: 100, width: 500}} alt=""/>
+              <img src="../img/spaceman5.png" className='spaceman-img' />
             </Reveal>
           </div>
       </div>

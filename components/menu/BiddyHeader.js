@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Breakpoint, { BreakpointProvider, setDefaultBreakpoints } from "react-socks";
 import { header } from 'react-bootstrap';
 import Link from 'next/link'
@@ -30,6 +30,8 @@ const NavLink = props => (
 const Header= function() {
 
     const logoSize = 25
+    const ref = useRef(null);
+    const refRef = useRef(null);
 
     const [openMenu, setOpenMenu] = useState(false);
     const [openMenu1, setOpenMenu1] = useState(false);
@@ -60,9 +62,9 @@ const Header= function() {
     const closeMenu3 = () => {
       setOpenMenu3(false);
     };
-    const ref = useOnclickOutside(() => {
-      closeMenu();
-    });
+    // const ref = useOnclickOutside(() => {
+    //   closeMenu();
+    // });
     const ref1 = useOnclickOutside(() => {
       closeMenu1();
     });
@@ -73,15 +75,17 @@ const Header= function() {
       closeMenu3();
     });
 
-    
+    // const headerHeight = ref.current && ref.current.clientHeight || 64;
+    const headerWidth = refRef.current && refRef.current.clientWidth || 64;
+
+    console.log('headerWidth', headerWidth)
     useEffect(() => {
     const header = document.getElementById("myHeader");
     const totop = document.getElementById("scroll-to-top");
     const sticky = header.offsetTop;
-    
     }, []);
     return (
-    <header id="myHeader" className='navbar white' >
+    <header id="myHeader" className='navbar white' ref={ref} >
      <div className='container' style={{marginTop: 20}}>
      
        <div className='row w-100-nav'  >
@@ -102,69 +106,30 @@ const Header= function() {
                 </Link>
                 
               <BreakpointProvider>
-              
                 <Breakpoint l down>
                   {showmenu && 
-                  <div className='menu'>
+                  <div className="mobile-navbar" >
                     <div className='navbar-item'>
-                      <div ref={ref}>
-                        <div className="dropdown-custom dropdown-toggle btn" 
-                          onClick={handleBtnClick}
-                          >
+                        <div className="mobile-menu-item" >
+                          <Link href="/">
                           Home
+                        </Link>
                         </div>
-                        
-                        {openMenu && (
-                          <div className='item-dropdown'>
-                            <div className="dropdown" onClick={closeMenu}>
-                              
-                            </div>
-                          </div>
-                        )}
-                      </div>
                     </div>
                     <div className='navbar-item'>
-                      <div ref={ref1}>
-                        <div className="  btn" 
-                          >
-                          Explore
-                        </div>
-                      </div>
+                        <Link href="/voting" className='btn btn-2' >
+                         Voting
+                       </Link>
                     </div>
                     <div className='navbar-item'>
-                      <div ref={ref2}>
-                        <div className="dropdown-custom dropdown-toggle btn" 
-                          onClick={handleBtnClick2}
-                          >
-                          Pages
-                        </div>
-                        {openMenu2 && (
-                          <div className='item-dropdown'>
-                            <div className="dropdown" onClick={closeMenu2}>
-                              
-                            </div>
-                          </div>
-                        )}
-                      </div>
+                    <a rel="noreferrer" href='https://twitter.com/BlackHoleLLC' target="_blank">
+                                Twitter
+                        </a>
                     </div>
                     <div className='navbar-item'>
-                      
-                    </div>
-                    <div className='navbar-item'>
-                      <div ref={ref3}>
-                        <div className="dropdown-custom dropdown-toggle btn" 
-                          onClick={handleBtnClick3}
-                          >
-                          Element
-                        </div>
-                        {openMenu3 && (
-                          <div className='item-dropdown'>
-                            <div className="dropdown" onClick={closeMenu3}>
-                              
-                            </div>
-                          </div>
-                        )}
-                      </div>
+                        <a rel="noreferrer" href='https://discord.com/invite/pY6cj2vNJD' target="_blank">
+                          Discord
+                            </a>
                     </div>
                   </div>
                   }
