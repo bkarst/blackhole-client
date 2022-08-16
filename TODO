@@ -1,37 +1,36 @@
+add text box to admin in edit poll as site content
 
-change logo and name and address in chain-registry
+various ui tasks
+start air drop
+setup claim page
+tweet airdrop claim
+add liquidity
+vote drop, fortis econama, https://www.fortisoeconomia.space/votedrops/
+
+Junoswap Asset List
+https://github.com/CosmosContracts/junoswap-asset-list/commit/db23150751d37fca8c355689229eb8833969ec3c
+
+header logo and text bigger
+
+https://juno.tools/airdrops/register/?contractAddress=juno14c5uvd66ly6auzhhjcvsxxvpxxg6hjgsf8mcn5hzx6g6d9gkpf9sepygdd
+
 change HOLE in app. 
 
-update the bkhl images
-loading between home and voting.
-update the discord url
 get mobile working
-phone sheet
 collect emails via mailchimp
 
 put whitepaper on top
-make blackhole voting interactive. 
+make blackhole voting interactive. add a loading icon.vortex loading
 play a game to get free tokens.
 create a fixed header version of the wallet
-
+items bigger on header
 Black hole for loading
-
-Wallet display where character is. 
-K inside black hole, 
-
-After connect, name balance, blkh
-
-
-Show a note that you need to refresh after voting. 
-Show keplr balance and connect wallet icon.
-Add transitions between pages. loading when vote clicked.
-Add Hover Effects for header. 
 Add backdrop blur to text. 
+add white circle behind voting thumbnails.
+
+#loading between home and voting.
 
 
-Add team page
-put in the high res spaceman. 
-Make the Send the vote submitted message.
 make donut segment font more readable
 Add discord and telegram icon.
 

@@ -210,11 +210,11 @@ export default function Voting(props) {
         </Reveal>
         </div>
         <div>
-        <div style={{zIndex: 1, textAlign: 'center', marginBottom: 120, flexDirection: 'row'}}>
+        <div style={{display: 'flex', zIndex: 1, textAlign: 'center', marginBottom: 120, flexDirection: 'row'}}>
     {links.map((link, index) => {
     return (
     // eslint-disable-next-line react/jsx-key
-    <Reveal key={index} style={{margin: 10}} className='onStep' keyframes={fadeIn} delay={index*150} duration={600} triggerOnce>
+    <Reveal key={index} style={{margin: 'auto'}} className='onStep' keyframes={fadeIn} delay={index*150} duration={600} triggerOnce >
         {link}
     </Reveal>
     )
@@ -225,11 +225,14 @@ export default function Voting(props) {
       </section>
       
       <section className='container' style={{padding: 10, marginTop: 30}}>
-        <FancyCountdown pollCampaign={pollCampaign}/>
-        <div>
+        <div style={{marginBottom: 55}}>
         <h4 className='col-white' style={{textAlign: 'center', marginTop: 20}}>
           { pollMessage }
         </h4>
+        </div>
+        <FancyCountdown pollCampaign={pollCampaign}/>
+        <div>
+        
         { pollCampaign.is_current_poll &&
         <div className='col-white' style={{textAlign: 'center', marginTop: 20, marginBottom: 100}}>
             Vote with your Blackhole Token Below Before the Poll Window Closes!
@@ -265,7 +268,7 @@ export default function Voting(props) {
         <div  style={{display: showCongratsVoting ? 'inline' : 'none'}} >
           <Reveal className='onStep' keyframes={grow} delay={0} duration={500} triggerOnce >
             <div onClick={closeMessage} style={{marginTop: 30}}className="alert fade alert-simple alert-success alert-dismissible text-left font__family-montserrat font__size-16 font__weight-light brk-library-rendered rendered show">
-                <strong className="font__weight-semibold">Thank you!</strong> We have received your response. See the preliminary results below... 
+                <strong className="font__weight-semibold">Thank you!</strong> We have received your response. Refresh page to see the preliminary results below... 
             </div>
           </Reveal>
         </div>

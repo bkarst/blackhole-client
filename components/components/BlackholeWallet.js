@@ -111,7 +111,8 @@ const BlackholeWallet = () => {
           return
         }
         // console.log(keplr)
-            const chainId = "juno-1";
+            // const chainId = "juno-1";
+            const chainId = "cosmoshub-4";
       
             // // Enabling before using the Keplr is recommended.
             // // This method will ask the user whether to allow access if they haven't visited this website.
@@ -131,6 +132,7 @@ const BlackholeWallet = () => {
             // // But, currently, Keplr extension manages only one address/public key pair.
             // // XXX: This line is needed to set the sender address for SigningCosmosClient.
             const accounts = await offlineSigner.getAccounts();
+            console.log(accounts)
             //https://lcd-juno.cosmostation.io/cosmos/bank/v1beta1/balances/juno1dru5985k4n5q369rxeqfdsjl8ezutch8y9vuau?pagination.limit=1000
             //use juno tools api to find balance
             // const balances = await axios.get(`https://lcd-juno.cosmostation.io/cosmos/bank/v1beta1/balances/${accounts[0].address}?pagination.limit=1000`)
