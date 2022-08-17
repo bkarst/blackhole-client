@@ -112,8 +112,8 @@ const BlackholeWallet = () => {
           return
         }
         // console.log(keplr)
-            // const chainId = "juno-1";
-            const chainId = "cosmoshub-4";
+            const chainId = "juno-1";
+            // const chainId = "cosmoshub-4";
       
             // // Enabling before using the Keplr is recommended.
             // // This method will ask the user whether to allow access if they haven't visited this website.
