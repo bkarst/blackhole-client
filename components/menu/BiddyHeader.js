@@ -105,7 +105,7 @@ const Header= function() {
                   />
                 </Link>
                 
-              <BreakpointProvider>
+              <BreakpointProvider customQuery="max-width: 768px)">
                 <Breakpoint l down>
                   {showmenu && 
                   <div className="mobile-navbar" >

@@ -376,7 +376,7 @@
 
 
 #particle{
-
+  display: none;
   width: 570px;
   height: 970px;
   margin-left: -134px;
@@ -731,7 +731,7 @@ background-clip: content-box, border-box;
 
   #particle{
 
-  
+    display: block;
     width: 2000px;
     height: 970px;
     margin-left: -852px;

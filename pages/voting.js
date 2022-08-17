@@ -226,6 +226,7 @@ export default function Voting(props) {
       </section>
       
       <section className='container' style={{padding: 10, marginTop: 30}}>
+      <div className='col-lg-12' style={{display: 'flex', flexDirection: 'column'}}>
         <div style={{marginBottom: 55}}>
         <h4 className='col-white' style={{textAlign: 'center', marginTop: 20}}>
           { pollMessage }
@@ -244,6 +245,7 @@ export default function Voting(props) {
             Get your HOLE before and be ready for the voting window to open.
         </div>
         } 
+        </div>
         </div>
       </section>
     <section className="container" style={{padding: 10}} >
