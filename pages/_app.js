@@ -48,7 +48,7 @@ function MyApp({ Component, pageProps }) {
   //   width = window.clientWidth
   // }
   // console.log('width', width)
-  return <div style={{width: width}}>
+  return <div >
   <Script src="https://www.google-analytics.com/analytics.js" />
   <Component {...pageProps} />
   </div>
