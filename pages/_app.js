@@ -15,6 +15,7 @@ import '../src/stylesheets/Roadmap.css'
 import '../src/stylesheets/App.css'
 import '../src/stylesheets/DonutChart.css'
 import '../src/stylesheets/FancyCountdown.css'
+import '../src/stylesheets/TreeRoadmap.scss'
 import 'swiper/css';
 import '../src/stylesheets/Slider.scss'
 import '../src/stylesheets/Hover.scss'
@@ -50,6 +51,7 @@ function MyApp({ Component, pageProps }) {
   // console.log('width'B, width)
   return <div style={{width: width}}>
   <Script src="https://www.google-analytics.com/analytics.js" />
+  <Script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.0-beta.26/scrollreveal.js" strategy="beforeInteractive" />
   <Component {...pageProps} />
   </div>
 }

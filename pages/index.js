@@ -5,6 +5,7 @@ import styles from '../styles/Home.module.css'
 import HomePage from '../components/pages/home'
 import SliderMainHome from '../components/components/SliderMainHome';
 import Roadmap from '../components/components/Roadmap'
+import TreeRoadmap from '../components/components/TreeRoadmap'
 import axios from 'axios'
 import BiddyHeader from '../components/menu/BiddyHeader';
 import StarryGalaxy from '../components/components/StarryGalaxy';
@@ -53,7 +54,7 @@ export default function Home() {
             Upcoming Missions
           </h2>
         </Reveal>
-        <Roadmap />
+        <TreeRoadmap />
       </section>
 
       
