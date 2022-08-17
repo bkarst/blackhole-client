@@ -102,7 +102,7 @@ const Roadmap = () => {
                     <div className="slide-description">
                         <ul>
                             <li>Black Token Airdrop on Juno Network.</li>
-                            <li>BLKH Listing on Osmosis DEX.</li>
+                            <li>HOLE Listing on Osmosis DEX.</li>
                             <li>Execute First BlackHole Vote and Burn.</li>
                         </ul>
                     </div>

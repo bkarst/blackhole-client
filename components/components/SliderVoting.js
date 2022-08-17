@@ -37,7 +37,7 @@ const SliderVoting = ({ pollCampaign }) => (
               </Reveal>
               <Reveal className='onStep' keyframes={fadeInUp} delay={0} duration={900} triggerOnce>
                 <p className="lead col-white" >
-                Each BLKH you hold in your wallet equals 1 vote. Only your latest vote will count.  Your BLKH token balance at the end of the voting period will be the number of votes cast for you. You will be voting with the Keplr Wallet.[Maybe other wallets] If you’d like to vote for multiple Burns you can hold BLKH in multiple wallets, then you may choose to vote with each wallet.
+                Each HOLE you hold in your wallet equals 1 vote. Only your latest vote will count.  Your HOLE token balance at the end of the voting period will be the number of votes cast for you. You will be voting with the Keplr Wallet.[Maybe other wallets] If you’d like to vote for multiple Burns you can hold HOLE in multiple wallets, then you may choose to vote with each wallet.
                 </p>
 
               </Reveal>

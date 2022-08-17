@@ -98,8 +98,8 @@ const Header= function() {
           <Link href="/"  >
                 <img
                     id='main-logo'
-                    src="../img/blacholealt.png"
-                    style={{width: 150, cursor: 'pointer'}}
+                    src="../img/header-logo.png"
+                    style={{width: 130, cursor: 'pointer', marginTop: 20}}
                     className="img-fluid d-block"
                     alt="#"
                   />
@@ -173,7 +173,7 @@ const Header= function() {
                             </a>
                           </div>
                           <div className="dropdown-custom btn" >
-                             <a rel="noreferrer" href='https://telegram.com/' target="_blank">
+                             <a rel="noreferrer" href='https://t.me/+YnPA2Dw4EE4yNGUx' target="_blank">
                                 <img src={'/img/telegram2.png'} style={{width: logoSize}} />
                             </a>
                           </div>
