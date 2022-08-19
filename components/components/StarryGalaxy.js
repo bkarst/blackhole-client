@@ -1,4 +1,5 @@
 import React from 'react';
+import { isMobile } from '../../lib/BrowserHelper';
 
 function run() {
     var num = 500;
@@ -292,7 +293,9 @@ window.addEventListener('resize',function(){
 const StarryGalaxy = () => {
       React.useEffect(() => {
         if ((typeof window !== 'undefined')){
-        run()
+          if (!isMobile()){
+            run()
+          }
         }
       }
       , [])
