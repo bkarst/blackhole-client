@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import Reveal from 'react-awesome-reveal';
 import { fadeIn, displayAddress } from '../../lib/CssHelper'
 import { getBalance, getKeplr } from '../../lib/CosmosHelper'
+import { isMobile } from '../../lib/BrowserHelper';
 
 function run() {
 window.requestAnimFrame = 
@@ -93,12 +94,26 @@ loop();
 
 const BlackholeWallet = () => {
 
+      const canvasRef = useRef(null)
       // const walletInfo = useState(null);
       const [walletInfo, setWalletInfo] = useState(null);
+      const [displayVortex, setDisplayVortex] = useState(false);
       React.useEffect(() => {
         if ((typeof window !== 'undefined')){
           // console.log("runnning")
-          run()
+          if (!isMobile()){
+            run()
+          }
+          else {
+
+            var doc = document.getElementById('canvas')
+            if (doc) {
+              doc.style.display = 'none'
+            }
+            
+          }
+          // setDisplayVortex(!isMobile())
+          
         }
       }
       , [])
@@ -173,7 +188,7 @@ const BlackholeWallet = () => {
       <div>
         <div>
     <div className='wallet-container' >
-        <canvas id="particle"></canvas>
+        <canvas ref={canvasRef} id="particle" ></canvas>
         <div className='center-wallet-cont'>
             <div id='keplr-logo' style={{zIndex: 99999999, cursor: 'pointer', display: walletInfo ? 'none' : 'inline' }} onClick={ connectAndGetBalance }>
                 <img style={{width: 50, margin: 'auto'}} src="./img/keplr-logo.png" alt="" />

@@ -91,6 +91,17 @@ $gradient2: rgb(79,137,162);
   border-color: transparent $gradient2 transparent transparent;
 }
 
+.reveal p{
+  font-size: 26px;
+  font-family: 'Dongle', sans-serif;
+}
+
+.reveal phase{
+  font-size: 26px;
+  font-family: 'Dongle', sans-serif;
+  font-weight: 800;
+}
+
 /*Distance for left content main box*/
 .timeline ul li:nth-child(even) div {
   left: -439px;

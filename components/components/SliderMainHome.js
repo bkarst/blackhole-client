@@ -49,7 +49,7 @@ const slidermainhome= () => (
                   <span className="btn-main inline lead">Vote Now</span>
                 </Link>
               <div className="mb-sm-30">
-              <Link href='/voting'>
+                <Link href="./V1_BLACKHOLE_LLC_WHITEPAPER.pdf" download="V1_BLACKHOLE_LLC_WHITEPAPER" target="_blank">
                   <span className="btn-main inline lead">View Whitepaper</span>
                 </Link>
               </div>
