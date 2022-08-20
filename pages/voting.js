@@ -181,9 +181,9 @@ export default function Voting(props) {
   console.log('endTime', pollCampaign.end_time)
   console.log('startTime', pollCampaign.start_time)
   const links = [
-    <div key={1} ><span className='btn-blue btn-main inline lead' style={{color: '#fff', fill: '#fff', background: 'rgb(54,135,182)', margin: 'auto'}}>Buy BKHL on Osmosis</span></div>,
+    <div key={1} ><span className='btn-blue btn-main inline lead' style={{color: '#fff', fill: '#fff', background: 'rgb(54,135,182)', margin: 'auto'}}>Get HOLE on Osmosis</span></div>,
     <div key={2} ><span onClick={openModal} className='btn-main inline lead' style={{margin: 'auto', cursor: 'pointer', zIndex: 9999999}} >How Voting Works</span></div>,
-    <div key={3} ><span className='btn-blue btn-main inline lead' style={{color: '#fff', fill: '#fff', background: 'rgb(54,135,182)', margin: 'auto'}}>Buy BKHL on Junoswap</span></div>,
+    <div key={3} ><span className='btn-blue btn-main inline lead' style={{color: '#fff', fill: '#fff', background: 'rgb(54,135,182)', margin: 'auto'}}>Get HOLE on Junoswap</span></div>,
   ]
   let pollMessage = "Time till poll Ends"
   
