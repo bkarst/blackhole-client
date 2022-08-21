@@ -75,7 +75,6 @@ const TreeRoadmap = () => {
         <div className="reveal">
           <p>
           <phase>PHASE 2</phase> 
-          Launch Interest Bearing Pulse Account <br />
           First Pulse Distribution To HOLE holders.	 <br />
         
           </p>
