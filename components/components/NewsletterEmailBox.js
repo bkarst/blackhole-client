@@ -2,6 +2,8 @@
 import React, { useRef, useState } from 'react';
 import Footer from '../components/footer';
 import Reveal from 'react-awesome-reveal';
+import axios from 'axios';
+import constants from '../../src/constants';
 import { createGlobalStyle } from 'styled-components';
 import { fadeIn, fadeInUp, grow, customStyles } from '../../lib/CssHelper'
 
@@ -25,9 +27,25 @@ const NewletterEmailBox = () => {
     const submitNewsletterEmail = (e) => {
         e.preventDefault()
         var email = document.getElementById('email').value;
-        setShowEmailBox(true);
-        console.log('email', email)
+        
+        var formObj = { 
+            email: email
+        }
+        // console.log()
+        axios.post(constants.API_URL + '/api/users/', formObj).then(response => {
+            console.log(response)
+            if (response.data.error){
+              alert(response.data.error)
+            }
+            else {
+                // alert("Submitted")
+                setShowEmailBox(true);
+            //   window.location.reload();
+            }
+        })
     }
+
+    
 
     const votingMessageRef = useRef(null);
     const [showEmailBox, setShowEmailBox] = useState(false);
@@ -47,7 +65,6 @@ const NewletterEmailBox = () => {
       <div className="field-set" style={{marginTop: 20}} >
         <input type='submit' id='send_message' value='Register Email' className="btn btn-main btn-fullwidth color-2"/>
       </div>
-      
 
       <div className='row' ref={votingMessageRef} >
           <div className='col-lg-12'>
