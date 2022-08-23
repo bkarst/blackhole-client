@@ -25,15 +25,17 @@ import { getBalance, getKeplr } from '../lib/CosmosHelper'
 import BlackholeWallet from '../components/components/BlackholeWallet'
 import ReactDOM from 'react-dom';
 import Modal from 'react-modal';// import { CosmWasmClient } from '@cosmjs/cosmwasm-stargate'
-
+import { useRouter } from "next/router";
+import lscache from 'lscache';
 
 export async function getServerSideProps(context) {
   // const pollid = context.params.pollid;
   // console.log('pollid', pollid)
   // const { nftid } = router.query
   // console.log(constants.API_URL + `/api/polls/`)
+  console.log(context)
   const res = await fetch(constants.API_URL + `/api/current_poll/`)
-  console.log('res', res)
+  // console.log('res', res)
   const data = await res.json()
 //   const nft = data[0];
 //   if (!data) {
@@ -41,7 +43,8 @@ export async function getServerSideProps(context) {
 //       notFound: true,
 //     }
 //   }
-  
+
+
   return {
     props: { pollCampaign: data }, // will be passed to the page component as props
   }
@@ -50,15 +53,17 @@ export async function getServerSideProps(context) {
 
 export default function Voting(props) {
 
+  
   const [showCongratsVoting, setShowCongratsVoting] = useState(false);
   const testDivRef = useRef(null);
   const votingMessageRef = useRef(null);
   const [modalIsOpen, setIsOpen] = useState(false);
-
+  
   let subtitle;
 
-  
-  
+  // lscache.set('voting_key', 'aiojsdfoiajsdf')
+  console.log('key', lscache.get('voting_key'));
+
   function openModal() {
     setIsOpen(true);
   }

@@ -8299,6 +8299,11 @@
   dependencies:
     "yallist" "^4.0.0"
 
+"lscache@^1.3.2":
+  "integrity" "sha512-CBZT/pDcaK3I3XGwDLaszDe8hj0pCgbuxd3W79gvHApBSdKVXvR9fillbp6eLvp7dLgtaWm3a1mvmhAqn9uCXQ=="
+  "resolved" "https://registry.npmjs.org/lscache/-/lscache-1.3.2.tgz"
+  "version" "1.3.2"
+
 "magic-string@^0.25.0", "magic-string@^0.25.7":
   "integrity" "sha512-RmF0AsMzgt25qzqqLc1+MbHmhdx0ojF2Fvs4XnOqz2ZOBXzzkEwc/dJQZCYHAn7v1jbVOjAZfK8msRn4BxO4VQ=="
   "resolved" "https://registry.npmjs.org/magic-string/-/magic-string-0.25.9.tgz"
