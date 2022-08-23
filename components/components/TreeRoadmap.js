@@ -76,7 +76,6 @@ const TreeRoadmap = () => {
           <p>
           <phase>PHASE 2</phase> 
           First Pulse Distribution To HOLE holders.	 <br />
-        
           </p>
         </div>
       </li>

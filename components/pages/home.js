@@ -21,7 +21,7 @@ const customStyles = {
   }),
   menu: base => ({
     ...base,
-    background: "#212428 !important",
+    background: "transparent",
     borderRadius: 0,
     marginTop: 0
   }),
@@ -56,7 +56,7 @@ const options2 = [
 
 const GlobalStyles = createGlobalStyle`
   header#myHeader.navbar.sticky.white {
-    background: #212428;
+    background: transparent;
     border-bottom: 0;
     box-shadow: 0 4px 20px 0 rgba(10,10,10, .8);
   }

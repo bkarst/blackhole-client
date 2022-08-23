@@ -65,7 +65,7 @@ const GlobalStyles = createGlobalStyle`
     background: rgba(255, 255, 255, .1);
   }
   header#myHeader.navbar.white .btn, .navbar.white a, .navbar.sticky.white a{
-    color: #fff;
+    color: transparent;
   }
   header#myHeader .dropdown-toggle::after{
     color: #fff;

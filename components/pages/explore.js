@@ -7,7 +7,7 @@ import Footer from '../components/footer';
 const customStyles = {
   option: (base, state) => ({
     ...base,
-    background: "#212428",
+    background: "transparent",
     color: "#fff",
     borderRadius: state.isFocused ? "0" : 0,
     "&:hover": {

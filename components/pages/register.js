@@ -4,7 +4,7 @@ import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
   header#myHeader.navbar.white {
-    background: #212428;
+    background: transparent;
   }
 `;
 

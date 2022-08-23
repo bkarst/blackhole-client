@@ -1,6 +1,6 @@
 import React from 'react';
 import Footer from '../components/footer';
-import { Link } from '@reach/router';
+import Link from 'next/link';
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
@@ -42,7 +42,7 @@ const logintwo= () => (
               <div className="text">
                   <h4>Getting Started</h4>
                   <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam.</p>
-                  <Link to="" className="btn-main m-auto">Read more</Link>
+                  <Link href="/" className="btn-main m-auto">Read more</Link>
               </div>
           </div>
       </div>    
@@ -52,7 +52,7 @@ const logintwo= () => (
               <div className="text">
                   <h4>Buying</h4>
                   <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam.</p>
-                  <Link to="" className="btn-main m-auto">Read more</Link>
+                  <Link href="/" className="btn-main m-auto">Read more</Link>
               </div>
           </div>
       </div>  
@@ -62,7 +62,7 @@ const logintwo= () => (
               <div className="text">
                   <h4>Selling</h4>
                   <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam.</p>
-                  <Link to="" className="btn-main m-auto">Read more</Link>
+                  <Link href="/" className="btn-main m-auto">Read more</Link>
               </div>
           </div>
       </div>  
@@ -72,7 +72,7 @@ const logintwo= () => (
               <div className="text">
                   <h4>Creating</h4>
                   <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam.</p>
-                  <Link to="" className="btn-main m-auto">Read more</Link>
+                  <Link href="" className="btn-main m-auto">Read more</Link>
               </div>
           </div>
       </div>  
@@ -82,7 +82,7 @@ const logintwo= () => (
               <div className="text">
                   <h4>Partners</h4>
                   <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam.</p>
-                  <Link to="" className="btn-main m-auto">Read more</Link>
+                  <Link href="/" className="btn-main m-auto">Read more</Link>
               </div>
           </div>
       </div>  
@@ -92,7 +92,7 @@ const logintwo= () => (
               <div className="text">
                   <h4>Developers</h4>
                   <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam.</p>
-                  <Link to="" className="btn-main m-auto">Read more</Link>
+                  <Link href="/" className="btn-main m-auto">Read more</Link>
               </div>
           </div>
       </div>  

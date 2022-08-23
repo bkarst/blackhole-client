@@ -8,7 +8,7 @@ import Link from 'next/link'
 
 const GlobalStyles = createGlobalStyle`
   header#myHeader.navbar.white {
-    background: #212428;
+    background: transparent;
   }
 `;
 

@@ -17,6 +17,7 @@ import constants from '../src/constants';
 import Countdown from 'react-countdown';
 import Footer from '../components/components/footer';
 import SliderVoting from '../components/components/SliderVoting'
+import HowVotingWorks from '../components/components/HowVotingWorks'
 import FancyCountdown from '../components/components/FancyCountdown'
 import Reveal from 'react-awesome-reveal';
 import { fadeIn, fadeInUp, grow, customStyles } from '../lib/CssHelper'
@@ -182,7 +183,7 @@ export default function Voting(props) {
   console.log('startTime', pollCampaign.start_time)
   const links = [
     <div key={1} ><span className='btn-blue btn-main inline lead' style={{color: '#fff', fill: '#fff', background: 'rgb(54,135,182)', margin: 'auto'}}>Get HOLE on Osmosis</span></div>,
-    <div key={2} ><span onClick={openModal} className='btn-main inline lead' style={{margin: 'auto', cursor: 'pointer', zIndex: 9999999}} >How Voting Works</span></div>,
+    
     <div key={3} ><span className='btn-blue btn-main inline lead' style={{color: '#fff', fill: '#fff', background: 'rgb(54,135,182)', margin: 'auto'}}>Get HOLE on Junoswap</span></div>,
   ]
   let pollMessage = "Time till poll Ends"
@@ -202,14 +203,13 @@ export default function Voting(props) {
       </Head>
       <StarryGalaxy />
       <BiddyHeader />
+      <section className='container' >
+        <HowVotingWorks />
+      </section>
       
       <section className='container' style={{padding: 10, marginTop: 30}}>
       <div className='row'>
-        <div className='col-lg-12'>
-        <Reveal style={{margin: 10}} className='onStep' keyframes={fadeIn} delay={0} duration={2000} triggerOnce>
-          <BlackholeWallet />
-        </Reveal>
-        </div>
+        
         <div>
         <div className='links-container' >
     {links.map((link, index) => {
