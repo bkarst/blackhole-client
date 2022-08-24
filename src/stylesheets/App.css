@@ -126,7 +126,7 @@
 
   .poll-opt-label{
     text-align: center;
-    margin-top: 23px;
+    margin-top: 7px;
     color: #ffffff;
     font-family: 'Dongle', sans-serif;
     font-size: 24px;
@@ -135,24 +135,28 @@
   .tooltip-label {
     display: inline;
     position: absolute;
-    background: #eee;
+    background: #aaa;
     padding: 3px 14px;
-    border-radius: 5px;
+    padding: 0px;
+    border-radius: 4px;
+    height: 28px;
     font-weight: 800;
     font-size: 13px;
     color: #000;
     text-align: center;
-    top: -59px;
+    top: -19px;
+    font-family: 'Dongle';
+    font-size: 20px;
     margin: auto;
-    left: 6px;
-    width: 140px;
+    left: 17px;
+    width: 90px;
   }
 
   .poll-opt{
     cursor: pointer;
-    margin: 50px;
-    margin-top: 21px;
-    margin-bottom: 30px;
+    margin: 19px;
+    margin-top: 11px;
+    margin-bottom: 24px;
     position: relative;
   }
 
@@ -498,7 +502,7 @@ border-radius:50%;
   box-shadow: 0 2px 5px rgb(0 0 0 / 40%);
     background: rgb(71 71 71 / 40%);
     border-radius: 10px;
-    padding: 27px;
+    padding: 10px;
 }
 
 .alert>.start-icon {
@@ -720,9 +724,54 @@ background-clip: content-box, border-box;
   overflow: hidden;
 }
 
+h1, .h1 {
+  font-size: 25px;
+  margin-bottom: 20px;
+  line-height: 1.2em;
+  letter-spacing: -1px;
+}
+
+h2, .h2 {
+  font-size: 20px;
+  margin-bottom: 18px;
+  line-height: 1.2em;
+  letter-spacing: -1px;
+}
+
+.buttons-cont div{
+margin: 10px 0px;
+  }
+
+.buttons-cont{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100px;
+}
+
 @media screen and (min-width: 768px) {
+
+  .buttons-cont{
+    display: flex;
+    flex-wrap: wrap;
+    width: 600px;
+  }
+
+  h1, .h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    line-height: 1.2em;
+    letter-spacing: -1px;
+}
+
+h2, .h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  line-height: 1.2em;
+  letter-spacing: -1px;
+}
+
   .main-cont{
-    margin-top: 100px;
+    margin-top: 60px;
   }
 
   .slider{
@@ -813,4 +862,17 @@ background-clip: content-box, border-box;
   50% {
     opacity: 0.2;
   }
+}
+
+.poll-option-image {
+  position: absolute;
+  top: 19px;
+  left: 19px;
+  z-index: 9;
+  height: 62px;
+}
+
+.poll-option-circle {
+  fill: transparent;
+  background: transparent;
 }

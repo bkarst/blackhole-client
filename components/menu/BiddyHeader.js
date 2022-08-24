@@ -117,9 +117,11 @@ const Header= function() {
                         </div>
                     </div>
                     <div className='navbar-item'>
+                      <div className="mobile-menu-item" >
                         <Link href="/voting" className='btn btn-2' >
                          Voting
                        </Link>
+                       </div>
                     </div>
                     <div className='navbar-item'>
                     <a rel="noreferrer" href='https://twitter.com/BlackHoleLLC' target="_blank">
@@ -130,6 +132,11 @@ const Header= function() {
                         <a rel="noreferrer" href='https://discord.com/invite/pY6cj2vNJD' target="_blank">
                           Discord
                             </a>
+                    </div>
+                    <div className='navbar-item'>
+                        <a rel="noreferrer" href='https://t.me/+YnPA2Dw4EE4yNGUx' target="_blank">
+                          Telegram
+                        </a>
                     </div>
                   </div>
                   }
@@ -150,13 +157,13 @@ const Header= function() {
                        </Link>
                        </div>
                      </div>
-                    <div className='navbar-item'>
+                    {/* <div className='navbar-item'>
                       <div className="hover-underline-animation">
                          <Link href="/team">
                            Team
                         </Link>
                       </div>
-                    </div>
+                    </div> */}
                     <div className='navbar-item'>
                     
                       <div>

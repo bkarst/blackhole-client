@@ -13,6 +13,7 @@ import constants from '../src/constants';
 import Reveal from 'react-awesome-reveal';
 import { fadeIn } from '../lib/CssHelper'
 import Footer from '../components/components/footer';
+import BlackholeHeader from '../components/menu/BlackholeHeader';
 import { DirectSecp256k1HdWallet } from "@cosmjs/proto-signing";
 import { assertIsBroadcastTxSuccess, SigningStargateClient, StargateClient } from "@cosmjs/stargate";
 import { CosmWasmClient } from '@cosmjs/cosmwasm-stargate'
@@ -42,8 +43,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       
+      <BlackholeHeader />
       <StarryGalaxy />
-      <BiddyHeader />
+      
       
       <section className='container' >
         <SliderMainHome />

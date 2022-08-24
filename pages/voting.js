@@ -13,6 +13,7 @@ import StarryGalaxy from '../components/components/StarryGalaxy'
 import Collection from '../components/pages/colection'
 import axios from 'axios'
 import BiddyHeader from '../components/menu/BiddyHeader';
+import BlackholeHeader from '../components/menu/BlackholeHeader';
 import constants from '../src/constants';
 import Countdown from 'react-countdown';
 import Footer from '../components/components/footer';
@@ -63,11 +64,9 @@ export default function Voting(props) {
   
   let subtitle;
 
-  // lscache.set('voting_key', 'aiojsdfoiajsdf')
   console.log('key', lscache.get('voting_key'));
 
   const votingKey = lscache.get('voting_key');
-  // const votingKey = null;
 
   function openModal() {
     setIsOpen(true);
@@ -226,8 +225,10 @@ export default function Voting(props) {
         <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <BlackholeHeader />
       <StarryGalaxy />
-      <BiddyHeader />
+      {/* <BiddyHeader /> */}
+      
       <section ref={votingRef} className='container' >
         { !votingKey && 
           <HowVotingWorks message={votingPromptMessage} />
@@ -267,7 +268,7 @@ export default function Voting(props) {
         
         { pollCampaign.is_current_poll &&
         <div className='col-white' style={{textAlign: 'center', marginTop: 20, marginBottom: 100}}>
-            Vote with your Blackhole Token Below Before the Poll Window Closes!
+            Vote with your Blackhole Token on what to burn Below Before the Poll Window Closes!
         </div>
         } 
         { !pollCampaign.is_current_poll &&
@@ -306,7 +307,7 @@ export default function Voting(props) {
           </Reveal>
         </div>
         <div className='poll-opts-container' >
-            {pollCampaign.is_current_poll && poll.poll_options.map((pollOption, index) =>
+            {pollCampaign.is_current_poll && pollCampaign.results.poll_options.map((pollOption, index) =>
               <Reveal key={index} className='onStep' keyframes={grow} delay={index * 200} duration={1300} triggerOnce >
                 <PollOption key={index} pollOption={pollOption} castVote={castVote} />
               </Reveal>
@@ -319,7 +320,7 @@ export default function Voting(props) {
   <section className="container" style={{padding: 10}} ref={testDivRef} >
         <div className='row'>
         <Reveal className='onStep' keyframes={fadeInUp} delay={0} duration={600} triggerOnce >
-        <h3 className='col-white' style={{textAlign: 'center', marginTop: 160}}>
+        <h3 className='col-white' style={{textAlign: 'center', marginTop: 50}}>
               Current Results
           </h3>
           <DonutChartPollResults pollResults={pollCampaign.results} />

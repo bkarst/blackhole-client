@@ -43,16 +43,16 @@ const slidermainhome= () => (
               </p>
               </Reveal>
               <div className="spacer-10"></div>
-              <div style={{display: 'flex'}}>
+              <div className='buttons-cont' >
               <Reveal className='onStep d-inline' keyframes={inline} delay={800} duration={900} triggerOnce>
-                <Link href='/voting'>
+                <Link href='/voting' >
                   <span className="btn-main inline lead">Vote Now</span>
                 </Link>
-              <div className="mb-sm-30">
+              
                 <Link href="./V1_BLACKHOLE_LLC_WHITEPAPER.pdf" download="V1_BLACKHOLE_LLC_WHITEPAPER" target="_blank">
                   <span className="btn-main inline lead">View Whitepaper</span>
                 </Link>
-              </div>
+              
               </Reveal>
               </div>
               <Reveal className='onStep d-inline' keyframes={inline} delay={900} duration={1200} triggerOnce>

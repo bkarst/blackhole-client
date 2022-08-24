@@ -11,7 +11,7 @@ import Script from 'next/script'
 import React, {useRef, useState} from 'react'
 
 import '../src/stylesheets/Roadmap.css'
-
+import "../components/menu/BlackholeHeader.css";
 import '../src/stylesheets/App.css'
 import '../src/stylesheets/DonutChart.css'
 import '../src/stylesheets/FancyCountdown.css'
@@ -49,7 +49,7 @@ function MyApp({ Component, pageProps }) {
   //   width = window.clientWidth
   // }
   // console.log('width'B, width)
-  return <div style={{width: width}}>
+  return <div >
   <Script src="https://www.google-analytics.com/analytics.js" />
   <Script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.0-beta.26/scrollreveal.js" strategy="beforeInteractive" />
   <Component {...pageProps} />
