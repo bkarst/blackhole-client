@@ -20,9 +20,14 @@ const GlobalStyles = createGlobalStyle`
   }
 `;
 
-const NewletterEmailBox = () => {
+const NewletterEmailBox = ({message}) => {
 
-    const closeMessage = () => {setShowEmailBox(false);}
+  const votingMessageRef = useRef(null);
+  const [showEmailBox, setShowEmailBox] = useState(false);
+  const [showEmailMessage, setShowEmailMessage] = useState(true);
+  const closeMessage = () => {setShowEmailBox(false);}
+  const closeMessage2 = () => {setShowEmailMessage(false);}
+    
 
     const submitNewsletterEmail = (e) => {
         e.preventDefault()
@@ -45,10 +50,7 @@ const NewletterEmailBox = () => {
         })
     }
 
-    
 
-    const votingMessageRef = useRef(null);
-    const [showEmailBox, setShowEmailBox] = useState(false);
 
     return (
 <div className='row align-items-center px-0'>
@@ -57,11 +59,9 @@ const NewletterEmailBox = () => {
     {/* <h3 className="col-white">Get Started</h3> */}
     <p>Stay informed and be ready when votes begin, end and when to collect the vote drop.</p>
     <form onSubmit={submitNewsletterEmail} name="contactForm" id='contact_form' className="form-border" action='#'>
-      
        <div className="field-set" style={{marginTop: 20}}>
             <input required type='email' name='email' id='email' className="form-control" placeholder="email"/>
         </div>
-      
       <div className="field-set" style={{marginTop: 20}} >
         <input type='submit' id='send_message' value='Register Email' className="btn btn-main btn-fullwidth color-2"/>
       </div>
@@ -73,11 +73,18 @@ const NewletterEmailBox = () => {
         <div  style={{display: showEmailBox ? 'inline' : 'none'}} >
           <Reveal className='onStep' keyframes={grow} delay={0} duration={500} triggerOnce >
             <div onClick={closeMessage} style={{marginTop: 30}}className="alert fade alert-simple alert-success alert-dismissible text-left font__family-montserrat font__size-16 font__weight-light brk-library-rendered rendered show">
-                Check your email now to verify it to continue to the next step. 
+                Check your email for your login link. 
             </div>
           </Reveal>
         </div>
         
+          <div  style={{display: showEmailMessage && message != "" ? 'inline' : 'none'}} >
+            <Reveal className='onStep' keyframes={grow} delay={0} duration={500} triggerOnce >
+              <div onClick={closeMessage2} style={{marginTop: 30}}className="blink_me alert fade alert-simple alert-success alert-dismissible text-left font__family-montserrat font__size-16 font__weight-light brk-library-rendered rendered show">
+                  {message}
+              </div>
+            </Reveal>
+          </div>
 
     </form>
   </div>

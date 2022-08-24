@@ -33,8 +33,14 @@ export default function Loginwithemail(props) {
 
   const { query } = useRouter();
 
-    lscache.set('voting_key', query.voting_key)
-    window.location = '/voting'
+  // React.useEffect(() => {
+    if ((typeof window !== 'undefined')){
+      lscache.set('voting_key', query.voting_key)
+      window.location = '/voting'
+    }
+  // }
+  // , [])
+    
 
   return (
     <div>

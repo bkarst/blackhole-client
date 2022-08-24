@@ -9,7 +9,7 @@ import BiddyHeader from '../../components/menu/BiddyHeader';
 import EditPollForm from '../../components/components/EditPollForm'
 import constants from '../../src/constants';
 import PollCampaignList from '../../components/components/PollCampaignList'
-
+import lscache from 'lscache';
 import Footer from '../../components/components/footer';
 
 export async function getServerSideProps(context) {
@@ -17,7 +17,8 @@ export async function getServerSideProps(context) {
   console.log('pollid', pollid)
   // const { nftid } = router.query
   console.log(constants.API_URL + `/api/polls/` + pollid)
-  const res = await fetch(constants.API_URL + `/api/polls/` + pollid)
+  const votingKey = lscache.get('voting_key');
+  const res = await fetch(constants.API_URL + `/api/polls/` + pollid +"?voting_key=" + votingKey)
   console.log('res', res)
   const data = await res.json()
 //   const nft = data[0];

@@ -10,6 +10,7 @@ import PollListing from '../components/components/PollListing';
 import Create from '../components/pages/create';
 import constants from '../src/constants';
 import Modal from 'react-modal';
+import lscache from 'lscache';
 
 const customStyles = {
   content: {
@@ -28,8 +29,10 @@ const customStyles = {
 export default function Home() {
   const [polls, setPolls] = useState([]);
   const [poll, setPoll] = useState([]);
+  const votingKey = lscache.get('voting_key');
+
   useEffect(() => {
-    axios.get(constants.API_URL + '/api/polls').then(response => {
+    axios.get(constants.API_URL + '/api/polls?voting_key=' + votingKey).then(response => {
       console.log(response.data)
       setPolls(response.data)
     })
@@ -49,9 +52,9 @@ export default function Home() {
   const startCampaign = () => {
     const startTime = document.getElementById("start_time").value;
     const duration = document.getElementById("duration").value;
+    const votingKey = lscache.get('voting_key');
     const formData = {duration: duration, start_time: startTime,
-      poll_id: poll.id }
-    console.log(formData)
+      poll_id: poll.id, voting_key: votingKey };
     axios.post(constants.API_URL + '/api/poll_campaigns/', formData).then(response => {
       console.log(response)
       if (response.data.error){

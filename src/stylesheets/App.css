@@ -804,3 +804,13 @@ background-clip: content-box, border-box;
   opacity: 0;
 }
 }
+
+.blink_me {
+  animation: blinker 1.5s linear 2;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0.2;
+  }
+}

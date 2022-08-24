@@ -55,7 +55,9 @@ export default function Voting(props) {
 
   
   const [showCongratsVoting, setShowCongratsVoting] = useState(false);
+  const [votingPromptMessage, setVotingPromptMessage] = useState("");
   const testDivRef = useRef(null);
+  const votingRef = useRef(null);
   const votingMessageRef = useRef(null);
   const [modalIsOpen, setIsOpen] = useState(false);
   
@@ -63,6 +65,9 @@ export default function Voting(props) {
 
   // lscache.set('voting_key', 'aiojsdfoiajsdf')
   console.log('key', lscache.get('voting_key'));
+
+  const votingKey = lscache.get('voting_key');
+  // const votingKey = null;
 
   function openModal() {
     setIsOpen(true);
@@ -93,10 +98,18 @@ export default function Voting(props) {
     return <div>No Polls currently upcoming or active</div>
   }  
 
+  
   const closeMessage = () => {testDivRef.current.scrollIntoView(); setShowCongratsVoting(false);}
 
   const castVote = async (pollOptionId) => {
     console.log('pollOptionId', pollOptionId)
+    if (!votingKey) {
+      // alert("you need to register email to vote.")
+      votingRef.current.scrollIntoView();
+      setVotingPromptMessage("You must first register email in order to vote.")
+      return
+    }
+
   var keplr = await getKeplr()
   if (keplr === undefined) {
     alert("Please install keplr. To continue.")
@@ -162,7 +175,8 @@ export default function Voting(props) {
         voting_balance: balance,
         address: accounts[0].address,
         poll_campaign_id: pollCampaign.id, 
-        poll_option_id: pollOptionId
+        poll_option_id: pollOptionId,
+        voting_key: votingKey,
       }
       console.log('formObj', formObj)
       axios.post(constants.API_URL + '/api/poll_responses/', formObj).then(response => {
@@ -186,13 +200,19 @@ export default function Voting(props) {
   const startTime = Date.parse(poll.start_time)
   console.log('endTime', pollCampaign.end_time)
   console.log('startTime', pollCampaign.start_time)
+
   const links = [
     <div key={1} ><span className='btn-blue btn-main inline lead' style={{color: '#fff', fill: '#fff', background: 'rgb(54,135,182)', margin: 'auto'}}>Get HOLE on Osmosis</span></div>,
-    
-    <div key={3} ><span className='btn-blue btn-main inline lead' style={{color: '#fff', fill: '#fff', background: 'rgb(54,135,182)', margin: 'auto'}}>Get HOLE on Junoswap</span></div>,
+      <div key={3} ><span className='btn-blue btn-main inline lead' style={{color: '#fff', fill: '#fff', background: 'rgb(54,135,182)', margin: 'auto'}}>Get HOLE on Junoswap</span></div>,
   ]
+  if (votingKey) {
+    links = [
+      <div key={1} ><span className='btn-blue btn-main inline lead' style={{color: '#fff', fill: '#fff', background: 'rgb(54,135,182)', margin: 'auto'}}>Get HOLE on Osmosis</span></div>,
+      <div key={2} ><span onClick={openModal} className='btn-main inline lead' style={{margin: 'auto', cursor: 'pointer', zIndex: 9999999}} >How Voting Works</span></div>,
+      <div key={3} ><span className='btn-blue btn-main inline lead' style={{color: '#fff', fill: '#fff', background: 'rgb(54,135,182)', margin: 'auto'}}>Get HOLE on Junoswap</span></div>,
+    ]
+  }
   let pollMessage = "Time till poll Ends"
-  
   if (Date.parse(pollCampaign.start_time) > Date.parse(new Date())){
     pollMessage = "Time till poll Begins"
   }
@@ -208,9 +228,14 @@ export default function Voting(props) {
       </Head>
       <StarryGalaxy />
       <BiddyHeader />
-      <section className='container' >
-        <HowVotingWorks />
+      <section ref={votingRef} className='container' >
+        { !votingKey && 
+          <HowVotingWorks message={votingPromptMessage} />
+        }
       </section>
+      { votingKey && 
+          <BlackholeWallet />
+        }
       
       <section className='container' style={{padding: 10, marginTop: 30}}>
       <div className='row'>

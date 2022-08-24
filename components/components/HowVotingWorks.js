@@ -29,7 +29,7 @@ const inline = keyframes`
    }
 `;
 
-const HowVotingWorks= () => (
+const HowVotingWorks= ({message}) => (
  <div className="container main-cont" style={{marginTop: 160}}>
     <div className="row align-items-center">
           <div className="col-md-6">
@@ -52,7 +52,7 @@ const HowVotingWorks= () => (
           </div>
           <div className="col-md-6">
             {/* <ProfileWallet /> */}
-            <NewsletterEmailBox />
+            <NewsletterEmailBox message={message} />
           </div>
       </div>
     </div>

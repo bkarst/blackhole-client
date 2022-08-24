@@ -5,6 +5,7 @@ import Footer from '../components/footer';
 import axios from 'axios'
 import constants from '../../src/constants';
 import Modal from 'react-modal';
+import lscache from "lscache";
 
 // Modal.setAppElement('#yourAppElement');
 
@@ -24,6 +25,7 @@ export default function EditPollForm({poll}){
     const [modalIsOpen, setIsOpen] = useState(false);
     const [selectedPollOption, setSelectedPollOption] = useState(false);
     const [editOptionModalIsOpen, setEditOptionModalIsOpen] = useState(false);
+    const votingKey = lscache.get('voting_key');
     const closeModal = () => {
         setIsOpen(false)
         // console.log('oijdfajoisdf');
@@ -49,7 +51,8 @@ export default function EditPollForm({poll}){
         var formObj = { 
             description: title, 
             poll_id: poll.id, 
-            thumbnail_url: thumbnailUrl 
+            thumbnail_url: thumbnailUrl,
+            voting_key: votingKey
           }
         console.log(constants.API_URL + '/api/polls')
         axios.post(constants.API_URL + '/api/poll_options/', formObj).then(response => {
@@ -65,7 +68,7 @@ export default function EditPollForm({poll}){
 
       const deletePollOption = (pollOptionId) => {
         if (confirm("Are you sure?")){
-            axios.post(constants.API_URL + '/api/inactivate_poll_option/' + pollOptionId, {}).then(response => {
+            axios.post(constants.API_URL + '/api/inactivate_poll_option/' + pollOptionId + "?voting_key=" + votingKey, {}).then(response => {
                 console.log(response)
                 if (response.data.error){
                 alert(response.data.error)
