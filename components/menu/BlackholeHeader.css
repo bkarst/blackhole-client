@@ -102,7 +102,11 @@
   @media (max-width: 768px) {
     .Header {
       grid-template-areas: "logo burger" "nav nav";
+      padding-left: 10px;
+      /* padding-right: 30px; */
     }
+
+    
     .Nav {
       grid-template-rows: repeat(4, auto);
       grid-template-columns: none;
