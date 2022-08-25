@@ -12,15 +12,13 @@
     top: 0; /* Stick it to the top */
     max-height: 70px;
     width: 100vw;
-  
     display: grid;
     grid-template-areas: "logo nav";
-  
     /* Cosmetics */
     background-color: rgba(0, 0, 0, 0.8);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     padding: 50px;
- 
+    margin-bottom: 40px;
   }
   
   .Logo {
@@ -97,7 +95,7 @@
       padding-left: calc(var(--bs-gutter-x) * .5);
       margin-right: auto;
       margin-left: auto;
-      max-width: 1320px;
+      /* max-width: 1320px; */
     }
   }
 

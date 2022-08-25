@@ -225,11 +225,9 @@ export default function Voting(props) {
         <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <BlackholeHeader />
       <StarryGalaxy />
-      {/* <BiddyHeader /> */}
-      
-      <section ref={votingRef} className='container' >
+      <section ref={votingRef} className='container' style={{marginTop: -50}}>
+      <BlackholeHeader />
         { !votingKey && 
           <HowVotingWorks message={votingPromptMessage} />
         }

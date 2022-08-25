@@ -42,11 +42,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       
-      <BlackholeHeader />
+      
       <StarryGalaxy />
       
       
-      <section className='container' >
+      <section className='container' style={{marginTop: -50}}>
+      <BlackholeHeader />
         <SliderMainHome />
       </section>
       <section>
