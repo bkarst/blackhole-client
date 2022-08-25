@@ -19,7 +19,6 @@ import { assertIsBroadcastTxSuccess, SigningStargateClient, StargateClient } fro
 import { CosmWasmClient } from '@cosmjs/cosmwasm-stargate'
 
 
-
 export default function Home() {
   // const [nftListings, setNftListings] = useState([]);
   useEffect(() => {

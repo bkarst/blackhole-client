@@ -76,8 +76,9 @@ export default function Header() {
           {/* <button>Logout</button> */}
         </nav>
       </CSSTransition>
+      
       <button onClick={toggleNav} className="Burger">
-        🍔
+        ☰
       </button>
     </header>
   );

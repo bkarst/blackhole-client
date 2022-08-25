@@ -69,6 +69,7 @@
   }
   
   .Burger {
+    color: #ffffff;
     display: none;
     grid-area: burger;
     margin: 0 20px 0 0;
