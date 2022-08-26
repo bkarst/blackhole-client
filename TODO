@@ -1,7 +1,3 @@
-fix the unique poll error
-
-make poll options smaller
-
 add text box to admin in edit poll as site content
 
 header keplr connect wallet
@@ -12,8 +8,6 @@ incorporate session messaging into verification
 
 add voting section back with image.
 
-add email login with app
-secure admin section
 secure voting with email login
 
 "add to wallet" button or address
