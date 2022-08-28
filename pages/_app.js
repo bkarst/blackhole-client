@@ -20,14 +20,15 @@ import 'swiper/css';
 import '../src/stylesheets/Slider.scss'
 import '../src/stylesheets/Hover.scss'
 import '../src/stylesheets/Hover2.css'
+import HeaderMetaTags from '../components/components/HeaderMetaTags'
 
-function getWindowDimensions() {
-  const { innerWidth: width, innerHeight: height } = window;
-  return {
-    width,
-    height
-  };
-}
+// function getWindowDimensions() {
+//   const { innerWidth: width, innerHeight: height } = window;
+//   return {
+//     width,
+//     height
+//   };
+// }
 
 function MyApp({ Component, pageProps }) {
   const ref = useRef(null)
@@ -52,6 +53,7 @@ function MyApp({ Component, pageProps }) {
   return <div >
   <Script src="https://www.google-analytics.com/analytics.js" />
   <Script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.0-beta.26/scrollreveal.js" strategy="beforeInteractive" />
+  <HeaderMetaTags />
   <Component {...pageProps} />
   </div>
 }

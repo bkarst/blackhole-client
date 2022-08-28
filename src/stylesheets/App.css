@@ -385,7 +385,7 @@
   height: 970px;
   margin-left: -134px;
   margin-top: -360px;
-  z-index: 0;
+  z-index: -1;
 
 }
 
@@ -472,6 +472,21 @@
 :root {
 --bg-light:#d5dfef;
 --bg-dark:#202631;
+}
+
+.bg-blue {
+  color: #fff;
+  fill: #fff;
+  background: rgb(54,135,182) !important;
+}
+
+.bg-blue:hover{
+  box-shadow: 2px 2px 20px 0px rgb(54,135,182);
+}
+
+.bg-yellow {
+  color: #222222;
+  background: rgb(236, 230, 152);
 }
 
 .links-container{
@@ -778,6 +793,8 @@ h2, .h2 {
     overflow: initial;
   }
 
+  
+
   #particle{
 
     display: block;
@@ -785,7 +802,7 @@ h2, .h2 {
     height: 970px;
     margin-left: -852px;
     margin-top: -340px;
-    z-index: 0;
+    z-index: -1;
   }
 
   .links-container{

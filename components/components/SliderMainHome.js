@@ -3,6 +3,7 @@ import Reveal from 'react-awesome-reveal';
 import { keyframes } from "@emotion/react";
 import Link from 'next/link'
 import { fadeIn } from '../../lib/CssHelper';
+import constants from '../../src/constants';
 
 const fadeInUp = keyframes`
   0% {
@@ -45,14 +46,12 @@ const slidermainhome= () => (
               <div className="spacer-10"></div>
               <div className='buttons-cont' >
               <Reveal className='onStep d-inline' keyframes={inline} delay={800} duration={900} triggerOnce>
-                <Link href='/voting' >
-                  <span className="btn-main inline lead">Vote Now</span>
+                <Link href={ constants.AIRDROP_CLAIM_URL } >
+                  <span className="btn-main inline lead">Claim Airdrop</span>
                 </Link>
-              
-                <Link href="./V1_BLACKHOLE_LLC_WHITEPAPER.pdf" download="V1_BLACKHOLE_LLC_WHITEPAPER" target="_blank">
+                {/* <Link href="./V1_BLACKHOLE_LLC_WHITEPAPER.pdf" download="V1_BLACKHOLE_LLC_WHITEPAPER" target="_blank">
                   <span className="btn-main inline lead">View Whitepaper</span>
-                </Link>
-              
+                </Link> */}
               </Reveal>
               </div>
               <Reveal className='onStep d-inline' keyframes={inline} delay={900} duration={1200} triggerOnce>

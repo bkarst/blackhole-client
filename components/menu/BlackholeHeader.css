@@ -1,6 +1,7 @@
 .header-link{
   font-family: 'Dongle', sans-serif;
   font-size: 30px;
+  cursor: pointer;
 }
 
 .social-icons{
@@ -15,7 +16,7 @@
     display: grid;
     grid-template-areas: "logo nav";
     /* Cosmetics */
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.3);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     padding: 50px;
     margin-bottom: 40px;

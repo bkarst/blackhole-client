@@ -5,6 +5,7 @@ import { header } from 'react-bootstrap';
 import Link from 'next/link'
 import useOnclickOutside from "react-cool-onclickoutside";
 import { FaTwitter, FaTelegramPlane } from "react-icons/fa";
+import constants from "../../src/constants";
 
 
 import { CSSTransition } from "react-transition-group";
@@ -39,7 +40,9 @@ export default function Header() {
 
   return (
     <header className="Header">
-      <img src="../img/logo10.png" className="Logo" alt="logo" />
+      <Link className='header-link' href="/">
+        <img src="../img/logo10.png" style={{cursor: 'pointer' }}className="Logo" alt="logo" />
+      </Link>
       <CSSTransition
         in={!isSmallScreen || isNavVisible}
         timeout={350}
@@ -47,14 +50,17 @@ export default function Header() {
         unmountOnExit
       >
         <nav className="Nav">
-          <Link className='header-link' href="/">
+          {/* <Link className='header-link' href="/">
             Home
-          </Link>
+          </Link> */}
           <Link className='header-link' href="/voting">
-            Voting
+            Vote
           </Link>
-          <Link className='header-link' href="/">
+          <Link className='header-link' href={ constants.AIRDROP_CLAIM_URL }>
             Claim
+          </Link>
+          <Link className='header-link' href="./V1_BLACKHOLE_LLC_WHITEPAPER.pdf" download="V1_BLACKHOLE_LLC_WHITEPAPER" target="_blank" >
+            Whitepaper
           </Link>
           <div style={{display:'flex', flexDirection: 'row'}}>
             <div className="social-icons">
