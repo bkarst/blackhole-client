@@ -21,6 +21,7 @@ import '../src/stylesheets/Slider.scss'
 import '../src/stylesheets/Hover.scss'
 import '../src/stylesheets/Hover2.css'
 import HeaderMetaTags from '../components/components/HeaderMetaTags'
+import { DefaultAppSeo } from "../components/components/DefaultAppSeo";
 
 // function getWindowDimensions() {
 //   const { innerWidth: width, innerHeight: height } = window;
@@ -54,6 +55,7 @@ function MyApp({ Component, pageProps }) {
   <Script src="https://www.google-analytics.com/analytics.js" />
   <Script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.0-beta.26/scrollreveal.js" strategy="beforeInteractive" />
   <HeaderMetaTags />
+  <DefaultAppSeo />
   <Component {...pageProps} />
   </div>
 }
