@@ -43,6 +43,7 @@
     text-decoration: none;
     font-family: 'Dongle', sans-serif;
     font-size: 28px;
+    white-space: nowrap;
     z-index: 9999;
   }
   .Nav a:hover {

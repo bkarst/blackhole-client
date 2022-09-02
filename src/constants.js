@@ -12,7 +12,8 @@ const constants = {
       RPC_ADDRESS: "https://rpc-juno.itastakers.com/",
     //   API_URL: "http://localhost:4000/",
     API_URL: "https://blackhole-staging.herokuapp.com",
-    AIRDROP_CLAIM_URL: "https://blackhole-airdrop-client.vercel.app/",
+    AIRDROP_CLAIM_URL: "https://blackholedrops.app/",
+    
     // API_URL: "http://localhost:3001",
   }
   

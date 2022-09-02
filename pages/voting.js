@@ -69,6 +69,9 @@ export default function Voting(props) {
 
   const votingKey = lscache.get('voting_key');
 
+  console.log('key2', votingKey);
+
+
   function openModal() {
     setIsOpen(true);
   }
@@ -167,7 +170,7 @@ export default function Voting(props) {
       // const title = document.getElementById("description").value;
 
       if (balance == 0) {
-        alert("You must hold Blackhole to vote. Visit Osmosis for more details. ")
+        alert("You must hold HOLE to vote. Get it on Junoswap soon or see our Token drop page to earn HOLE. ")
         return
       }
 
@@ -201,17 +204,6 @@ export default function Voting(props) {
   console.log('endTime', pollCampaign.end_time)
   console.log('startTime', pollCampaign.start_time)
 
-  var links = [
-    <span key={1} className='btn-main inline lead' style={{margin: 'auto'}}>Get HOLE on Osmosis</span>,
-    <span key={2} className='btn-main inline lead' style={{margin: 'auto'}}>Get HOLE on Junoswap</span>,
-  ]
-  if (votingKey) {
-    links = [
-      <span key={3} className='btn-blue btn-main inline lead bg-blue' style={{margin: 'auto'}}>Get HOLE on Osmosis</span>,
-      <span key={4} onClick={openModal} className='btn-main inline lead bg-blue' style={{ margin: 'auto', cursor: 'pointer', zIndex: 9999999}} >How Voting Works</span>,
-      <span key={5} className='btn-blue btn-main inline lead' style={{margin: 'auto'}}>Get HOLE on Junoswap</span>,
-    ]
-  }
   let pollMessage = "Time till poll Ends"
   if (Date.parse(pollCampaign.start_time) > Date.parse(new Date())){
     pollMessage = "Time till poll Begins"
@@ -312,6 +304,11 @@ export default function Voting(props) {
             {pollCampaign.is_current_poll && pollCampaign.results.poll_options.map((pollOption, index) =>
               <Reveal key={index} className='onStep' keyframes={grow} delay={index * 200} duration={1300} triggerOnce >
                 <PollOption key={index} pollOption={pollOption} castVote={castVote} />
+              </Reveal>
+            )}
+            {!pollCampaign.is_current_poll && pollCampaign.results.poll_options.map((pollOption, index) =>
+              <Reveal key={index} className='onStep' keyframes={grow} delay={index * 200} duration={1300} triggerOnce >
+                <PollOption toolTipText="Preview Only" key={index} pollOption={pollOption} castVote={() => null} />
               </Reveal>
             )}
         </div>

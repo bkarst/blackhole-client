@@ -63,10 +63,9 @@ const TreeRoadmap = () => {
     <ul>
       <li>
         <div className="reveal">
-          <p><phase>PHASE 1</phase> 
-            Airdrop HOLE<br />
-            HOLE List on Dex<br />
-            Launch Voting API<br />
+          <p><phase>PHASE 1 - QUARTER 3 - 2022</phase> 
+            Airdrop to Cosmos Ecosystem<br />
+            List HOLE on Junoswap<br />
             Execute First Black Hole<br />
           </p>
         </div>

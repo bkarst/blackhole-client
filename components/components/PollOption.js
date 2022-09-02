@@ -3,7 +3,7 @@ import Reveal from 'react-awesome-reveal';
 // import { keyframes } from "@emotion/react";
 import { fadeInUp } from '../../lib/CssHelper';
 
-export default function PollOption({castVote, pollOption}) {
+export default function PollOption({castVote, pollOption, toolTipText="Click to Vote"}) {
     const [isOpen, setOpen] = useState(false);
     const index = 2;
     console.log('pollOption', pollOption)
@@ -11,7 +11,7 @@ export default function PollOption({castVote, pollOption}) {
         <div onMouseLeave={() => setOpen(false)} onMouseEnter={() => setOpen(true)} className='poll-opt' onClick={() => castVote(pollOption.id)} >
               <Reveal className='onStep' keyframes={fadeInUp} delay={0} duration={600} >
                 <div className="tooltip-label" style={{display: isOpen ? 'inline' : 'none', position: 'absolute'}}>
-                  Click to Vote
+                  {toolTipText}
                 </div>
               </Reveal>
                 <div className='vote-container' style={{zIndex: 999999999}}>

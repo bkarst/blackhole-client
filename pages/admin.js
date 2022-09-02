@@ -29,8 +29,9 @@ const customStyles = {
 export default function Home() {
   const [polls, setPolls] = useState([]);
   const [poll, setPoll] = useState([]);
+  
   const votingKey = lscache.get('voting_key');
-
+  console.log('votingKey', votingKey);
   useEffect(() => {
     axios.get(constants.API_URL + '/api/polls?voting_key=' + votingKey).then(response => {
       console.log(response.data)

@@ -57,7 +57,7 @@ export default function Header() {
             Vote
           </Link>
           <Link className='header-link' href={ constants.AIRDROP_CLAIM_URL }>
-            Claim
+            Drops
           </Link>
           <Link className='header-link' href="./V1_BLACKHOLE_LLC_WHITEPAPER.pdf" download="V1_BLACKHOLE_LLC_WHITEPAPER" target="_blank" >
             Whitepaper
@@ -66,7 +66,7 @@ export default function Header() {
             <div className="social-icons">
             <a rel="noreferrer" href='https://twitter.com/BlackHoleLLC' target="_blank">
                                 <FaTwitter size={logoSize} />
-                            </a>
+            </a>
             </div>
             <div className="social-icons">
             <a rel="noreferrer" href='https://discord.com/invite/pY6cj2vNJD' target="_blank">

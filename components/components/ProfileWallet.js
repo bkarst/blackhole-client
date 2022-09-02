@@ -92,7 +92,7 @@ const ProfileWallet = () => {
             // const title = document.getElementById("description").value;
       
             if (balance == 0) {
-              alert("You must hold Blackhole to vote. Visit Osmosis for more details. ")
+              alert("You must hold HOLE to vote. Get it on Junoswap soon or see our Token drop page to earn HOLE. ")
               return
             }
     }
