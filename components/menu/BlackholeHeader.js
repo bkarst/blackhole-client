@@ -74,9 +74,9 @@ export default function Header() {
                             </a>
             </div>
             <div className="social-icons">
-            {/* <a rel="noreferrer" href='https://t.me/+YnPA2Dw4EE4yNGUx' target="_blank">
+            <a rel="noreferrer" href='https://t.me/HoleChat' target="_blank">
                                 <img src={'/img/telegram2.png'} style={{width: logoSize}} />
-                            </a> */}
+                            </a>
             </div>
           </div>
           {/* <button>Logout</button> */}
