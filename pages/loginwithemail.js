@@ -36,6 +36,7 @@ export default function Loginwithemail(props) {
   // React.useEffect(() => {
     if ((typeof window !== 'undefined')){
       lscache.set('voting_key', query.voting_key)
+      alert("key set")
       window.location = '/voting'
     }
   // }
