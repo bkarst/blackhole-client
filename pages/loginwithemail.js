@@ -35,9 +35,12 @@ export default function Loginwithemail(props) {
 
   // React.useEffect(() => {
     if ((typeof window !== 'undefined')){
+      const params = new Proxy(new URLSearchParams(window.location.search), {
+        get: (searchParams, prop) => searchParams.get(prop),
+      });
       lscache.remove('voting_key');
-      lscache.set('voting_key', query.voting_key)
-      console.log('query.voting_key', query.voting_key);
+      lscache.set('voting_key', params.voting_key)
+      console.log('query.voting_key', params.voting_key);
       alert("key set")
       window.location = '/voting'
     }
