@@ -4,6 +4,7 @@ import Footer from '../components/footer';
 import axios from 'axios'
 import constants from '../../src/constants';
 import Modal from 'react-modal';
+import lscache from "lscache";
 
 // Modal.setAppElement('#yourAppElement');
 
@@ -48,9 +49,11 @@ export default function EditPollOptionModal({pollOption, modalIsOpen, modalClose
     const updateOption = () => {
         const title = document.getElementById("description").value;
         const thumbnailUrl = document.getElementById("thumbnail_url").value;
+        const votingKey = lscache.get('voting_key');
         var formObj = { 
             description: title, 
-            thumbnail_url: thumbnailUrl 
+            thumbnail_url: thumbnailUrl,
+            voting_key: votingKey
           }
           console.log('formObj', formObj)
         axios.put(constants.API_URL + '/api/poll_options/' + pollOption.id, formObj).then(response => {
