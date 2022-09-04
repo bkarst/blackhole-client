@@ -40,8 +40,6 @@ export default function Loginwithemail(props) {
       });
       lscache.remove('voting_key');
       lscache.set('voting_key', params.voting_key)
-      console.log('query.voting_key', params.voting_key);
-      alert("key set")
       window.location = '/voting'
     }
   // }
