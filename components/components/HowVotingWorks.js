@@ -38,7 +38,7 @@ const HowVotingWorks= ({message}) => (
               </Reveal>
               <Reveal className='onStep' keyframes={fadeInUp} delay={600} duration={900} triggerOnce>
                 <p className="lead col-white">
-                    A mechanism built for maintaining order through the broader crypto space, BlackHole finds its purpose in upholding the sanitation of digital asset ecosystems by serving as an economic engine through which holders can utilize their share of BLKH tokens to vote on the destruction of other digital assets, HOLE, assets, and debt if the community so chooses.
+                    A mechanism built for maintaining order through the broader crypto space, BlackHole finds its purpose in upholding the sanitation of digital asset ecosystems by serving as an economic engine through which holders can utilize their share of HOLE tokens to vote on the destruction of other digital assets, HOLE, assets, and debt if the community so chooses.
                 </p>
               </Reveal>
               <div className="spacer-10"></div>
