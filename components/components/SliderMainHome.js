@@ -47,7 +47,7 @@ const slidermainhome= () => (
               <div className='buttons-cont' >
               <Reveal className='onStep d-inline' keyframes={inline} delay={800} duration={900} triggerOnce>
                 <Link href={ constants.AIRDROP_CLAIM_URL } >
-                  <span className="btn-main inline lead">Claim Airdrop</span>
+                  <span className="btn-main inline lead">Claim Drop</span>
                 </Link>
                 {/* <Link href="./V1_BLACKHOLE_LLC_WHITEPAPER.pdf" download="V1_BLACKHOLE_LLC_WHITEPAPER" target="_blank">
                   <span className="btn-main inline lead">View Whitepaper</span>

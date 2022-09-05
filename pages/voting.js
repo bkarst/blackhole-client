@@ -234,15 +234,15 @@ export default function Voting(props) {
         <div className='links-container' >
           {votingKey && 
         <Reveal style={{margin: 'auto'}} className='onStep' keyframes={fadeIn} delay={0} duration={600} triggerOnce >
-            <span className='btn-blue btn-main inline lead bg-blue' style={{margin: 'auto'}}>Get HOLE on Osmosis</span>
+            <span className='btn-blue btn-main inline lead bg-blue' style={{margin: 'auto'}}>Get on Osmosis (Coming Soon)</span>
             <span onClick={openModal} className='btn-main inline lead' style={{ margin: 'auto', cursor: 'pointer', zIndex: 9999999}} >How Voting Works</span>
-            <span className='btn-blue btn-main inline lead bg-blue' style={{margin: 'auto'}}>Get HOLE on Junoswap</span>
+            <span className='btn-blue btn-main inline lead bg-blue' style={{margin: 'auto'}}>Get HOLE on Junoswap (Coming Soon)</span>
         </Reveal>
           }
           {!votingKey && 
         <Reveal style={{margin: 'auto'}} className='onStep' keyframes={fadeIn} delay={0} duration={600} triggerOnce >
-            <span className='btn-main inline lead bg-blue' style={{margin: 'auto'}}>Get HOLE on Osmosis</span>
-            <span className='btn-main inline lead bg-blue' style={{margin: 'auto'}}>Get HOLE on Junoswap</span>
+            <span className='btn-main inline lead bg-blue' style={{margin: 'auto'}}>Get HOLE on Osmosis (Coming Soon)</span>
+            <span className='btn-main inline lead bg-blue' style={{margin: 'auto'}}>Get HOLE on Junoswap (Coming Soon)</span>
         </Reveal>
           }
         </div>  
