@@ -59,9 +59,9 @@ export default function Header() {
           <Link className='header-link' href={ constants.AIRDROP_CLAIM_URL }>
             Drops
           </Link>
-          <Link className='header-link' href="./V1_BLACKHOLE_LLC_WHITEPAPER.pdf" download="V1_BLACKHOLE_LLC_WHITEPAPER" target="_blank" >
+          {/* <Link className='header-link' href="./V1_BLACKHOLE_LLC_WHITEPAPER.pdf" download="V1_BLACKHOLE_LLC_WHITEPAPER" target="_blank" >
             Whitepaper
-          </Link>
+          </Link> */}
           <div style={{display:'flex', flexDirection: 'row'}}>
             <div className="social-icons">
             <a rel="noreferrer" href='https://twitter.com/BlackHoleLLC' target="_blank">
