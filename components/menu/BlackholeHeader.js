@@ -53,15 +53,15 @@ export default function Header() {
           {/* <Link className='header-link' href="/">
             Home
           </Link> */}
-          {/* <Link className='header-link' href="/voting">
-            Vote
-          </Link> */}
-          <Link className='header-link' href="https://linktr.ee/blackholeonjuno">
-            Links
-          </Link>
           <Link className='header-link' href={ constants.AIRDROP_CLAIM_URL }>
             Drops
           </Link>
+          <Link className='header-link' href="/voting">
+            Vote
+          </Link>
+          {/* <Link className='header-link' href="https://linktr.ee/blackholeonjuno">
+            Links
+          </Link> */}
           {/* <Link className='header-link' href="./V1_BLACKHOLE_LLC_WHITEPAPER.pdf" download="V1_BLACKHOLE_LLC_WHITEPAPER" target="_blank" >
             Whitepaper
           </Link> */}

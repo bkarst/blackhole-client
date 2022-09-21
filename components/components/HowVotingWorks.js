@@ -38,7 +38,11 @@ const HowVotingWorks= ({message}) => (
               </Reveal>
               <Reveal className='onStep' keyframes={fadeInUp} delay={600} duration={900} triggerOnce>
                 <p className="lead col-white">
-                    A mechanism built for maintaining order through the broader crypto space, BlackHole finds its purpose in upholding the sanitation of digital asset ecosystems by serving as an economic engine through which holders can utilize their share of HOLE tokens to vote on the destruction of other digital assets, HOLE, assets, and debt if the community so chooses.
+                    Blackhole is a way to support you can vote on the crytpo projects you love. 
+                    To vote, you must first acquire $HOLE. 
+                    Once you have $HOLE, and you login with email, you will be able to cast your vote for an active poll. 
+                    The $HOLE in your wallet will determine the amount of votes you have. 
+                    More details coming soon on voting drops and the reward for the winning project.  
                 </p>
               </Reveal>
               <div className="spacer-10"></div>
