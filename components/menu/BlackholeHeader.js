@@ -53,8 +53,11 @@ export default function Header() {
           {/* <Link className='header-link' href="/">
             Home
           </Link> */}
-          <Link className='header-link' href="/voting">
+          {/* <Link className='header-link' href="/voting">
             Vote
+          </Link> */}
+          <Link className='header-link' href="https://linktr.ee/blackholeonjuno">
+            Links
           </Link>
           <Link className='header-link' href={ constants.AIRDROP_CLAIM_URL }>
             Drops

@@ -65,8 +65,8 @@ const TreeRoadmap = () => {
         <div className="reveal">
           <p><phase>PHASE 1 - QUARTER 3 - 2022</phase> 
             Airdrop to Cosmos Ecosystem<br />
-            List HOLE on Junoswap<br />
-            Execute First Black Hole<br />
+            Social Media Airdrop<br />
+            Whitepaper 2.0 Release<br />
           </p>
         </div>
       </li>
@@ -74,26 +74,17 @@ const TreeRoadmap = () => {
         <div className="reveal">
           <p>
           <phase>PHASE 2</phase> 
-          First Pulse Distribution To HOLE holders.	 <br />
+          Start HOLE Staking Protocol <br />
+          List HOLE on Junoswap <br />
           </p>
         </div>
       </li>
       <li>
         <div className="reveal">
           <p>
-          <phase>PHASE 3</phase> 
-            Launch API<br />
-            Lift Restrictions on Eligible Tokens <br />
-            Deploy Black Hole Exchange Hub  <br />
-          </p>
-        </div>
-      </li>
-      <li>
-        <div className="reveal">
-          <p>
-          <phase>PHASE 4</phase>
-            Launch Custom API for Tokenizing Debt<br />
-            Personal Debt Becomes Eligible to Black Hole<br />
+          <phase>PHASE 3</phase>
+            Launch BlackHole DAO <br/>
+            Launch On-Chain Community DAO Proposal <br/>
           </p>
         </div>
       </li>

@@ -36,11 +36,11 @@ const slidermainhome= () => (
               <div className="spacer-single"></div>
               
               <Reveal className='onStep' keyframes={fadeInUp} delay={300} duration={900} triggerOnce>
-              <h1 className="col-white">Creating On-chain Demand</h1>
+              <h1 className="col-white">Something Big is Coming</h1>
               </Reveal>
               <Reveal className='onStep' keyframes={fadeInUp} delay={600} duration={900} triggerOnce>
               <p className="lead col-white">
-                A mechanism built for maintaining order through the broader crypto space, BlackHole finds its purpose in upholding the sanitation of digital asset ecosystems by serving as an economic engine through which holders can utilize their share of HOLE tokens to vote on the destruction of other digital assets, HOLE, assets, and debt if the community so chooses.
+                Welcome to BlackHole on Juno! A black hole is biggest object in the universe. In fact, when the universe is all gone, there will only be black holes. We are taking a few days to rewrite our whitepaper. Stay tuned on socials for its release. 
               </p>
               </Reveal>
               <div className="spacer-10"></div>
