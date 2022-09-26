@@ -40,7 +40,7 @@ const slidermainhome= () => (
               </Reveal>
               <Reveal className='onStep' keyframes={fadeInUp} delay={600} duration={900} triggerOnce>
               <p className="lead col-white">
-                Welcome to BlackHole on Juno! A black hole is biggest object in the universe. In fact, when the universe is all gone, there will only be black holes. We are taking a few days to rewrite our whitepaper. Stay tuned on socials for its release. 
+                Welcome to BlackHole on Juno! A black hole is biggest object in the universe. In fact, when the universe is all gone, there will only be black holes. Whitepaper 2.0 is en route. Stay tuned on socials for its release. 
               </p>
               </Reveal>
               <div className="spacer-10"></div>
