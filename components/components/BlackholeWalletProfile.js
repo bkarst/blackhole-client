@@ -102,7 +102,7 @@ const BlackholeWallet = () => {
         if ((typeof window !== 'undefined')){
           // console.log("runnning")
           if (!isMobile()){
-            run()
+            
           }
           else {
 
@@ -187,28 +187,27 @@ const BlackholeWallet = () => {
     return (
       <div>
         <div>
-    <div className='wallet-container' >
-        <canvas ref={canvasRef} id="particle" ></canvas>
-        <div className='center-wallet-cont'>
+    <div>
+        <div>
             <div id='keplr-logo' style={{zIndex: 99999999, cursor: 'pointer', display: walletInfo ? 'none' : 'inline' }} onClick={ connectAndGetBalance }>
-                <img style={{width: 50, margin: 'auto'}} src="./img/keplr-logo.png" alt="" />
+                <div style={{margin: 'auto', width: '100%', textAlign: 'center'}}>
+                    <img style={{width: 50, margin: 'auto'}} src="./img/keplr-logo.png" alt="" />
+                </div>
                 <div style={{fontSize: 12, marginTop: 10, color: '#ffffff'}}>
                     Connect Keplr
                 </div>
                 <div style={{fontSize: 12, color: '#ffffff'}}>
-                    to vote
+                    to see balance
                 </div>
             </div>
             <div style={{ marginTop: -23, display: walletInfo ? 'inline' : 'none'}}  >
-                <div style={{fontSize: 28, marginTop: -6, color: '#ffffff', fontWeight: 800}}>
+                <div style={{width: '100%', textAlign: 'center', marginTop: 10, fontSize: 28, color: '#ffffff', fontWeight: 800}}>
                   {parseInt(walletInfo && walletInfo.balance)/10000}
                 </div>
                 <div style={{fontSize: 12, fontWeight: 800, color: '#ffffff'}}>
                     HOLE
                 </div>
-                <div style={{fontSize: 12, color: 'rgb(54,135,182)', marginTop: 10}}>
-                    {walletInfo && displayAddress(walletInfo.address)}
-                </div>
+                
             </div>
         </div>
         </div>

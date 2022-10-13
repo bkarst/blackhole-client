@@ -18,47 +18,25 @@ import { DirectSecp256k1HdWallet } from "@cosmjs/proto-signing";
 import { assertIsBroadcastTxSuccess, SigningStargateClient, StargateClient } from "@cosmjs/stargate";
 import { CosmWasmClient } from '@cosmjs/cosmwasm-stargate'
 import HeaderMetaTags from '../components/components/HeaderMetaTags';
-
+import BlackholeProfile from '../components/components/BlackholeProfile';
 
 export default function Home() {
   // const [nftListings, setNftListings] = useState([]);
   useEffect(() => {
-    
-
-    
-// const { balance } = response
-
-  //   axios.get(constants.API_URL + '/api/nft_listings').then(response => {
-  //     setNftListings(response.data)
-  //   })
-  //   // Update the document title using the browser API
   }, []);
-
   return (
     <div>
       <Head>
         <title>BlackHole | Cleaning Digital Space</title>
         <HeaderMetaTags />
       </Head>
-      
-      
       <StarryGalaxy />
-      
-      
       <section className='container' style={{marginTop: -50}}>
-        <BlackholeHeader />
-        <SliderMainHome />
+      <BlackholeHeader />
       </section>
-      <section>
-        <Reveal className='onStep' keyframes={fadeIn} delay={1000} duration={1000} triggerOnce>
-          <h2 className="col-white" style={{textAlign: 'center' }} >
-            Upcoming Missions
-          </h2>
-        </Reveal>
-        <TreeRoadmap />
+      <section style={{marginTop: -150}}>
+        <BlackholeProfile />
       </section>
-
-      
       <Footer />
 
     </div>

@@ -3,6 +3,7 @@ import ColumnZero from '../components/ColumnZero';
 import ColumnZeroTwo from '../components/ColumnZeroTwo';
 import ColumnZeroThree from '../components/ColumnZeroThree';
 import Footer from '../components/footer';
+import BlackholeWalletProfile from '../components/BlackholeWalletProfile'
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
@@ -46,14 +47,14 @@ return (
 <div>
 <GlobalStyles/>
 
-  <section className='container no-bottom'>
+  <section className="container main-cont">
     <div className='row'>
       <div className='spacer-double'></div>
-      <div className="col-md-12">
+      <div className="col-md-11">
          <div className="d_profile de-flex">
               <div className="de-flex-col">
                   <div className="profile_avatar">
-                      <img src="./img/author_single/author_thumbnail.jpg" alt=""/>
+                      <img src="./img/alien.gif" />
                       <i className="fa fa-check"></i>
                       <div className="profile_name">
                           <h4>
@@ -64,47 +65,18 @@ return (
                           </h4>
                       </div>
                   </div>
+                  <div >
               </div>
-              <div className="profile_follow de-flex">
-                  <div className="de-flex-col">
-                      <div className="profile_follower">500 followers</div>
-                  </div>
-                  <div className="de-flex-col">
-                      <span className="btn-main">Follow</span>
-                  </div>
               </div>
-
+              <BlackholeWalletProfile />
           </div>
       </div>
     </div>
   </section>
 
-  <section className='container no-top'>
-        <div className='row'>
-          <div className='col-lg-12'>
-              <div className="items_filter">
-                <ul className="de_nav text-left">
-                    <li id='Mainbtn' className="active"><span onClick={handleBtnClick}>Avatars</span></li>
-                </ul>
-            </div>
-          </div>
-        </div>
-      {openMenu && (  
-        <div id='zero1' className='onStep fadeIn'>
-         <ColumnZero/>
-        </div>
-      )}
-      {openMenu1 && ( 
-        <div id='zero2' className='onStep fadeIn'>
-         <ColumnZeroTwo/>
-        </div>
-      )}
-      {openMenu2 && ( 
-        <div id='zero3' className='onStep fadeIn'>
-         <ColumnZeroThree/>
-        </div>
-      )}
-      </section>
+  <section>
+
+  </section>
 
 
   <Footer />
