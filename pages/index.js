@@ -46,7 +46,7 @@ export default function Home() {
       
       
       <section className='container' style={{marginTop: -50}}>
-        <BlackholeHeader />
+      <BlackholeHeader />
         <SliderMainHome />
       </section>
       <section>
