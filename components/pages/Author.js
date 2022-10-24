@@ -84,7 +84,9 @@ return (
           <div className='col-lg-12'>
               <div className="items_filter">
                 <ul className="de_nav text-left">
-                    <li id='Mainbtn' className="active"><span onClick={handleBtnClick}>Avatars</span></li>
+                    <li id='Mainbtn' className="active"><span onClick={handleBtnClick}>On Sale</span></li>
+                    <li id='Mainbtn1' className=""><span onClick={handleBtnClick1}>Created</span></li>
+                    <li id='Mainbtn2' className=""><span onClick={handleBtnClick2}>Liked</span></li>
                 </ul>
             </div>
           </div>

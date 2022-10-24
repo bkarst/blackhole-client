@@ -194,37 +194,49 @@ export default function Team() {
             run();
         }
     }, [])
+
   return (
     <div>
       <Head>
         <title>Create Next App</title>
+        
+        
       </Head>
       <StarryGalaxy />
       <BiddyHeader />
-        <div>
-        <div className="about">
-            <a className="bg_links social portfolio" href="https://www.rafaelalucas.com/dailyui" target="_blank" rel="noreferrer">
-                <span className="icon"></span>
-            </a>
-            <a className="bg_links social dribbble" href="https://dribbble.com/rafaelalucas" target="_blank" rel="noreferrer">
-                <span className="icon"></span>
-            </a>
-            <a className="bg_links social linkedin" href="https://www.linkedin.com/in/rafaelalucas/" target="_blank" rel="noreferrer">
-                <span className="icon"></span>
-            </a>
-            <a className="bg_links logo"></a>
-        </div>
-        <div className="wrapper">
-            <section className="module-team">
-                <div className="team">
-                    {/* <Reveal className='onStep' keyframes={fadeInUp} delay={300} duration={900} triggerOnce>
-                    <h2 className="col-white">Blackhole Voting</h2>
-                    </Reveal> */}
-                    <h2 className="title">Meet our Team</h2>
-                    <div className="team-cards">
-                    <div className="swiper-container">
-                    <div className="swiper-wrapper"></div>
-                </div>
+      
+      <div>
+        
+
+
+<div className="about">
+   <a className="bg_links social portfolio" href="https://www.rafaelalucas.com/dailyui" target="_blank" rel="noreferrer">
+      <span className="icon"></span>
+   </a>
+   <a className="bg_links social dribbble" href="https://dribbble.com/rafaelalucas" target="_blank" rel="noreferrer">
+      <span className="icon"></span>
+   </a>
+   <a className="bg_links social linkedin" href="https://www.linkedin.com/in/rafaelalucas/" target="_blank" rel="noreferrer">
+      <span className="icon"></span>
+   </a>
+   <a className="bg_links logo"></a>
+</div>
+
+<div className="wrapper">
+
+   <section className="module-team">
+
+      <div className="team">
+      {/* <Reveal className='onStep' keyframes={fadeInUp} delay={300} duration={900} triggerOnce>
+              <h2 className="col-white">Blackhole Voting</h2>
+        </Reveal> */}
+         <h2 className="title">Meet our Team</h2>
+         <div className="team-cards">
+
+            <div className="swiper-container">
+               <div className="swiper-wrapper"></div>
+
+            </div>
 
             <div className="swiper-pagination"></div>
             <div className="navigation">

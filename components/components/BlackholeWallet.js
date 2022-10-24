@@ -204,7 +204,7 @@ const BlackholeWallet = () => {
                   {parseInt(walletInfo && walletInfo.balance)/10000}
                 </div>
                 <div style={{fontSize: 12, fontWeight: 800, color: '#ffffff'}}>
-                    HOLE
+                    BKHL
                 </div>
                 <div style={{fontSize: 12, color: 'rgb(54,135,182)', marginTop: 10}}>
                     {walletInfo && displayAddress(walletInfo.address)}

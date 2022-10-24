@@ -1,15 +1,3 @@
-cosmwasm-ts-codegen generate \
-          --plugin client \
-          --schema ./schema \
-          --out ./ts \
-          --name stakin \
-          --no-bundle
-
-probuf cosmos file
-
-Add to mintscan
-https://twitter.com/JunoNetwork/status/1574471164285653004?t=Ur6DkrkRwYCVrLqSEciQNA&s=09
-
 make a profile section and include links to other platforms. 
 make an nft on solana that points to 
 look more into staking
