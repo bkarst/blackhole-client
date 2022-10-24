@@ -59,6 +59,9 @@ export default function Header() {
           <Link className='header-link' href="/voting">
             Vote
           </Link>
+          <Link className='header-link' href="/profile">
+            Profile
+          </Link>
           {/* <Link className='header-link' href="https://linktr.ee/blackholeonjuno">
             Links
           </Link> */}
